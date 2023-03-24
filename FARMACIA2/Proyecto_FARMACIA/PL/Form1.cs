@@ -22,6 +22,8 @@ namespace Proyecto_FARMACIA.PL
         {
             label1.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
+            Aparecer.Start();
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -30,26 +32,45 @@ namespace Proyecto_FARMACIA.PL
             menuAdmin.Show(new frmMenuAdmin());
         }
 
+        int count = 0;
+        frmInicio inicio = new frmInicio();
+
+        private void Aparecer_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity < 1)
+            {
+                this.Opacity += 0.05;
+            }
+
+            count += 1;
+
+            if(count == 100) 
+            {
+                Aparecer.Stop();
+                Desvanecer.Start();
+            }
+        }
+
+        private void Desvanecer_Tick(object sender, EventArgs e)
+        {
+            this.Opacity -= 0.05;
+
+            if (this.Opacity == 0)
+            {
+                Desvanecer.Stop();
+                this.Close();
+
+                frmMenuAdmin menuAdmin = new frmMenuAdmin();
+                menuAdmin.ShowDialog();
+            }
+        }
+
         //private void btnCerrar_Click(object sender, EventArgs e)
         //{
         //    Close();
         //}
 
-        //public void AbrirForm(object mas)
-        //{
-        //    if (this.PanelContenedor.Controls.Count > 0)
-        //    {
-        //        this.PanelContenedor.Controls.RemoveAt(0);
-        //    }
-
-        //    Form admin = mas as Form;
-        //    admin.TopLevel = false;
-        //    admin.Dock = DockStyle.Fill;
-        //    this.PanelContenedor.Controls.Add(admin);
-        //    this.PanelContenedor.Tag = admin;
-
-        //    admin.Show();
-        //}
+       
 
         //private void frmAdmin_Load(object sender, EventArgs e)
         //{

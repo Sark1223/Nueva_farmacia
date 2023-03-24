@@ -110,6 +110,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmCiudad.resx">
       <DependentUpon>frmCiudad.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmMasMenu.resx">
       <DependentUpon>frmMasMenu.cs</DependentUpon>
@@ -207,6 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ingeniero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Web.WebView2.1.0.1264.42\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.1264.42\build\Microsoft.Web.WebView2.targets')" />

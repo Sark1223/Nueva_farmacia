@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.Encabezado = new System.Windows.Forms.Panel();
             this.lblNomFarm = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.cuerpo = new System.Windows.Forms.Panel();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.icon_sesion = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Encabezado.SuspendLayout();
             this.cuerpo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Encabezado
             // 
             this.Encabezado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(164)))));
+            this.Encabezado.Controls.Add(this.pictureBox2);
             this.Encabezado.Controls.Add(this.lblNomFarm);
-            this.Encabezado.Controls.Add(this.btnCerrar);
             this.Encabezado.Location = new System.Drawing.Point(0, 0);
             this.Encabezado.Name = "Encabezado";
             this.Encabezado.Size = new System.Drawing.Size(801, 42);
@@ -66,21 +66,6 @@
             this.lblNomFarm.TabIndex = 2;
             this.lblNomFarm.Text = "Farmacia Express";
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(79)))), ((int)(((byte)(95)))));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.ForeColor = System.Drawing.Color.Salmon;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(757, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(43, 42);
-            this.btnCerrar.TabIndex = 1;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // cuerpo
             // 
             this.cuerpo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -93,7 +78,7 @@
             this.cuerpo.Controls.Add(this.icon_sesion);
             this.cuerpo.Location = new System.Drawing.Point(0, 40);
             this.cuerpo.Name = "cuerpo";
-            this.cuerpo.Size = new System.Drawing.Size(800, 447);
+            this.cuerpo.Size = new System.Drawing.Size(800, 444);
             this.cuerpo.TabIndex = 4;
             // 
             // btnIniciarSesion
@@ -105,7 +90,7 @@
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(332, 264);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(332, 263);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(146, 41);
             this.btnIniciarSesion.TabIndex = 4;
@@ -119,7 +104,7 @@
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContraseña.Font = new System.Drawing.Font("Cascadia Mono", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtContraseña.Location = new System.Drawing.Point(279, 211);
+            this.txtContraseña.Location = new System.Drawing.Point(279, 210);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(260, 32);
             this.txtContraseña.TabIndex = 3;
@@ -131,7 +116,7 @@
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsuario.Font = new System.Drawing.Font("Cascadia Mono", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUsuario.Location = new System.Drawing.Point(279, 164);
+            this.txtUsuario.Location = new System.Drawing.Point(279, 163);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(260, 32);
             this.txtUsuario.TabIndex = 2;
@@ -141,7 +126,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Proyecto_FARMACIA.Properties.Resources.usuario1;
-            this.pictureBox1.Location = new System.Drawing.Point(363, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(363, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 81);
             this.pictureBox1.TabIndex = 1;
@@ -152,11 +137,22 @@
             this.icon_sesion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.icon_sesion.AutoSize = true;
             this.icon_sesion.Font = new System.Drawing.Font("Corbel", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icon_sesion.Location = new System.Drawing.Point(284, 113);
+            this.icon_sesion.Location = new System.Drawing.Point(284, 112);
             this.icon_sesion.Name = "icon_sesion";
             this.icon_sesion.Size = new System.Drawing.Size(245, 36);
             this.icon_sesion.TabIndex = 0;
             this.icon_sesion.Text = "INICIO DE SESION";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Proyecto_FARMACIA.Properties.Resources.cerrar;
+            this.pictureBox2.Location = new System.Drawing.Point(759, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // frmInicio
             // 
@@ -174,12 +170,12 @@
             this.cuerpo.ResumeLayout(false);
             this.cuerpo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel Encabezado;
         private System.Windows.Forms.Label lblNomFarm;
         private System.Windows.Forms.Panel cuerpo;
@@ -188,6 +184,7 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

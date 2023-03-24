@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Aparecer = new System.Windows.Forms.Timer(this.components);
+            this.Desvanecer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +60,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Karla Santos";
             // 
+            // Aparecer
+            // 
+            this.Aparecer.Interval = 30;
+            this.Aparecer.Tick += new System.EventHandler(this.Aparecer_Tick);
+            // 
+            // Desvanecer
+            // 
+            this.Desvanecer.Interval = 30;
+            this.Desvanecer.Tick += new System.EventHandler(this.Desvanecer_Tick);
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -68,6 +81,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdmin";
+            this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmAdmin_Load);
@@ -81,5 +95,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer Aparecer;
+        private System.Windows.Forms.Timer Desvanecer;
     }
 }

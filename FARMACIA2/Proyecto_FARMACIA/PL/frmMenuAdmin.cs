@@ -24,22 +24,21 @@ namespace Proyecto_FARMACIA.PL
             lblSalir.Text = "Sirvoooo";
         }
 
-        //public void AbrirForm(object mas)
-        //{
-        //    frmAdmin see = new frmAdmin();
-        //    if (see.PanelContenedor.Controls.Count > 0)
-        //    {
-        //        see.PanelContenedor.Controls.RemoveAt(0);
-        //    }
+        public void AbrirForm(object mas)
+        {
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+            }
 
-        //    Form admin = mas as Form;
-        //    admin.TopLevel = false;
-        //    admin.Dock = DockStyle.Fill;
-        //    see.PanelContenedor.Controls.Add(admin);
-        //    see.PanelContenedor.Tag = admin;
+            Form admin = mas as Form;
+            admin.TopLevel = false;
+            admin.Dock = DockStyle.Fill;
+            this.PanelContenedor.Controls.Add(admin);
+            this.PanelContenedor.Tag = admin;
 
-        //    admin.Show();
-        //}
+            admin.Show();
+        }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -61,6 +60,12 @@ namespace Proyecto_FARMACIA.PL
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cmdciudad_MouseHover(object sender, EventArgs e)
+        {
+
+            cmdciudad.BackColor=  7, 200, 216;
         }
     }
 }

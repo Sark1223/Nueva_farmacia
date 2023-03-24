@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuEmpleados));
             this.Encabezado = new System.Windows.Forms.Panel();
             this.lblNomFarm = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.Encabezado.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,7 +37,6 @@
             // 
             this.Encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(164)))));
             this.Encabezado.Controls.Add(this.lblNomFarm);
-            this.Encabezado.Controls.Add(this.btnCerrar);
             this.Encabezado.Location = new System.Drawing.Point(0, 0);
             this.Encabezado.Name = "Encabezado";
             this.Encabezado.Size = new System.Drawing.Size(801, 42);
@@ -55,19 +52,6 @@
             this.lblNomFarm.Size = new System.Drawing.Size(203, 31);
             this.lblNomFarm.TabIndex = 2;
             this.lblNomFarm.Text = "Farmacia Express";
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(79)))), ((int)(((byte)(95)))));
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.ForeColor = System.Drawing.Color.Salmon;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(757, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(43, 42);
-            this.btnCerrar.TabIndex = 1;
-            this.btnCerrar.UseVisualStyleBackColor = false;
             // 
             // frmMenuEmpleados
             // 
@@ -87,6 +71,5 @@
 
         private System.Windows.Forms.Panel Encabezado;
         private System.Windows.Forms.Label lblNomFarm;
-        private System.Windows.Forms.Button btnCerrar;
     }
 }

@@ -20,11 +20,13 @@ namespace Proyecto_FARMACIA
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            this.Opacity = 0;
             frmAdmin Admin = new frmAdmin();
             Admin.ShowDialog();
+            this.Close();
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             Close();
         }
