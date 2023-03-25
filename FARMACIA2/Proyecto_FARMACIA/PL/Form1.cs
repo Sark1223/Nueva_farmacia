@@ -26,14 +26,7 @@ namespace Proyecto_FARMACIA.PL
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            frmMenuAdmin menuAdmin = new frmMenuAdmin();
-            menuAdmin.Show(new frmMenuAdmin());
-        }
-
         int count = 0;
-        frmInicio inicio = new frmInicio();
 
         private void Aparecer_Tick(object sender, EventArgs e)
         {
@@ -48,34 +41,25 @@ namespace Proyecto_FARMACIA.PL
             {
                 Aparecer.Stop();
                 Desvanecer.Start();
+                menuAdmin.Opacity = 0;
+                menuAdmin.Show();
             }
         }
+
+        frmMenuAdmin menuAdmin = new frmMenuAdmin();
 
         private void Desvanecer_Tick(object sender, EventArgs e)
         {
             this.Opacity -= 0.05;
+            menuAdmin.Opacity += 0.05;
+
 
             if (this.Opacity == 0)
             {
                 Desvanecer.Stop();
                 this.Close();
-
-                frmMenuAdmin menuAdmin = new frmMenuAdmin();
-                menuAdmin.ShowDialog();
             }
         }
-
-        //private void btnCerrar_Click(object sender, EventArgs e)
-        //{
-        //    Close();
-        //}
-
-       
-
-        //private void frmAdmin_Load(object sender, EventArgs e)
-        //{
-        //    AbrirForm(new frmMenuAdmin());
-        //}
 
     }
 }

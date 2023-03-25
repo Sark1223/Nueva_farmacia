@@ -28,77 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PanelSalir = new System.Windows.Forms.Panel();
-            this.lblSalir = new System.Windows.Forms.Label();
+            this.MenosMas = new System.Windows.Forms.Panel();
+            this.lblMenosMAs = new System.Windows.Forms.Label();
+            this.pbMenosMas = new System.Windows.Forms.PictureBox();
             this.lblOpEmple = new System.Windows.Forms.Label();
             this.name_usuario = new System.Windows.Forms.Label();
             this.lblCiudad = new System.Windows.Forms.Label();
             this.lblProp = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Menu = new System.Windows.Forms.Panel();
+            this.avatar = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cmdMedi = new System.Windows.Forms.Panel();
+            this.pbMedi = new System.Windows.Forms.PictureBox();
+            this.lblMed = new System.Windows.Forms.Label();
             this.cmdVentas = new System.Windows.Forms.Panel();
+            this.pbVentas = new System.Windows.Forms.PictureBox();
             this.lblVentas = new System.Windows.Forms.Label();
             this.cmdProp = new System.Windows.Forms.Panel();
+            this.pbPropi = new System.Windows.Forms.PictureBox();
             this.cmdSucursales = new System.Windows.Forms.Panel();
+            this.pbSucursales = new System.Windows.Forms.PictureBox();
             this.lblSuc = new System.Windows.Forms.Label();
             this.cmdEmpleado = new System.Windows.Forms.Panel();
-            this.cmdciudad = new System.Windows.Forms.Panel();
-            this.lblMed = new System.Windows.Forms.Label();
-            this.Encabezado = new System.Windows.Forms.Panel();
-            this.lblNomFarm = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.pbSalir = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.avatar = new System.Windows.Forms.PictureBox();
-            this.pbVentas = new System.Windows.Forms.PictureBox();
-            this.pbPropi = new System.Windows.Forms.PictureBox();
-            this.pbSucursales = new System.Windows.Forms.PictureBox();
             this.pbEmple = new System.Windows.Forms.PictureBox();
+            this.cmdciudad = new System.Windows.Forms.Panel();
             this.pbCiudad = new System.Windows.Forms.PictureBox();
-            this.pbMedi = new System.Windows.Forms.PictureBox();
-            this.cmdMedi = new System.Windows.Forms.Panel();
-            this.PanelSalir.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.cmdVentas.SuspendLayout();
-            this.cmdProp.SuspendLayout();
-            this.cmdSucursales.SuspendLayout();
-            this.cmdEmpleado.SuspendLayout();
-            this.cmdciudad.SuspendLayout();
-            this.Encabezado.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.PanelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSalir)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Encabezado = new System.Windows.Forms.Panel();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.lblNomFarm = new System.Windows.Forms.Label();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.logoPantalla = new System.Windows.Forms.PictureBox();
+            this.cerrar = new System.Windows.Forms.PictureBox();
+            this.MenosMas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenosMas)).BeginInit();
+            this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPropi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSucursales)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmple)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMedi)).BeginInit();
             this.cmdMedi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMedi)).BeginInit();
+            this.cmdVentas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).BeginInit();
+            this.cmdProp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPropi)).BeginInit();
+            this.cmdSucursales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSucursales)).BeginInit();
+            this.cmdEmpleado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmple)).BeginInit();
+            this.cmdciudad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).BeginInit();
+            this.Encabezado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.PanelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPantalla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).BeginInit();
             this.SuspendLayout();
             // 
-            // PanelSalir
+            // MenosMas
             // 
-            this.PanelSalir.Controls.Add(this.lblSalir);
-            this.PanelSalir.Controls.Add(this.pbSalir);
-            this.PanelSalir.Location = new System.Drawing.Point(230, 355);
-            this.PanelSalir.Name = "PanelSalir";
-            this.PanelSalir.Size = new System.Drawing.Size(43, 51);
-            this.PanelSalir.TabIndex = 21;
+            this.MenosMas.Controls.Add(this.lblMenosMAs);
+            this.MenosMas.Controls.Add(this.pbMenosMas);
+            this.MenosMas.Location = new System.Drawing.Point(63, 465);
+            this.MenosMas.Name = "MenosMas";
+            this.MenosMas.Size = new System.Drawing.Size(43, 51);
+            this.MenosMas.TabIndex = 21;
+            this.MenosMas.Click += new System.EventHandler(this.pbMenosMas_Click);
             // 
-            // lblSalir
+            // lblMenosMAs
             // 
-            this.lblSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSalir.AutoSize = true;
-            this.lblSalir.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalir.Location = new System.Drawing.Point(7, 37);
-            this.lblSalir.Name = "lblSalir";
-            this.lblSalir.Size = new System.Drawing.Size(28, 13);
-            this.lblSalir.TabIndex = 12;
-            this.lblSalir.Text = "Salir";
-            this.lblSalir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMenosMAs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblMenosMAs.AutoSize = true;
+            this.lblMenosMAs.Font = new System.Drawing.Font("Constantia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenosMAs.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblMenosMAs.Location = new System.Drawing.Point(4, 37);
+            this.lblMenosMAs.Name = "lblMenosMAs";
+            this.lblMenosMAs.Size = new System.Drawing.Size(38, 13);
+            this.lblMenosMAs.TabIndex = 12;
+            this.lblMenosMAs.Text = "Menos";
+            this.lblMenosMAs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMenosMAs.Click += new System.EventHandler(this.pbMenosMas_Click);
+            // 
+            // pbMenosMas
+            // 
+            this.pbMenosMas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMenosMas.Image = global::Proyecto_FARMACIA.Properties.Resources.respuesta;
+            this.pbMenosMas.Location = new System.Drawing.Point(5, 3);
+            this.pbMenosMas.Name = "pbMenosMas";
+            this.pbMenosMas.Size = new System.Drawing.Size(35, 33);
+            this.pbMenosMas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbMenosMas.TabIndex = 10;
+            this.pbMenosMas.TabStop = false;
+            this.pbMenosMas.Click += new System.EventHandler(this.pbMenosMas_Click);
             // 
             // lblOpEmple
             // 
@@ -106,18 +124,20 @@
             this.lblOpEmple.AutoSize = true;
             this.lblOpEmple.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOpEmple.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblOpEmple.Location = new System.Drawing.Point(71, 29);
+            this.lblOpEmple.Location = new System.Drawing.Point(74, 24);
             this.lblOpEmple.Name = "lblOpEmple";
             this.lblOpEmple.Size = new System.Drawing.Size(74, 15);
             this.lblOpEmple.TabIndex = 1;
             this.lblOpEmple.Text = "EMPLEADOS";
+            this.lblOpEmple.MouseLeave += new System.EventHandler(this.cmdEmpleado_MouseLeave);
+            this.lblOpEmple.MouseHover += new System.EventHandler(this.cmdEmpleado_MouseHover);
             // 
             // name_usuario
             // 
             this.name_usuario.AutoSize = true;
             this.name_usuario.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name_usuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.name_usuario.Location = new System.Drawing.Point(5, 43);
+            this.name_usuario.Location = new System.Drawing.Point(42, 37);
             this.name_usuario.Name = "name_usuario";
             this.name_usuario.Size = new System.Drawing.Size(92, 22);
             this.name_usuario.TabIndex = 17;
@@ -130,11 +150,14 @@
             this.lblCiudad.BackColor = System.Drawing.Color.Transparent;
             this.lblCiudad.Font = new System.Drawing.Font("Tw Cen MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCiudad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCiudad.Location = new System.Drawing.Point(71, 25);
+            this.lblCiudad.Location = new System.Drawing.Point(73, 25);
             this.lblCiudad.Name = "lblCiudad";
             this.lblCiudad.Size = new System.Drawing.Size(63, 16);
             this.lblCiudad.TabIndex = 1;
             this.lblCiudad.Text = "CIUDADES";
+            this.lblCiudad.Click += new System.EventHandler(this.pbCiudad_Click);
+            this.lblCiudad.MouseLeave += new System.EventHandler(this.cmdciudad_MouseLeave_1);
+            this.lblCiudad.MouseHover += new System.EventHandler(this.cmdciudad_MouseHover);
             // 
             // lblProp
             // 
@@ -142,97 +165,74 @@
             this.lblProp.AutoSize = true;
             this.lblProp.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProp.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblProp.Location = new System.Drawing.Point(71, 22);
+            this.lblProp.Location = new System.Drawing.Point(73, 22);
             this.lblProp.Name = "lblProp";
             this.lblProp.Size = new System.Drawing.Size(88, 15);
             this.lblProp.TabIndex = 1;
             this.lblProp.Text = "PROPIETARIOS";
+            this.lblProp.MouseLeave += new System.EventHandler(this.cmdProp_MouseLeave);
+            this.lblProp.MouseHover += new System.EventHandler(this.cmdProp_MouseHover);
             // 
-            // panel1
+            // Menu
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(138)))), ((int)(((byte)(158)))));
-            this.panel1.Controls.Add(this.cmdMedi);
-            this.panel1.Controls.Add(this.cmdVentas);
-            this.panel1.Controls.Add(this.cmdProp);
-            this.panel1.Controls.Add(this.cmdSucursales);
-            this.panel1.Controls.Add(this.cmdEmpleado);
-            this.panel1.Controls.Add(this.cmdciudad);
-            this.panel1.Location = new System.Drawing.Point(0, 109);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(163, 479);
-            this.panel1.TabIndex = 25;
+            this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(138)))), ((int)(((byte)(158)))));
+            this.Menu.Controls.Add(this.name_usuario);
+            this.Menu.Controls.Add(this.MenosMas);
+            this.Menu.Controls.Add(this.avatar);
+            this.Menu.Controls.Add(this.panel2);
+            this.Menu.Controls.Add(this.cmdMedi);
+            this.Menu.Controls.Add(this.cmdVentas);
+            this.Menu.Controls.Add(this.cmdProp);
+            this.Menu.Controls.Add(this.cmdSucursales);
+            this.Menu.Controls.Add(this.cmdEmpleado);
+            this.Menu.Controls.Add(this.cmdciudad);
+            this.Menu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Menu.Location = new System.Drawing.Point(0, 42);
+            this.Menu.Name = "Menu";
+            this.Menu.Size = new System.Drawing.Size(185, 517);
+            this.Menu.TabIndex = 25;
             // 
-            // cmdVentas
+            // avatar
             // 
-            this.cmdVentas.Controls.Add(this.pbVentas);
-            this.cmdVentas.Controls.Add(this.lblVentas);
-            this.cmdVentas.Location = new System.Drawing.Point(0, 314);
-            this.cmdVentas.Name = "cmdVentas";
-            this.cmdVentas.Size = new System.Drawing.Size(161, 62);
-            this.cmdVentas.TabIndex = 33;
+            this.avatar.Image = global::Proyecto_FARMACIA.Properties.Resources.mujer;
+            this.avatar.Location = new System.Drawing.Point(63, 4);
+            this.avatar.Name = "avatar";
+            this.avatar.Size = new System.Drawing.Size(40, 34);
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.avatar.TabIndex = 16;
+            this.avatar.TabStop = false;
             // 
-            // lblVentas
+            // panel2
             // 
-            this.lblVentas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblVentas.AutoSize = true;
-            this.lblVentas.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblVentas.Location = new System.Drawing.Point(71, 26);
-            this.lblVentas.Name = "lblVentas";
-            this.lblVentas.Size = new System.Drawing.Size(51, 15);
-            this.lblVentas.TabIndex = 27;
-            this.lblVentas.Text = "VENTAS";
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(0, 62);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(175, 3);
+            this.panel2.TabIndex = 4;
             // 
-            // cmdProp
+            // cmdMedi
             // 
-            this.cmdProp.Controls.Add(this.pbPropi);
-            this.cmdProp.Controls.Add(this.lblProp);
-            this.cmdProp.Location = new System.Drawing.Point(0, 172);
-            this.cmdProp.Name = "cmdProp";
-            this.cmdProp.Size = new System.Drawing.Size(161, 62);
-            this.cmdProp.TabIndex = 32;
+            this.cmdMedi.Controls.Add(this.pbMedi);
+            this.cmdMedi.Controls.Add(this.lblMed);
+            this.cmdMedi.Location = new System.Drawing.Point(0, 401);
+            this.cmdMedi.Name = "cmdMedi";
+            this.cmdMedi.Size = new System.Drawing.Size(164, 62);
+            this.cmdMedi.TabIndex = 34;
+            this.cmdMedi.MouseLeave += new System.EventHandler(this.cmdMedi_MouseLeave);
+            this.cmdMedi.MouseHover += new System.EventHandler(this.cmdMedi_MouseHover);
             // 
-            // cmdSucursales
+            // pbMedi
             // 
-            this.cmdSucursales.Controls.Add(this.pbSucursales);
-            this.cmdSucursales.Controls.Add(this.lblSuc);
-            this.cmdSucursales.Location = new System.Drawing.Point(0, 243);
-            this.cmdSucursales.Name = "cmdSucursales";
-            this.cmdSucursales.Size = new System.Drawing.Size(161, 62);
-            this.cmdSucursales.TabIndex = 33;
-            // 
-            // lblSuc
-            // 
-            this.lblSuc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSuc.AutoSize = true;
-            this.lblSuc.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSuc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSuc.Location = new System.Drawing.Point(71, 24);
-            this.lblSuc.Name = "lblSuc";
-            this.lblSuc.Size = new System.Drawing.Size(78, 15);
-            this.lblSuc.TabIndex = 29;
-            this.lblSuc.Text = "SUCURSALES";
-            // 
-            // cmdEmpleado
-            // 
-            this.cmdEmpleado.Controls.Add(this.pbEmple);
-            this.cmdEmpleado.Controls.Add(this.lblOpEmple);
-            this.cmdEmpleado.Location = new System.Drawing.Point(0, 101);
-            this.cmdEmpleado.Name = "cmdEmpleado";
-            this.cmdEmpleado.Size = new System.Drawing.Size(161, 62);
-            this.cmdEmpleado.TabIndex = 31;
-            // 
-            // cmdciudad
-            // 
-            this.cmdciudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(138)))), ((int)(((byte)(158)))));
-            this.cmdciudad.Controls.Add(this.pbCiudad);
-            this.cmdciudad.Controls.Add(this.lblCiudad);
-            this.cmdciudad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cmdciudad.Location = new System.Drawing.Point(0, 29);
-            this.cmdciudad.Name = "cmdciudad";
-            this.cmdciudad.Size = new System.Drawing.Size(161, 63);
-            this.cmdciudad.TabIndex = 30;
-            this.cmdciudad.MouseHover += new System.EventHandler(this.cmdciudad_MouseHover);
+            this.pbMedi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbMedi.Image = global::Proyecto_FARMACIA.Properties.Resources.medicamento;
+            this.pbMedi.Location = new System.Drawing.Point(5, 2);
+            this.pbMedi.Name = "pbMedi";
+            this.pbMedi.Size = new System.Drawing.Size(56, 60);
+            this.pbMedi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMedi.TabIndex = 19;
+            this.pbMedi.TabStop = false;
+            this.pbMedi.MouseLeave += new System.EventHandler(this.cmdMedi_MouseLeave);
+            this.pbMedi.MouseHover += new System.EventHandler(this.cmdMedi_MouseHover);
             // 
             // lblMed
             // 
@@ -240,22 +240,189 @@
             this.lblMed.AutoSize = true;
             this.lblMed.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMed.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMed.Location = new System.Drawing.Point(60, 20);
+            this.lblMed.Location = new System.Drawing.Point(67, 24);
             this.lblMed.Name = "lblMed";
             this.lblMed.Size = new System.Drawing.Size(98, 15);
             this.lblMed.TabIndex = 28;
             this.lblMed.Text = "MEDICAMENTOS";
+            this.lblMed.MouseLeave += new System.EventHandler(this.cmdMedi_MouseLeave);
+            this.lblMed.MouseHover += new System.EventHandler(this.cmdMedi_MouseHover);
+            // 
+            // cmdVentas
+            // 
+            this.cmdVentas.Controls.Add(this.pbVentas);
+            this.cmdVentas.Controls.Add(this.lblVentas);
+            this.cmdVentas.Location = new System.Drawing.Point(0, 334);
+            this.cmdVentas.Name = "cmdVentas";
+            this.cmdVentas.Size = new System.Drawing.Size(164, 62);
+            this.cmdVentas.TabIndex = 33;
+            this.cmdVentas.MouseLeave += new System.EventHandler(this.cmdVentas_MouseLeave);
+            this.cmdVentas.MouseHover += new System.EventHandler(this.cmdVentas_MouseHover);
+            // 
+            // pbVentas
+            // 
+            this.pbVentas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbVentas.Image = global::Proyecto_FARMACIA.Properties.Resources.ventas;
+            this.pbVentas.Location = new System.Drawing.Point(4, 3);
+            this.pbVentas.Name = "pbVentas";
+            this.pbVentas.Size = new System.Drawing.Size(63, 55);
+            this.pbVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbVentas.TabIndex = 18;
+            this.pbVentas.TabStop = false;
+            this.pbVentas.MouseLeave += new System.EventHandler(this.cmdVentas_MouseLeave);
+            this.pbVentas.MouseHover += new System.EventHandler(this.cmdVentas_MouseHover);
+            // 
+            // lblVentas
+            // 
+            this.lblVentas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblVentas.AutoSize = true;
+            this.lblVentas.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblVentas.Location = new System.Drawing.Point(73, 26);
+            this.lblVentas.Name = "lblVentas";
+            this.lblVentas.Size = new System.Drawing.Size(51, 15);
+            this.lblVentas.TabIndex = 27;
+            this.lblVentas.Text = "VENTAS";
+            this.lblVentas.MouseLeave += new System.EventHandler(this.cmdVentas_MouseLeave);
+            this.lblVentas.MouseHover += new System.EventHandler(this.cmdVentas_MouseHover);
+            // 
+            // cmdProp
+            // 
+            this.cmdProp.Controls.Add(this.pbPropi);
+            this.cmdProp.Controls.Add(this.lblProp);
+            this.cmdProp.Location = new System.Drawing.Point(0, 200);
+            this.cmdProp.Name = "cmdProp";
+            this.cmdProp.Size = new System.Drawing.Size(164, 62);
+            this.cmdProp.TabIndex = 32;
+            this.cmdProp.MouseLeave += new System.EventHandler(this.cmdProp_MouseLeave);
+            this.cmdProp.MouseHover += new System.EventHandler(this.cmdProp_MouseHover);
+            // 
+            // pbPropi
+            // 
+            this.pbPropi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbPropi.Image = global::Proyecto_FARMACIA.Properties.Resources.dueno;
+            this.pbPropi.Location = new System.Drawing.Point(5, 5);
+            this.pbPropi.Name = "pbPropi";
+            this.pbPropi.Size = new System.Drawing.Size(60, 57);
+            this.pbPropi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPropi.TabIndex = 0;
+            this.pbPropi.TabStop = false;
+            this.pbPropi.Click += new System.EventHandler(this.pbPropi_Click);
+            this.pbPropi.MouseLeave += new System.EventHandler(this.cmdProp_MouseLeave);
+            this.pbPropi.MouseHover += new System.EventHandler(this.cmdProp_MouseHover);
+            // 
+            // cmdSucursales
+            // 
+            this.cmdSucursales.Controls.Add(this.pbSucursales);
+            this.cmdSucursales.Controls.Add(this.lblSuc);
+            this.cmdSucursales.Location = new System.Drawing.Point(0, 267);
+            this.cmdSucursales.Name = "cmdSucursales";
+            this.cmdSucursales.Size = new System.Drawing.Size(164, 62);
+            this.cmdSucursales.TabIndex = 33;
+            this.cmdSucursales.MouseLeave += new System.EventHandler(this.cmdSucursales_MouseLeave);
+            this.cmdSucursales.MouseHover += new System.EventHandler(this.cmdSucursales_MouseHover);
+            // 
+            // pbSucursales
+            // 
+            this.pbSucursales.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbSucursales.Image = global::Proyecto_FARMACIA.Properties.Resources.farmacia;
+            this.pbSucursales.Location = new System.Drawing.Point(2, 0);
+            this.pbSucursales.Name = "pbSucursales";
+            this.pbSucursales.Size = new System.Drawing.Size(63, 62);
+            this.pbSucursales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbSucursales.TabIndex = 20;
+            this.pbSucursales.TabStop = false;
+            this.pbSucursales.MouseLeave += new System.EventHandler(this.cmdSucursales_MouseLeave);
+            this.pbSucursales.MouseHover += new System.EventHandler(this.cmdSucursales_MouseHover);
+            // 
+            // lblSuc
+            // 
+            this.lblSuc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSuc.AutoSize = true;
+            this.lblSuc.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSuc.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSuc.Location = new System.Drawing.Point(73, 24);
+            this.lblSuc.Name = "lblSuc";
+            this.lblSuc.Size = new System.Drawing.Size(78, 15);
+            this.lblSuc.TabIndex = 29;
+            this.lblSuc.Text = "SUCURSALES";
+            this.lblSuc.MouseLeave += new System.EventHandler(this.cmdSucursales_MouseLeave);
+            this.lblSuc.MouseHover += new System.EventHandler(this.cmdSucursales_MouseHover);
+            // 
+            // cmdEmpleado
+            // 
+            this.cmdEmpleado.Controls.Add(this.pbEmple);
+            this.cmdEmpleado.Controls.Add(this.lblOpEmple);
+            this.cmdEmpleado.Location = new System.Drawing.Point(0, 133);
+            this.cmdEmpleado.Name = "cmdEmpleado";
+            this.cmdEmpleado.Size = new System.Drawing.Size(164, 62);
+            this.cmdEmpleado.TabIndex = 31;
+            this.cmdEmpleado.MouseLeave += new System.EventHandler(this.cmdEmpleado_MouseLeave);
+            this.cmdEmpleado.MouseHover += new System.EventHandler(this.cmdEmpleado_MouseHover);
+            // 
+            // pbEmple
+            // 
+            this.pbEmple.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbEmple.Image = global::Proyecto_FARMACIA.Properties.Resources.ingeniero;
+            this.pbEmple.Location = new System.Drawing.Point(5, 0);
+            this.pbEmple.Name = "pbEmple";
+            this.pbEmple.Size = new System.Drawing.Size(63, 60);
+            this.pbEmple.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbEmple.TabIndex = 0;
+            this.pbEmple.TabStop = false;
+            this.pbEmple.MouseLeave += new System.EventHandler(this.cmdEmpleado_MouseLeave);
+            this.pbEmple.MouseHover += new System.EventHandler(this.cmdEmpleado_MouseHover);
+            // 
+            // cmdciudad
+            // 
+            this.cmdciudad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(138)))), ((int)(((byte)(158)))));
+            this.cmdciudad.Controls.Add(this.pbCiudad);
+            this.cmdciudad.Controls.Add(this.lblCiudad);
+            this.cmdciudad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.cmdciudad.Location = new System.Drawing.Point(0, 66);
+            this.cmdciudad.Name = "cmdciudad";
+            this.cmdciudad.Size = new System.Drawing.Size(164, 63);
+            this.cmdciudad.TabIndex = 30;
+            this.cmdciudad.Click += new System.EventHandler(this.pbCiudad_Click);
+            this.cmdciudad.MouseLeave += new System.EventHandler(this.cmdciudad_MouseLeave_1);
+            this.cmdciudad.MouseHover += new System.EventHandler(this.cmdciudad_MouseHover);
+            // 
+            // pbCiudad
+            // 
+            this.pbCiudad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbCiudad.Image = global::Proyecto_FARMACIA.Properties.Resources.ciudad;
+            this.pbCiudad.Location = new System.Drawing.Point(4, 1);
+            this.pbCiudad.Name = "pbCiudad";
+            this.pbCiudad.Size = new System.Drawing.Size(63, 62);
+            this.pbCiudad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCiudad.TabIndex = 0;
+            this.pbCiudad.TabStop = false;
+            this.pbCiudad.Click += new System.EventHandler(this.pbCiudad_Click);
+            this.pbCiudad.MouseLeave += new System.EventHandler(this.cmdciudad_MouseLeave_1);
+            this.pbCiudad.MouseHover += new System.EventHandler(this.cmdciudad_MouseHover);
             // 
             // Encabezado
             // 
-            this.Encabezado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(164)))));
-            this.Encabezado.Controls.Add(this.pictureBox1);
+            this.Encabezado.Controls.Add(this.cerrar);
+            this.Encabezado.Controls.Add(this.logo);
             this.Encabezado.Controls.Add(this.lblNomFarm);
-            this.Encabezado.Location = new System.Drawing.Point(-3, 0);
+            this.Encabezado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Encabezado.Location = new System.Drawing.Point(0, 0);
             this.Encabezado.Name = "Encabezado";
-            this.Encabezado.Size = new System.Drawing.Size(923, 42);
+            this.Encabezado.Size = new System.Drawing.Size(973, 42);
             this.Encabezado.TabIndex = 26;
+            this.Encabezado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Encabezado_MouseDown);
+            // 
+            // logo
+            // 
+            this.logo.Image = global::Proyecto_FARMACIA.Properties.Resources.logo2;
+            this.logo.Location = new System.Drawing.Point(2, 1);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(42, 40);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logo.TabIndex = 3;
+            this.logo.TabStop = false;
             // 
             // lblNomFarm
             // 
@@ -263,190 +430,95 @@
             this.lblNomFarm.AutoSize = true;
             this.lblNomFarm.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomFarm.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNomFarm.Location = new System.Drawing.Point(54, 7);
+            this.lblNomFarm.Location = new System.Drawing.Point(50, 5);
             this.lblNomFarm.Name = "lblNomFarm";
-            this.lblNomFarm.Size = new System.Drawing.Size(203, 31);
-            this.lblNomFarm.TabIndex = 2;
-            this.lblNomFarm.Text = "Farmacia Express";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(138)))), ((int)(((byte)(158)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.avatar);
-            this.panel2.Controls.Add(this.name_usuario);
-            this.panel2.Location = new System.Drawing.Point(-8, 39);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(178, 87);
-            this.panel2.TabIndex = 4;
+            this.lblNomFarm.Size = new System.Drawing.Size(165, 31);
+            this.lblNomFarm.TabIndex = 4;
+            this.lblNomFarm.Text = "PHARMAKON";
             // 
             // PanelContenedor
             // 
-            this.PanelContenedor.Controls.Add(this.PanelSalir);
-            this.PanelContenedor.Location = new System.Drawing.Point(163, 41);
+            this.PanelContenedor.BackColor = System.Drawing.Color.White;
+            this.PanelContenedor.Controls.Add(this.logoPantalla);
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(185, 42);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(765, 547);
+            this.PanelContenedor.Size = new System.Drawing.Size(788, 517);
             this.PanelContenedor.TabIndex = 4;
             // 
-            // pbSalir
+            // logoPantalla
             // 
-            this.pbSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbSalir.Image = global::Proyecto_FARMACIA.Properties.Resources.respuesta;
-            this.pbSalir.Location = new System.Drawing.Point(3, 3);
-            this.pbSalir.Name = "pbSalir";
-            this.pbSalir.Size = new System.Drawing.Size(35, 33);
-            this.pbSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbSalir.TabIndex = 10;
-            this.pbSalir.TabStop = false;
+            this.logoPantalla.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.logoPantalla.Image = global::Proyecto_FARMACIA.Properties.Resources.logo2;
+            this.logoPantalla.Location = new System.Drawing.Point(300, 128);
+            this.logoPantalla.Name = "logoPantalla";
+            this.logoPantalla.Size = new System.Drawing.Size(226, 225);
+            this.logoPantalla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPantalla.TabIndex = 5;
+            this.logoPantalla.TabStop = false;
             // 
-            // pictureBox1
+            // cerrar
             // 
-            this.pictureBox1.Image = global::Proyecto_FARMACIA.Properties.Resources.logo2;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // avatar
-            // 
-            this.avatar.Image = global::Proyecto_FARMACIA.Properties.Resources.mujer;
-            this.avatar.Location = new System.Drawing.Point(32, 7);
-            this.avatar.Name = "avatar";
-            this.avatar.Size = new System.Drawing.Size(40, 34);
-            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.avatar.TabIndex = 16;
-            this.avatar.TabStop = false;
-            // 
-            // pbVentas
-            // 
-            this.pbVentas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbVentas.Image = global::Proyecto_FARMACIA.Properties.Resources.ventas;
-            this.pbVentas.Location = new System.Drawing.Point(2, 3);
-            this.pbVentas.Name = "pbVentas";
-            this.pbVentas.Size = new System.Drawing.Size(63, 55);
-            this.pbVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbVentas.TabIndex = 18;
-            this.pbVentas.TabStop = false;
-            // 
-            // pbPropi
-            // 
-            this.pbPropi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbPropi.Image = global::Proyecto_FARMACIA.Properties.Resources.dueno;
-            this.pbPropi.Location = new System.Drawing.Point(3, 5);
-            this.pbPropi.Name = "pbPropi";
-            this.pbPropi.Size = new System.Drawing.Size(60, 57);
-            this.pbPropi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPropi.TabIndex = 0;
-            this.pbPropi.TabStop = false;
-            this.pbPropi.Click += new System.EventHandler(this.pbPropi_Click);
-            // 
-            // pbSucursales
-            // 
-            this.pbSucursales.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbSucursales.Image = global::Proyecto_FARMACIA.Properties.Resources.farmacia;
-            this.pbSucursales.Location = new System.Drawing.Point(0, 0);
-            this.pbSucursales.Name = "pbSucursales";
-            this.pbSucursales.Size = new System.Drawing.Size(63, 62);
-            this.pbSucursales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbSucursales.TabIndex = 20;
-            this.pbSucursales.TabStop = false;
-            // 
-            // pbEmple
-            // 
-            this.pbEmple.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbEmple.Image = global::Proyecto_FARMACIA.Properties.Resources.ingeniero;
-            this.pbEmple.Location = new System.Drawing.Point(3, 0);
-            this.pbEmple.Name = "pbEmple";
-            this.pbEmple.Size = new System.Drawing.Size(63, 60);
-            this.pbEmple.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbEmple.TabIndex = 0;
-            this.pbEmple.TabStop = false;
-            // 
-            // pbCiudad
-            // 
-            this.pbCiudad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbCiudad.Image = global::Proyecto_FARMACIA.Properties.Resources.ciudad;
-            this.pbCiudad.Location = new System.Drawing.Point(2, 1);
-            this.pbCiudad.Name = "pbCiudad";
-            this.pbCiudad.Size = new System.Drawing.Size(63, 62);
-            this.pbCiudad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCiudad.TabIndex = 0;
-            this.pbCiudad.TabStop = false;
-            this.pbCiudad.Click += new System.EventHandler(this.pbCiudad_Click);
-            // 
-            // pbMedi
-            // 
-            this.pbMedi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbMedi.Image = global::Proyecto_FARMACIA.Properties.Resources.medicamento;
-            this.pbMedi.Location = new System.Drawing.Point(3, 2);
-            this.pbMedi.Name = "pbMedi";
-            this.pbMedi.Size = new System.Drawing.Size(56, 60);
-            this.pbMedi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMedi.TabIndex = 19;
-            this.pbMedi.TabStop = false;
-            // 
-            // cmdMedi
-            // 
-            this.cmdMedi.Controls.Add(this.pbMedi);
-            this.cmdMedi.Controls.Add(this.lblMed);
-            this.cmdMedi.Location = new System.Drawing.Point(0, 385);
-            this.cmdMedi.Name = "cmdMedi";
-            this.cmdMedi.Size = new System.Drawing.Size(161, 62);
-            this.cmdMedi.TabIndex = 34;
+            this.cerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.cerrar;
+            this.cerrar.Location = new System.Drawing.Point(931, 1);
+            this.cerrar.Name = "cerrar";
+            this.cerrar.Size = new System.Drawing.Size(42, 40);
+            this.cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cerrar.TabIndex = 4;
+            this.cerrar.TabStop = false;
+            this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
             // 
             // frmMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(919, 587);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(973, 559);
             this.Controls.Add(this.PanelContenedor);
+            this.Controls.Add(this.Menu);
             this.Controls.Add(this.Encabezado);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenuAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMenuAdmin";
-            this.PanelSalir.ResumeLayout(false);
-            this.PanelSalir.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.cmdVentas.ResumeLayout(false);
-            this.cmdVentas.PerformLayout();
-            this.cmdProp.ResumeLayout(false);
-            this.cmdProp.PerformLayout();
-            this.cmdSucursales.ResumeLayout(false);
-            this.cmdSucursales.PerformLayout();
-            this.cmdEmpleado.ResumeLayout(false);
-            this.cmdEmpleado.PerformLayout();
-            this.cmdciudad.ResumeLayout(false);
-            this.cmdciudad.PerformLayout();
-            this.Encabezado.ResumeLayout(false);
-            this.Encabezado.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.PanelContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbSalir)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.MenosMas.ResumeLayout(false);
+            this.MenosMas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMenosMas)).EndInit();
+            this.Menu.ResumeLayout(false);
+            this.Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPropi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSucursales)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmple)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMedi)).EndInit();
             this.cmdMedi.ResumeLayout(false);
             this.cmdMedi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMedi)).EndInit();
+            this.cmdVentas.ResumeLayout(false);
+            this.cmdVentas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVentas)).EndInit();
+            this.cmdProp.ResumeLayout(false);
+            this.cmdProp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPropi)).EndInit();
+            this.cmdSucursales.ResumeLayout(false);
+            this.cmdSucursales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSucursales)).EndInit();
+            this.cmdEmpleado.ResumeLayout(false);
+            this.cmdEmpleado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbEmple)).EndInit();
+            this.cmdciudad.ResumeLayout(false);
+            this.cmdciudad.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).EndInit();
+            this.Encabezado.ResumeLayout(false);
+            this.Encabezado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            this.PanelContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.logoPantalla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        public System.Windows.Forms.Panel PanelSalir;
-        public System.Windows.Forms.Label lblSalir;
-        public System.Windows.Forms.PictureBox pbSalir;
+        public System.Windows.Forms.Panel MenosMas;
+        public System.Windows.Forms.Label lblMenosMAs;
+        public System.Windows.Forms.PictureBox pbMenosMas;
         public System.Windows.Forms.Label lblOpEmple;
         public System.Windows.Forms.PictureBox pbEmple;
         public System.Windows.Forms.Label name_usuario;
@@ -455,10 +527,9 @@
         public System.Windows.Forms.PictureBox pbCiudad;
         public System.Windows.Forms.PictureBox pbPropi;
         public System.Windows.Forms.Label lblProp;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Menu;
         private System.Windows.Forms.Panel Encabezado;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblNomFarm;
+        private System.Windows.Forms.PictureBox logo;
         public System.Windows.Forms.PictureBox pbVentas;
         public System.Windows.Forms.PictureBox pbMedi;
         public System.Windows.Forms.PictureBox pbSucursales;
@@ -473,5 +544,8 @@
         private System.Windows.Forms.Panel cmdEmpleado;
         private System.Windows.Forms.Panel cmdciudad;
         private System.Windows.Forms.Panel cmdMedi;
+        private System.Windows.Forms.Label lblNomFarm;
+        private System.Windows.Forms.PictureBox logoPantalla;
+        private System.Windows.Forms.PictureBox cerrar;
     }
 }

@@ -30,7 +30,9 @@ namespace Proyecto_FARMACIA.PL
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            SqlConnection conexion = new SqlConnection(@"Server=localhost\SQLEXPRESS; Initial Catalog = biblioteca; Trusted_Connection=True;");
+            //SqlConnection conexion = new SqlConnection(@"Server=localhost\SQLEXPRESS; Initial Catalog = biblioteca; Trusted_Connection=True;");
+            frmAciudad agregar = new frmAciudad();
+            agregar.ShowDialog();
         }
     }
 }

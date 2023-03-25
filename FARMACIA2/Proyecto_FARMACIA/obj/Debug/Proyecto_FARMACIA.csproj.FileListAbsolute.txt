@@ -52,3 +52,4 @@ C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.csproj.GenerateResource.cache
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.csproj.CoreCompileInputs.cache
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.csproj.CopyComplete
+C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmAciudad.resources

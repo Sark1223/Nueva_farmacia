@@ -23,7 +23,7 @@ namespace Proyecto_FARMACIA
             this.Opacity = 0;
             frmAdmin Admin = new frmAdmin();
             Admin.ShowDialog();
-            this.Close();
+            this.Hide();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

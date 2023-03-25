@@ -29,30 +29,45 @@
         private void InitializeComponent()
         {
             this.Encabezado = new System.Windows.Forms.Panel();
+            this.cerrar = new System.Windows.Forms.PictureBox();
             this.lblNomFarm = new System.Windows.Forms.Label();
             this.cuerpo = new System.Windows.Forms.Panel();
+            this.ReyitaContra = new System.Windows.Forms.Panel();
+            this.RayitaUsuario = new System.Windows.Forms.Panel();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.icon_sesion = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.Encabezado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).BeginInit();
             this.cuerpo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // Encabezado
             // 
-            this.Encabezado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(164)))));
-            this.Encabezado.Controls.Add(this.pictureBox2);
+            this.Encabezado.Controls.Add(this.Logo);
+            this.Encabezado.Controls.Add(this.cerrar);
             this.Encabezado.Controls.Add(this.lblNomFarm);
-            this.Encabezado.Location = new System.Drawing.Point(0, 0);
+            this.Encabezado.Location = new System.Drawing.Point(-1, 0);
             this.Encabezado.Name = "Encabezado";
-            this.Encabezado.Size = new System.Drawing.Size(801, 42);
+            this.Encabezado.Size = new System.Drawing.Size(399, 42);
             this.Encabezado.TabIndex = 3;
+            // 
+            // cerrar
+            // 
+            this.cerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.cerrar;
+            this.cerrar.Location = new System.Drawing.Point(357, 0);
+            this.cerrar.Name = "cerrar";
+            this.cerrar.Size = new System.Drawing.Size(42, 40);
+            this.cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cerrar.TabIndex = 3;
+            this.cerrar.TabStop = false;
+            this.cerrar.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lblNomFarm
             // 
@@ -60,26 +75,47 @@
             this.lblNomFarm.AutoSize = true;
             this.lblNomFarm.Font = new System.Drawing.Font("Tw Cen MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomFarm.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNomFarm.Location = new System.Drawing.Point(3, 6);
+            this.lblNomFarm.Location = new System.Drawing.Point(40, 6);
             this.lblNomFarm.Name = "lblNomFarm";
-            this.lblNomFarm.Size = new System.Drawing.Size(203, 31);
+            this.lblNomFarm.Size = new System.Drawing.Size(165, 31);
             this.lblNomFarm.TabIndex = 2;
-            this.lblNomFarm.Text = "Farmacia Express";
+            this.lblNomFarm.Text = "PHARMAKON";
             // 
             // cuerpo
             // 
-            this.cuerpo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cuerpo.BackColor = System.Drawing.Color.White;
             this.cuerpo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.cuerpo.Controls.Add(this.btnIniciarSesion);
             this.cuerpo.Controls.Add(this.txtContraseña);
             this.cuerpo.Controls.Add(this.txtUsuario);
+            this.cuerpo.Controls.Add(this.btnIniciarSesion);
+            this.cuerpo.Controls.Add(this.ReyitaContra);
+            this.cuerpo.Controls.Add(this.RayitaUsuario);
             this.cuerpo.Controls.Add(this.pictureBox1);
             this.cuerpo.Controls.Add(this.icon_sesion);
             this.cuerpo.Location = new System.Drawing.Point(0, 40);
             this.cuerpo.Name = "cuerpo";
-            this.cuerpo.Size = new System.Drawing.Size(800, 444);
+            this.cuerpo.Size = new System.Drawing.Size(398, 444);
             this.cuerpo.TabIndex = 4;
+            // 
+            // ReyitaContra
+            // 
+            this.ReyitaContra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReyitaContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(70)))), ((int)(((byte)(86)))));
+            this.ReyitaContra.Location = new System.Drawing.Point(78, 241);
+            this.ReyitaContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ReyitaContra.Name = "ReyitaContra";
+            this.ReyitaContra.Size = new System.Drawing.Size(261, 1);
+            this.ReyitaContra.TabIndex = 6;
+            // 
+            // RayitaUsuario
+            // 
+            this.RayitaUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RayitaUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(70)))), ((int)(((byte)(86)))));
+            this.RayitaUsuario.Location = new System.Drawing.Point(78, 190);
+            this.RayitaUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RayitaUsuario.Name = "RayitaUsuario";
+            this.RayitaUsuario.Size = new System.Drawing.Size(261, 1);
+            this.RayitaUsuario.TabIndex = 5;
             // 
             // btnIniciarSesion
             // 
@@ -90,7 +126,7 @@
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(332, 263);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(131, 263);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(146, 41);
             this.btnIniciarSesion.TabIndex = 4;
@@ -101,32 +137,32 @@
             // txtContraseña
             // 
             this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Cascadia Mono", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtContraseña.Location = new System.Drawing.Point(279, 210);
+            this.txtContraseña.Location = new System.Drawing.Point(78, 210);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(260, 32);
+            this.txtContraseña.Size = new System.Drawing.Size(260, 25);
             this.txtContraseña.TabIndex = 3;
-            this.txtContraseña.Text = "Ingrese contraseña";
+            this.txtContraseña.Text = "Contraseña";
             // 
             // txtUsuario
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Cascadia Mono", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUsuario.Location = new System.Drawing.Point(279, 163);
+            this.txtUsuario.Location = new System.Drawing.Point(78, 157);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(260, 32);
+            this.txtUsuario.Size = new System.Drawing.Size(259, 25);
             this.txtUsuario.TabIndex = 2;
-            this.txtUsuario.Text = "Ingrese usuario";
+            this.txtUsuario.Text = "Usuario";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Proyecto_FARMACIA.Properties.Resources.usuario1;
-            this.pictureBox1.Location = new System.Drawing.Point(363, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(162, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 81);
             this.pictureBox1.TabIndex = 1;
@@ -137,28 +173,27 @@
             this.icon_sesion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.icon_sesion.AutoSize = true;
             this.icon_sesion.Font = new System.Drawing.Font("Corbel", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icon_sesion.Location = new System.Drawing.Point(284, 112);
+            this.icon_sesion.Location = new System.Drawing.Point(83, 112);
             this.icon_sesion.Name = "icon_sesion";
             this.icon_sesion.Size = new System.Drawing.Size(245, 36);
             this.icon_sesion.TabIndex = 0;
             this.icon_sesion.Text = "INICIO DE SESION";
             // 
-            // pictureBox2
+            // Logo
             // 
-            this.pictureBox2.Image = global::Proyecto_FARMACIA.Properties.Resources.cerrar;
-            this.pictureBox2.Location = new System.Drawing.Point(759, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.Logo.Image = global::Proyecto_FARMACIA.Properties.Resources.logo2;
+            this.Logo.Location = new System.Drawing.Point(3, 0);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(42, 40);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Logo.TabIndex = 4;
+            this.Logo.TabStop = false;
             // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 482);
+            this.ClientSize = new System.Drawing.Size(397, 481);
             this.Controls.Add(this.cuerpo);
             this.Controls.Add(this.Encabezado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -167,10 +202,11 @@
             this.Text = "Form1";
             this.Encabezado.ResumeLayout(false);
             this.Encabezado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).EndInit();
             this.cuerpo.ResumeLayout(false);
             this.cuerpo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,7 +220,10 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnIniciarSesion;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox cerrar;
+        private System.Windows.Forms.Panel ReyitaContra;
+        private System.Windows.Forms.Panel RayitaUsuario;
+        private System.Windows.Forms.PictureBox Logo;
     }
 }
 
