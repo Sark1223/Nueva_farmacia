@@ -54,11 +54,11 @@
             this.cmdciudad = new System.Windows.Forms.Panel();
             this.pbCiudad = new System.Windows.Forms.PictureBox();
             this.Encabezado = new System.Windows.Forms.Panel();
+            this.cerrar = new System.Windows.Forms.PictureBox();
             this.logo = new System.Windows.Forms.PictureBox();
             this.lblNomFarm = new System.Windows.Forms.Label();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.logoPantalla = new System.Windows.Forms.PictureBox();
-            this.cerrar = new System.Windows.Forms.PictureBox();
             this.MenosMas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenosMas)).BeginInit();
             this.Menu.SuspendLayout();
@@ -76,10 +76,10 @@
             this.cmdciudad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).BeginInit();
             this.Encabezado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.PanelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPantalla)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // MenosMas
@@ -414,6 +414,17 @@
             this.Encabezado.TabIndex = 26;
             this.Encabezado.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Encabezado_MouseDown);
             // 
+            // cerrar
+            // 
+            this.cerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.cerrar;
+            this.cerrar.Location = new System.Drawing.Point(931, 1);
+            this.cerrar.Name = "cerrar";
+            this.cerrar.Size = new System.Drawing.Size(42, 40);
+            this.cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cerrar.TabIndex = 4;
+            this.cerrar.TabStop = false;
+            this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
+            // 
             // logo
             // 
             this.logo.Image = global::Proyecto_FARMACIA.Properties.Resources.logo2;
@@ -457,17 +468,6 @@
             this.logoPantalla.TabIndex = 5;
             this.logoPantalla.TabStop = false;
             // 
-            // cerrar
-            // 
-            this.cerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.cerrar;
-            this.cerrar.Location = new System.Drawing.Point(931, 1);
-            this.cerrar.Name = "cerrar";
-            this.cerrar.Size = new System.Drawing.Size(42, 40);
-            this.cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cerrar.TabIndex = 4;
-            this.cerrar.TabStop = false;
-            this.cerrar.Click += new System.EventHandler(this.cerrar_Click);
-            // 
             // frmMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,10 +507,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbCiudad)).EndInit();
             this.Encabezado.ResumeLayout(false);
             this.Encabezado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.PanelContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPantalla)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).EndInit();
             this.ResumeLayout(false);
 
         }

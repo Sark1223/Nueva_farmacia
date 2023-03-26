@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using Proyecto_FARMACIA.DAL;
 namespace Proyecto_FARMACIA.PL
 {
     public partial class frmCiudad : Form
@@ -31,8 +31,10 @@ namespace Proyecto_FARMACIA.PL
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             //SqlConnection conexion = new SqlConnection(@"Server=localhost\SQLEXPRESS; Initial Catalog = biblioteca; Trusted_Connection=True;");
-            frmAciudad agregar = new frmAciudad();
-            agregar.ShowDialog();
+            //frmAciudad agregar = new frmAciudad();
+            //agregar.ShowDialog();
+            Conexion conectar = new Conexion();
+            MessageBox.Show("conexion = " + conectar.Conectar());
         }
     }
 }

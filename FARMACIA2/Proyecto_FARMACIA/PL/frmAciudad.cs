@@ -21,5 +21,23 @@ namespace Proyecto_FARMACIA.PL
         {
             Close();
         }
+
+        private void button1_MouseDown(object sender, MouseEventArgs e)
+        {
+            cmdAgregar.ForeColor = Color.Maroon;
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            cmdAgregar.ForeColor = Color.White;
+            cmdAgregar.BackColor = Color.LightCoral;
+            
+        }
+
+        private void cmdAgregar_MouseLeave(object sender, EventArgs e)
+        {
+            cmdAgregar.ForeColor = Color.Maroon;
+            cmdAgregar.BackColor = Color.FromArgb(255, 192, 192);
+        }
     }
 }
