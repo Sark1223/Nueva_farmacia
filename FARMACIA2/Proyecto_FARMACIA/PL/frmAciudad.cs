@@ -72,7 +72,5 @@ namespace Proyecto_FARMACIA.PL
             MessageBox.Show("conexion = " + conexion.AgregarCiudad(ObjciudadBLL));
 
         }
-
-        
     }
 }

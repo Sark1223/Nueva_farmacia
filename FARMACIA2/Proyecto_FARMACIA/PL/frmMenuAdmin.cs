@@ -143,19 +143,24 @@ namespace Proyecto_FARMACIA.PL
             {
                 Menu.Width = 185;
 
+                pbMenosMas.Image = Properties.Resources.menos;
                 name_usuario.Font = new Font("Sylfaen", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 name_usuario.Location = new Point(42, 37);
                 avatar.Location = new Point(63, 4);
                 MenosMas.Location = new Point(63, 465);
+                lblMenosMAs.Text = "Menos";
+                lblMenosMAs.Location = new Point(4, 37);
             }
             else
             {
                 Menu.Width = 70;
-
+                pbMenosMas.Image = Properties.Resources.mas;
                 name_usuario.Font = new Font("Sylfaen", 9F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
                 name_usuario.Location = new Point(-2, 37);
                 avatar.Location = new Point(15, 3);
                 MenosMas.Location = new Point(15, 465);
+                lblMenosMAs.Location = new Point(9,37);
+                lblMenosMAs.Text = "Mas";
             }
         }
     }

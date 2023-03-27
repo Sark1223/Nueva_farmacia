@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MenosMas = new System.Windows.Forms.Panel();
             this.lblMenosMAs = new System.Windows.Forms.Label();
             this.pbMenosMas = new System.Windows.Forms.PictureBox();
@@ -59,6 +60,7 @@
             this.lblNomFarm = new System.Windows.Forms.Label();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.logoPantalla = new System.Windows.Forms.PictureBox();
+            this.HoverControl = new System.Windows.Forms.ToolTip(this.components);
             this.MenosMas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMenosMas)).BeginInit();
             this.Menu.SuspendLayout();
@@ -109,7 +111,7 @@
             // pbMenosMas
             // 
             this.pbMenosMas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMenosMas.Image = global::Proyecto_FARMACIA.Properties.Resources.respuesta;
+            this.pbMenosMas.Image = global::Proyecto_FARMACIA.Properties.Resources.menos;
             this.pbMenosMas.Location = new System.Drawing.Point(5, 3);
             this.pbMenosMas.Name = "pbMenosMas";
             this.pbMenosMas.Size = new System.Drawing.Size(35, 33);
@@ -129,6 +131,7 @@
             this.lblOpEmple.Size = new System.Drawing.Size(74, 15);
             this.lblOpEmple.TabIndex = 1;
             this.lblOpEmple.Text = "EMPLEADOS";
+            this.HoverControl.SetToolTip(this.lblOpEmple, "Agrega, Modifica, Elimina o Consulta PROPIEDADES");
             this.lblOpEmple.MouseLeave += new System.EventHandler(this.cmdEmpleado_MouseLeave);
             this.lblOpEmple.MouseHover += new System.EventHandler(this.cmdEmpleado_MouseHover);
             // 
@@ -155,6 +158,7 @@
             this.lblCiudad.Size = new System.Drawing.Size(63, 16);
             this.lblCiudad.TabIndex = 1;
             this.lblCiudad.Text = "CIUDADES";
+            this.HoverControl.SetToolTip(this.lblCiudad, "Agrega, Modifica, Elimina o Consulta CIUDADES");
             this.lblCiudad.Click += new System.EventHandler(this.pbCiudad_Click);
             this.lblCiudad.MouseLeave += new System.EventHandler(this.cmdciudad_MouseLeave_1);
             this.lblCiudad.MouseHover += new System.EventHandler(this.cmdciudad_MouseHover);
@@ -170,6 +174,7 @@
             this.lblProp.Size = new System.Drawing.Size(88, 15);
             this.lblProp.TabIndex = 1;
             this.lblProp.Text = "PROPIETARIOS";
+            this.HoverControl.SetToolTip(this.lblProp, "Agrega, Modifica, Elimina o Consulta EMPLEADOS");
             this.lblProp.MouseLeave += new System.EventHandler(this.cmdProp_MouseLeave);
             this.lblProp.MouseHover += new System.EventHandler(this.cmdProp_MouseHover);
             // 
@@ -218,6 +223,7 @@
             this.cmdMedi.Name = "cmdMedi";
             this.cmdMedi.Size = new System.Drawing.Size(164, 62);
             this.cmdMedi.TabIndex = 34;
+            this.HoverControl.SetToolTip(this.cmdMedi, "Agrega, Modifica, Elimina o Consulta MEDICAMENTOS");
             this.cmdMedi.MouseLeave += new System.EventHandler(this.cmdMedi_MouseLeave);
             this.cmdMedi.MouseHover += new System.EventHandler(this.cmdMedi_MouseHover);
             // 
@@ -231,6 +237,7 @@
             this.pbMedi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbMedi.TabIndex = 19;
             this.pbMedi.TabStop = false;
+            this.HoverControl.SetToolTip(this.pbMedi, "Agrega, Modifica, Elimina o Consulta MEDICAMENTOS");
             this.pbMedi.MouseLeave += new System.EventHandler(this.cmdMedi_MouseLeave);
             this.pbMedi.MouseHover += new System.EventHandler(this.cmdMedi_MouseHover);
             // 
@@ -245,6 +252,7 @@
             this.lblMed.Size = new System.Drawing.Size(98, 15);
             this.lblMed.TabIndex = 28;
             this.lblMed.Text = "MEDICAMENTOS";
+            this.HoverControl.SetToolTip(this.lblMed, "Agrega, Modifica, Elimina o Consulta MEDICAMENTOS");
             this.lblMed.MouseLeave += new System.EventHandler(this.cmdMedi_MouseLeave);
             this.lblMed.MouseHover += new System.EventHandler(this.cmdMedi_MouseHover);
             // 
@@ -256,6 +264,7 @@
             this.cmdVentas.Name = "cmdVentas";
             this.cmdVentas.Size = new System.Drawing.Size(164, 62);
             this.cmdVentas.TabIndex = 33;
+            this.HoverControl.SetToolTip(this.cmdVentas, "Agrega, Modifica, Elimina o Consulta VENTAS");
             this.cmdVentas.MouseLeave += new System.EventHandler(this.cmdVentas_MouseLeave);
             this.cmdVentas.MouseHover += new System.EventHandler(this.cmdVentas_MouseHover);
             // 
@@ -269,6 +278,7 @@
             this.pbVentas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbVentas.TabIndex = 18;
             this.pbVentas.TabStop = false;
+            this.HoverControl.SetToolTip(this.pbVentas, "Agrega, Modifica, Elimina o Consulta VENTAS");
             this.pbVentas.MouseLeave += new System.EventHandler(this.cmdVentas_MouseLeave);
             this.pbVentas.MouseHover += new System.EventHandler(this.cmdVentas_MouseHover);
             // 
@@ -283,6 +293,7 @@
             this.lblVentas.Size = new System.Drawing.Size(51, 15);
             this.lblVentas.TabIndex = 27;
             this.lblVentas.Text = "VENTAS";
+            this.HoverControl.SetToolTip(this.lblVentas, "Agrega, Modifica, Elimina o Consulta VENTAS");
             this.lblVentas.MouseLeave += new System.EventHandler(this.cmdVentas_MouseLeave);
             this.lblVentas.MouseHover += new System.EventHandler(this.cmdVentas_MouseHover);
             // 
@@ -294,6 +305,7 @@
             this.cmdProp.Name = "cmdProp";
             this.cmdProp.Size = new System.Drawing.Size(164, 62);
             this.cmdProp.TabIndex = 32;
+            this.HoverControl.SetToolTip(this.cmdProp, "Agrega, Modifica, Elimina o Consulta EMPLEADOS");
             this.cmdProp.MouseLeave += new System.EventHandler(this.cmdProp_MouseLeave);
             this.cmdProp.MouseHover += new System.EventHandler(this.cmdProp_MouseHover);
             // 
@@ -301,12 +313,13 @@
             // 
             this.pbPropi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbPropi.Image = global::Proyecto_FARMACIA.Properties.Resources.dueno;
-            this.pbPropi.Location = new System.Drawing.Point(5, 5);
+            this.pbPropi.Location = new System.Drawing.Point(1, -1);
             this.pbPropi.Name = "pbPropi";
-            this.pbPropi.Size = new System.Drawing.Size(60, 57);
+            this.pbPropi.Size = new System.Drawing.Size(65, 61);
             this.pbPropi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPropi.TabIndex = 0;
             this.pbPropi.TabStop = false;
+            this.HoverControl.SetToolTip(this.pbPropi, "Agrega, Modifica, Elimina o Consulta EMPLEADOS");
             this.pbPropi.Click += new System.EventHandler(this.pbPropi_Click);
             this.pbPropi.MouseLeave += new System.EventHandler(this.cmdProp_MouseLeave);
             this.pbPropi.MouseHover += new System.EventHandler(this.cmdProp_MouseHover);
@@ -319,6 +332,7 @@
             this.cmdSucursales.Name = "cmdSucursales";
             this.cmdSucursales.Size = new System.Drawing.Size(164, 62);
             this.cmdSucursales.TabIndex = 33;
+            this.HoverControl.SetToolTip(this.cmdSucursales, "Agrega, Modifica, Elimina o Consulta SUCURSALES");
             this.cmdSucursales.MouseLeave += new System.EventHandler(this.cmdSucursales_MouseLeave);
             this.cmdSucursales.MouseHover += new System.EventHandler(this.cmdSucursales_MouseHover);
             // 
@@ -332,6 +346,7 @@
             this.pbSucursales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSucursales.TabIndex = 20;
             this.pbSucursales.TabStop = false;
+            this.HoverControl.SetToolTip(this.pbSucursales, "Agrega, Modifica, Elimina o Consulta SUCURSALES");
             this.pbSucursales.MouseLeave += new System.EventHandler(this.cmdSucursales_MouseLeave);
             this.pbSucursales.MouseHover += new System.EventHandler(this.cmdSucursales_MouseHover);
             // 
@@ -346,6 +361,7 @@
             this.lblSuc.Size = new System.Drawing.Size(78, 15);
             this.lblSuc.TabIndex = 29;
             this.lblSuc.Text = "SUCURSALES";
+            this.HoverControl.SetToolTip(this.lblSuc, "Agrega, Modifica, Elimina o Consulta SUCURSALES");
             this.lblSuc.MouseLeave += new System.EventHandler(this.cmdSucursales_MouseLeave);
             this.lblSuc.MouseHover += new System.EventHandler(this.cmdSucursales_MouseHover);
             // 
@@ -357,6 +373,7 @@
             this.cmdEmpleado.Name = "cmdEmpleado";
             this.cmdEmpleado.Size = new System.Drawing.Size(164, 62);
             this.cmdEmpleado.TabIndex = 31;
+            this.HoverControl.SetToolTip(this.cmdEmpleado, "Agrega, Modifica, Elimina o Consulta PROPIEDADES");
             this.cmdEmpleado.MouseLeave += new System.EventHandler(this.cmdEmpleado_MouseLeave);
             this.cmdEmpleado.MouseHover += new System.EventHandler(this.cmdEmpleado_MouseHover);
             // 
@@ -370,6 +387,7 @@
             this.pbEmple.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbEmple.TabIndex = 0;
             this.pbEmple.TabStop = false;
+            this.HoverControl.SetToolTip(this.pbEmple, "Agrega, Modifica, Elimina o Consulta PROPIEDADES");
             this.pbEmple.MouseLeave += new System.EventHandler(this.cmdEmpleado_MouseLeave);
             this.pbEmple.MouseHover += new System.EventHandler(this.cmdEmpleado_MouseHover);
             // 
@@ -383,6 +401,7 @@
             this.cmdciudad.Name = "cmdciudad";
             this.cmdciudad.Size = new System.Drawing.Size(164, 63);
             this.cmdciudad.TabIndex = 30;
+            this.HoverControl.SetToolTip(this.cmdciudad, "Agrega, Modifica, Elimina o Consulta CIUDADES");
             this.cmdciudad.Click += new System.EventHandler(this.pbCiudad_Click);
             this.cmdciudad.MouseLeave += new System.EventHandler(this.cmdciudad_MouseLeave_1);
             this.cmdciudad.MouseHover += new System.EventHandler(this.cmdciudad_MouseHover);
@@ -397,6 +416,7 @@
             this.pbCiudad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCiudad.TabIndex = 0;
             this.pbCiudad.TabStop = false;
+            this.HoverControl.SetToolTip(this.pbCiudad, "Agrega, Modifica, Elimina o Consulta CIUDADES");
             this.pbCiudad.Click += new System.EventHandler(this.pbCiudad_Click);
             this.pbCiudad.MouseLeave += new System.EventHandler(this.cmdciudad_MouseLeave_1);
             this.pbCiudad.MouseHover += new System.EventHandler(this.cmdciudad_MouseHover);
@@ -547,5 +567,6 @@
         private System.Windows.Forms.Label lblNomFarm;
         private System.Windows.Forms.PictureBox logoPantalla;
         private System.Windows.Forms.PictureBox cerrar;
+        private System.Windows.Forms.ToolTip HoverControl;
     }
 }

@@ -61,12 +61,12 @@
             // 
             // Aparecer
             // 
-            this.Aparecer.Interval = 30;
+            this.Aparecer.Interval = 15;
             this.Aparecer.Tick += new System.EventHandler(this.Aparecer_Tick);
             // 
             // Desvanecer
             // 
-            this.Desvanecer.Interval = 30;
+            this.Desvanecer.Interval = 15;
             this.Desvanecer.Tick += new System.EventHandler(this.Desvanecer_Tick);
             // 
             // frmAdmin

@@ -78,6 +78,12 @@
     <Compile Include="PL\frmAciudad.Designer.cs">
       <DependentUpon>frmAciudad.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmAEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAEmpleados.Designer.cs">
+      <DependentUpon>frmAEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frmCiudad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmAciudad.resx">
       <DependentUpon>frmAciudad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAEmpleados.resx">
+      <DependentUpon>frmAEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmCiudad.resx">
       <DependentUpon>frmCiudad.cs</DependentUpon>
