@@ -28,115 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lbldescCiudad = new System.Windows.Forms.Label();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCiudad = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.cmdCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblCiudad = new System.Windows.Forms.Label();
+            this.lblTamaño = new System.Windows.Forms.Label();
+            this.lblHabitantes = new System.Windows.Forms.Label();
+            this.lblPais = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtPoblacion = new System.Windows.Forms.TextBox();
+            this.linea = new System.Windows.Forms.Panel();
+            this.txtTamaño = new System.Windows.Forms.TextBox();
             this.cmdAgregar = new System.Windows.Forms.Button();
             this.Title.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txtEstado
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBox2.Location = new System.Drawing.Point(12, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 19);
-            this.textBox2.TabIndex = 26;
-            this.textBox2.Text = "Baja California";
+            this.txtEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
+            this.txtEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtEstado.Location = new System.Drawing.Point(12, 103);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(136, 19);
+            this.txtEstado.TabIndex = 26;
             // 
-            // label1
+            // lblEstado
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(5, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Estado";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.Color.White;
+            this.lblEstado.Location = new System.Drawing.Point(5, 84);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(44, 16);
+            this.lblEstado.TabIndex = 25;
+            this.lblEstado.Text = "Estado";
+            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Location = new System.Drawing.Point(127, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 19);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Tijuana";
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtNombre.Location = new System.Drawing.Point(127, 57);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(175, 19);
+            this.txtNombre.TabIndex = 24;
             // 
-            // txtUsuario
+            // txtId
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtUsuario.Location = new System.Drawing.Point(12, 57);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(92, 19);
-            this.txtUsuario.TabIndex = 23;
-            this.txtUsuario.Text = "1234567890";
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtId.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtId.Location = new System.Drawing.Point(12, 57);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(92, 19);
+            this.txtId.TabIndex = 23;
             // 
-            // label7
+            // lblNombre
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(121, 38);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 16);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Nombre de la Ciudad";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(121, 38);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(126, 16);
+            this.lblNombre.TabIndex = 22;
+            this.lblNombre.Text = "Nombre de la Ciudad";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbldescCiudad
+            // lblCiudad
             // 
-            this.lbldescCiudad.AutoSize = true;
-            this.lbldescCiudad.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldescCiudad.ForeColor = System.Drawing.Color.White;
-            this.lbldescCiudad.Location = new System.Drawing.Point(5, 38);
-            this.lbldescCiudad.Name = "lbldescCiudad";
-            this.lbldescCiudad.Size = new System.Drawing.Size(66, 16);
-            this.lbldescCiudad.TabIndex = 21;
-            this.lbldescCiudad.Text = "Id_Ciudad";
-            this.lbldescCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCiudad.AutoSize = true;
+            this.lblCiudad.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCiudad.ForeColor = System.Drawing.Color.White;
+            this.lblCiudad.Location = new System.Drawing.Point(5, 38);
+            this.lblCiudad.Name = "lblCiudad";
+            this.lblCiudad.Size = new System.Drawing.Size(66, 16);
+            this.lblCiudad.TabIndex = 21;
+            this.lblCiudad.Text = "Id_Ciudad";
+            this.lblCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Title
             // 
             this.Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(201)))), ((int)(((byte)(48)))));
-            this.Title.Controls.Add(this.lblCiudad);
-            this.Title.Controls.Add(this.pictureBox1);
+            this.Title.Controls.Add(this.lblTitle);
+            this.Title.Controls.Add(this.cmdCerrar);
             this.Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.Title.Location = new System.Drawing.Point(0, 0);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(314, 25);
             this.Title.TabIndex = 28;
+            this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Title_MouseDown);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTitle.Location = new System.Drawing.Point(70, 4);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(179, 21);
+            this.lblTitle.TabIndex = 34;
+            this.lblTitle.Text = "AÑADIR CIUDAD";
+            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Title_MouseDown);
+            // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdCerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.iconCerrarblanco;
+            this.cmdCerrar.Location = new System.Drawing.Point(288, 3);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(23, 20);
+            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdCerrar.TabIndex = 0;
+            this.cmdCerrar.TabStop = false;
+            this.cmdCerrar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -162,54 +187,41 @@
             this.panel4.Size = new System.Drawing.Size(140, 2);
             this.panel4.TabIndex = 30;
             // 
-            // label6
+            // lblTamaño
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(126, 130);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 16);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Tamaño de superficie";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTamaño.AutoSize = true;
+            this.lblTamaño.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTamaño.ForeColor = System.Drawing.Color.White;
+            this.lblTamaño.Location = new System.Drawing.Point(126, 130);
+            this.lblTamaño.Name = "lblTamaño";
+            this.lblTamaño.Size = new System.Drawing.Size(123, 16);
+            this.lblTamaño.TabIndex = 33;
+            this.lblTamaño.Text = "Tamaño de superficie";
+            this.lblTamaño.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lblHabitantes
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(5, 130);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 16);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "No. de habitantes";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHabitantes.AutoSize = true;
+            this.lblHabitantes.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHabitantes.ForeColor = System.Drawing.Color.White;
+            this.lblHabitantes.Location = new System.Drawing.Point(5, 130);
+            this.lblHabitantes.Name = "lblHabitantes";
+            this.lblHabitantes.Size = new System.Drawing.Size(105, 16);
+            this.lblHabitantes.TabIndex = 32;
+            this.lblHabitantes.Text = "No. de habitantes";
+            this.lblHabitantes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lblPais
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(160, 84);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 16);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Pais";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCiudad
-            // 
-            this.lblCiudad.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCiudad.AutoSize = true;
-            this.lblCiudad.BackColor = System.Drawing.Color.Transparent;
-            this.lblCiudad.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCiudad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCiudad.Location = new System.Drawing.Point(70, 4);
-            this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(179, 21);
-            this.lblCiudad.TabIndex = 34;
-            this.lblCiudad.Text = "AÑADIR CIUDAD";
+            this.lblPais.AutoSize = true;
+            this.lblPais.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPais.ForeColor = System.Drawing.Color.White;
+            this.lblPais.Location = new System.Drawing.Point(160, 84);
+            this.lblPais.Name = "lblPais";
+            this.lblPais.Size = new System.Drawing.Size(28, 16);
+            this.lblPais.TabIndex = 31;
+            this.lblPais.Text = "Pais";
+            this.lblPais.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -219,19 +231,6 @@
             this.panel5.Size = new System.Drawing.Size(340, 5);
             this.panel5.TabIndex = 34;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Proyecto_FARMACIA.Properties.Resources.iconCerrarblanco;
-            this.pictureBox1.Location = new System.Drawing.Point(288, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -240,17 +239,16 @@
             this.panel1.Size = new System.Drawing.Size(140, 2);
             this.panel1.TabIndex = 36;
             // 
-            // textBox3
+            // txtPais
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBox3.Location = new System.Drawing.Point(169, 103);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 19);
-            this.textBox3.TabIndex = 35;
-            this.textBox3.Text = "México";
+            this.txtPais.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
+            this.txtPais.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPais.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtPais.Location = new System.Drawing.Point(169, 103);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(130, 19);
+            this.txtPais.TabIndex = 35;
             // 
             // panel6
             // 
@@ -260,37 +258,35 @@
             this.panel6.Size = new System.Drawing.Size(102, 2);
             this.panel6.TabIndex = 38;
             // 
-            // textBox4
+            // txtPoblacion
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBox4.Location = new System.Drawing.Point(12, 147);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(98, 19);
-            this.textBox4.TabIndex = 37;
-            this.textBox4.Text = "10000000";
+            this.txtPoblacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
+            this.txtPoblacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPoblacion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPoblacion.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtPoblacion.Location = new System.Drawing.Point(12, 147);
+            this.txtPoblacion.Name = "txtPoblacion";
+            this.txtPoblacion.Size = new System.Drawing.Size(98, 19);
+            this.txtPoblacion.TabIndex = 37;
             // 
-            // panel7
+            // linea
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(129, 167);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(102, 2);
-            this.panel7.TabIndex = 40;
+            this.linea.BackColor = System.Drawing.Color.White;
+            this.linea.Location = new System.Drawing.Point(129, 167);
+            this.linea.Name = "linea";
+            this.linea.Size = new System.Drawing.Size(102, 2);
+            this.linea.TabIndex = 40;
             // 
-            // textBox5
+            // txtTamaño
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBox5.Location = new System.Drawing.Point(133, 147);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(98, 19);
-            this.textBox5.TabIndex = 39;
-            this.textBox5.Text = "10000000";
+            this.txtTamaño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
+            this.txtTamaño.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTamaño.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTamaño.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtTamaño.Location = new System.Drawing.Point(133, 147);
+            this.txtTamaño.Name = "txtTamaño";
+            this.txtTamaño.Size = new System.Drawing.Size(98, 19);
+            this.txtTamaño.TabIndex = 39;
             // 
             // cmdAgregar
             // 
@@ -308,6 +304,7 @@
             this.cmdAgregar.TabIndex = 41;
             this.cmdAgregar.Text = "Añadir";
             this.cmdAgregar.UseVisualStyleBackColor = false;
+            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             this.cmdAgregar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
             this.cmdAgregar.MouseLeave += new System.EventHandler(this.cmdAgregar_MouseLeave);
             this.cmdAgregar.MouseHover += new System.EventHandler(this.button1_MouseHover);
@@ -319,26 +316,26 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(113)))), ((int)(((byte)(129)))));
             this.ClientSize = new System.Drawing.Size(314, 230);
             this.Controls.Add(this.cmdAgregar);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.linea);
+            this.Controls.Add(this.txtTamaño);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtPoblacion);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtPais);
+            this.Controls.Add(this.lblTamaño);
+            this.Controls.Add(this.lblHabitantes);
+            this.Controls.Add(this.lblPais);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Title);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.lbldescCiudad);
+            this.Controls.Add(this.lblEstado);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblCiudad);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAciudad";
@@ -346,7 +343,7 @@
             this.Text = "frmAciudad";
             this.Title.ResumeLayout(false);
             this.Title.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,28 +351,28 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtUsuario;
-        public System.Windows.Forms.Label label7;
-        public System.Windows.Forms.Label lbldescCiudad;
-        private System.Windows.Forms.Panel Title;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Label label4;
+        public  System.Windows.Forms.PictureBox cmdCerrar;
+        public  System.Windows.Forms.TextBox txtEstado;
+        public System.Windows.Forms.Label lblEstado;
+        public  System.Windows.Forms.TextBox txtNombre;
+        public  System.Windows.Forms.TextBox txtId;
+        public System.Windows.Forms.Label lblNombre;
         public System.Windows.Forms.Label lblCiudad;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button cmdAgregar;
+        public  System.Windows.Forms.Panel Title;
+        public  System.Windows.Forms.Panel panel2;
+        public  System.Windows.Forms.Panel panel3;
+        public  System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Label lblTamaño;
+        public System.Windows.Forms.Label lblHabitantes;
+        public System.Windows.Forms.Label lblPais;
+        public System.Windows.Forms.Label lblTitle;
+        public  System.Windows.Forms.Panel panel5;
+        public  System.Windows.Forms.Panel panel1;
+        public  System.Windows.Forms.TextBox txtPais;
+        public  System.Windows.Forms.Panel panel6;
+        public  System.Windows.Forms.TextBox txtPoblacion;
+        public  System.Windows.Forms.Panel linea;
+        public  System.Windows.Forms.TextBox txtTamaño;
+        public  System.Windows.Forms.Button cmdAgregar;
     }
 }

@@ -16,7 +16,10 @@ namespace Proyecto_FARMACIA.PL
         public frmCiudad()
         {
             InitializeComponent();
+            
         }
+
+        //SqlConnection conexion = new SqlConnection(@"server = ANVORGUEZA\\SQLEXPRESS; Initial Catalog=DB_FARMACIA_TOPICOS; Integrated Security = true");
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
@@ -30,11 +33,14 @@ namespace Proyecto_FARMACIA.PL
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //SqlConnection conexion = new SqlConnection(@"Server=localhost\SQLEXPRESS; Initial Catalog = biblioteca; Trusted_Connection=True;");
-            //frmAciudad agregar = new frmAciudad();
-            //agregar.ShowDialog();
+            frmAciudad aciudad = new frmAciudad();
+            aciudad.ShowDialog();
+        }
+
+        private void frmCiudad_Load(object sender, EventArgs e)
+        {
             Conexion conectar = new Conexion();
-            MessageBox.Show("conexion = " + conectar.Conectar());
+            dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
         }
     }
 }
