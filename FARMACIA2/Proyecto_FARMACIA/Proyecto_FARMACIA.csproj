@@ -78,11 +78,11 @@
     <Compile Include="PL\frmAciudad.Designer.cs">
       <DependentUpon>frmAciudad.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\frmAEmpleados.cs">
+    <Compile Include="PL\frmAPropietario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\frmAEmpleados.Designer.cs">
-      <DependentUpon>frmAEmpleados.cs</DependentUpon>
+    <Compile Include="PL\frmAPropietario.Designer.cs">
+      <DependentUpon>frmAPropietario.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\frmCiudad.cs">
       <SubType>Form</SubType>
@@ -108,12 +108,6 @@
     <Compile Include="PL\frmMenuEmpleados.Designer.cs">
       <DependentUpon>frmMenuEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\frmPropietario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\frmPropietario.Designer.cs">
-      <DependentUpon>frmPropietario.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\frmPropietarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,8 +125,8 @@
     <EmbeddedResource Include="PL\frmAciudad.resx">
       <DependentUpon>frmAciudad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\frmAEmpleados.resx">
-      <DependentUpon>frmAEmpleados.cs</DependentUpon>
+    <EmbeddedResource Include="PL\frmAPropietario.resx">
+      <DependentUpon>frmAPropietario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmCiudad.resx">
       <DependentUpon>frmCiudad.cs</DependentUpon>

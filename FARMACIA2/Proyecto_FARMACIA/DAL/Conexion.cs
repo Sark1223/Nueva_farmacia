@@ -82,5 +82,11 @@ namespace Proyecto_FARMACIA.DAL
             SqlCommand sentencia = new SqlCommand("SELECT * FROM CIUDAD");
             return EjecutarSentencia(sentencia);
         }
+
+        public DataSet MostrarPropietarios()
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * FROM PROPIETARIO");
+            return EjecutarSentencia(sentencia);
+        }
     }
 }

@@ -51,8 +51,7 @@ namespace Proyecto_FARMACIA.PL
 
         private void pbPropi_Click(object sender, EventArgs e)
         {
-            frmPropietarios propietarios = new frmPropietarios();
-            propietarios.Show();
+            AbrirForm(new frmPropietarios());
         }
 
         private void cmdciudad_MouseHover(object sender, EventArgs e)

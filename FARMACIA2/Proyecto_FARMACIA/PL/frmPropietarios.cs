@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_FARMACIA.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,18 @@ namespace Proyecto_FARMACIA.PL
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void frmPropietarios_Load(object sender, EventArgs e)
+        {
+            Conexion conectar = new Conexion();
+            dgvPropietarios.DataSource = conectar.MostrarPropietarios().Tables[0];
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAPropietario aPropietario = new frmAPropietario();
+            aPropietario.ShowDialog();
         }
     }
 }
