@@ -72,7 +72,7 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cmdAgregar = new System.Windows.Forms.Button();
@@ -559,18 +559,18 @@
             this.panel16.Size = new System.Drawing.Size(306, 1);
             this.panel16.TabIndex = 94;
             // 
-            // textBox2
+            // txtCorreo
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.textBox2.Location = new System.Drawing.Point(26, 162);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(296, 19);
-            this.textBox2.TabIndex = 93;
-            this.textBox2.Text = "SANTOSKARLA122308@GMAIL.COM";
+            this.txtCorreo.BackColor = System.Drawing.Color.White;
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCorreo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCorreo.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
+            this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
+            this.txtCorreo.Location = new System.Drawing.Point(26, 162);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(296, 19);
+            this.txtCorreo.TabIndex = 93;
+            this.txtCorreo.Text = "SANTOSKARLA122308@GMAIL.COM";
             // 
             // label5
             // 
@@ -617,6 +617,7 @@
             this.cmdAgregar.TabIndex = 95;
             this.cmdAgregar.Text = "Añadir";
             this.cmdAgregar.UseVisualStyleBackColor = false;
+            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
             // frmAPropietario
             // 
@@ -627,7 +628,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmdAgregar);
             this.Controls.Add(this.panel16);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel15);
@@ -727,7 +728,7 @@
         public System.Windows.Forms.Panel panel15;
         public System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Panel panel16;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox txtCorreo;
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button cmdAgregar;

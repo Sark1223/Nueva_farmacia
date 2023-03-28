@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto_FARMACIA.BLL;
+using Proyecto_FARMACIA.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +39,40 @@ namespace Proyecto_FARMACIA.PL
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        /*CREATE TABLE PROPIETARIO (
+        private void cmdAgregar_Click(object sender, EventArgs e)
+        {
+            PropietarioBLL OpropiBLL = new PropietarioBLL();
+            OpropiBLL.ID = int.Parse(txtIdPro.Text);
+            OpropiBLL.A_paterno = txtPaterno.Text;
+            OpropiBLL.A_materno = txtMaterno.Text;
+            OpropiBLL.Nombre_s = txtNombres.Text;
+            OpropiBLL.Calle = txtCalle.Text;
+            OpropiBLL.No_exterior = int.Parse(txtIdPro.Text);
+            OpropiBLL.No_interior = txtInterios.Text;
+            OpropiBLL.Colonia = txtcolonia.Text;
+            OpropiBLL.CP = int.Parse(txtIdPro.Text);
+            OpropiBLL.telefono = int.Parse(txtIdPro.Text);
+            OpropiBLL.correo_e = txtCorreo.Text;
+            OpropiBLL.id_ciudad = comboBox1.Text;
+
+            Conexion conexion = new Conexion();
+            MessageBox.Show("conexion = " + conexion.AgregarCiudad(ObjciudadBLL));
+        }
+
+        /*int ID;
+         *string  
+         *string  
+         *string 
+         *string Calle; 
+         *int No_exterior; 
+         *string No_interio 
+         *string Colonia; 
+         *int CP; 
+         *long telefono; 
+         *string correo_e; 
+         *int id_ciudad; 
+         * 
+         * CREATE TABLE PROPIETARIO (
     id_propietario   VARCHAR(10) NOT NULL PRIMARY KEY,
     a_paterno        VARCHAR(50) NOT NULL,
     a_materno        VARCHAR(50) NOT NULL,
