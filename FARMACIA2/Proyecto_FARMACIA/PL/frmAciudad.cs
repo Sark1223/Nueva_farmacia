@@ -71,6 +71,8 @@ namespace Proyecto_FARMACIA.PL
             Conexion conexion = new Conexion();
             MessageBox.Show("conexion = " + conexion.AgregarCiudad(ObjciudadBLL));
 
+            frmCiudad ciudad = new frmCiudad();
+            ciudad.dgvCiudades.DataSource = conexion.MostrarCiudades().Tables[0];
         }
     }
 }

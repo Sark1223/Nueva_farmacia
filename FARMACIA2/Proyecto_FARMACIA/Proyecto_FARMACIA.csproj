@@ -108,6 +108,12 @@
     <Compile Include="PL\frmMenuEmpleados.Designer.cs">
       <DependentUpon>frmMenuEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmPropietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmPropietario.Designer.cs">
+      <DependentUpon>frmPropietario.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frmPropietarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,7 +174,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario1.png" />
   </ItemGroup>
@@ -234,6 +242,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconCerrarblanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giratorio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Web.WebView2.1.0.1264.42\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.1264.42\build\Microsoft.Web.WebView2.targets')" />

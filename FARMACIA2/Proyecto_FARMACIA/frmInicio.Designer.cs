@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.Encabezado = new System.Windows.Forms.Panel();
-            this.cerrar = new System.Windows.Forms.PictureBox();
             this.lblNomFarm = new System.Windows.Forms.Label();
             this.cuerpo = new System.Windows.Forms.Panel();
-            this.ReyitaContra = new System.Windows.Forms.Panel();
-            this.RayitaUsuario = new System.Windows.Forms.Panel();
-            this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.ReyitaContra = new System.Windows.Forms.Panel();
+            this.RayitaUsuario = new System.Windows.Forms.Panel();
             this.icon_sesion = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.cerrar = new System.Windows.Forms.PictureBox();
             this.Encabezado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).BeginInit();
             this.cuerpo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // Encabezado
             // 
-            this.Encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(164)))));
+            this.Encabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(142)))), ((int)(((byte)(145)))));
             this.Encabezado.Controls.Add(this.Logo);
             this.Encabezado.Controls.Add(this.cerrar);
             this.Encabezado.Controls.Add(this.lblNomFarm);
@@ -57,17 +57,6 @@
             this.Encabezado.Name = "Encabezado";
             this.Encabezado.Size = new System.Drawing.Size(399, 42);
             this.Encabezado.TabIndex = 3;
-            // 
-            // cerrar
-            // 
-            this.cerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.cerrar;
-            this.cerrar.Location = new System.Drawing.Point(357, 0);
-            this.cerrar.Name = "cerrar";
-            this.cerrar.Size = new System.Drawing.Size(42, 40);
-            this.cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cerrar.TabIndex = 3;
-            this.cerrar.TabStop = false;
-            this.cerrar.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // lblNomFarm
             // 
@@ -97,43 +86,6 @@
             this.cuerpo.Size = new System.Drawing.Size(398, 444);
             this.cuerpo.TabIndex = 4;
             // 
-            // ReyitaContra
-            // 
-            this.ReyitaContra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ReyitaContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(70)))), ((int)(((byte)(86)))));
-            this.ReyitaContra.Location = new System.Drawing.Point(78, 241);
-            this.ReyitaContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ReyitaContra.Name = "ReyitaContra";
-            this.ReyitaContra.Size = new System.Drawing.Size(261, 1);
-            this.ReyitaContra.TabIndex = 6;
-            // 
-            // RayitaUsuario
-            // 
-            this.RayitaUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RayitaUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(70)))), ((int)(((byte)(86)))));
-            this.RayitaUsuario.Location = new System.Drawing.Point(78, 190);
-            this.RayitaUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.RayitaUsuario.Name = "RayitaUsuario";
-            this.RayitaUsuario.Size = new System.Drawing.Size(261, 1);
-            this.RayitaUsuario.TabIndex = 5;
-            // 
-            // btnIniciarSesion
-            // 
-            this.btnIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(164)))));
-            this.btnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(164)))));
-            this.btnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(153)))), ((int)(((byte)(191)))));
-            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarSesion.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(131, 263);
-            this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(146, 41);
-            this.btnIniciarSesion.TabIndex = 4;
-            this.btnIniciarSesion.Text = "INICIAR SESION";
-            this.btnIniciarSesion.UseVisualStyleBackColor = false;
-            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
-            // 
             // txtContraseña
             // 
             this.txtContraseña.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -158,15 +110,43 @@
             this.txtUsuario.TabIndex = 2;
             this.txtUsuario.Text = "Usuario";
             // 
-            // pictureBox1
+            // btnIniciarSesion
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::Proyecto_FARMACIA.Properties.Resources.usuario1;
-            this.pictureBox1.Location = new System.Drawing.Point(162, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 81);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.btnIniciarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(142)))), ((int)(((byte)(145)))));
+            this.btnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(125)))), ((int)(((byte)(164)))));
+            this.btnIniciarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(153)))), ((int)(((byte)(191)))));
+            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(131, 263);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(146, 41);
+            this.btnIniciarSesion.TabIndex = 4;
+            this.btnIniciarSesion.Text = "INICIAR SESION";
+            this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+            // 
+            // ReyitaContra
+            // 
+            this.ReyitaContra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ReyitaContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(142)))), ((int)(((byte)(145)))));
+            this.ReyitaContra.Location = new System.Drawing.Point(78, 241);
+            this.ReyitaContra.Margin = new System.Windows.Forms.Padding(2);
+            this.ReyitaContra.Name = "ReyitaContra";
+            this.ReyitaContra.Size = new System.Drawing.Size(261, 1);
+            this.ReyitaContra.TabIndex = 6;
+            // 
+            // RayitaUsuario
+            // 
+            this.RayitaUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RayitaUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(142)))), ((int)(((byte)(145)))));
+            this.RayitaUsuario.Location = new System.Drawing.Point(78, 190);
+            this.RayitaUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.RayitaUsuario.Name = "RayitaUsuario";
+            this.RayitaUsuario.Size = new System.Drawing.Size(261, 1);
+            this.RayitaUsuario.TabIndex = 5;
             // 
             // icon_sesion
             // 
@@ -179,6 +159,17 @@
             this.icon_sesion.TabIndex = 0;
             this.icon_sesion.Text = "INICIO DE SESION";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::Proyecto_FARMACIA.Properties.Resources.usuario;
+            this.pictureBox1.Location = new System.Drawing.Point(162, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 81);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // Logo
             // 
             this.Logo.Image = global::Proyecto_FARMACIA.Properties.Resources.logo2;
@@ -188,6 +179,18 @@
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Logo.TabIndex = 4;
             this.Logo.TabStop = false;
+            // 
+            // cerrar
+            // 
+            this.cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.cerrar;
+            this.cerrar.Location = new System.Drawing.Point(357, 0);
+            this.cerrar.Name = "cerrar";
+            this.cerrar.Size = new System.Drawing.Size(42, 40);
+            this.cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cerrar.TabIndex = 3;
+            this.cerrar.TabStop = false;
+            this.cerrar.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // frmInicio
             // 
@@ -202,11 +205,11 @@
             this.Text = "Form1";
             this.Encabezado.ResumeLayout(false);
             this.Encabezado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).EndInit();
             this.cuerpo.ResumeLayout(false);
             this.cuerpo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrar)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -42,5 +42,11 @@ namespace Proyecto_FARMACIA.PL
             Conexion conectar = new Conexion();
             dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
         }
+
+        private void pbRefrescar_Click(object sender, EventArgs e)
+        {
+            Conexion conectar = new Conexion();
+            dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
+        }
     }
 }

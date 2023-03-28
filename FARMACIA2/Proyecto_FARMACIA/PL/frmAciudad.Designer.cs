@@ -62,13 +62,14 @@
             // 
             this.txtEstado.BackColor = System.Drawing.Color.White;
             this.txtEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEstado.Font = new System.Drawing.Font("Farsi Simple Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtEstado.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEstado.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtEstado.Location = new System.Drawing.Point(19, 107);
+            this.txtEstado.Location = new System.Drawing.Point(19, 105);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(148, 29);
+            this.txtEstado.Size = new System.Drawing.Size(148, 19);
             this.txtEstado.TabIndex = 26;
-            this.txtEstado.Text = "Tijuana";
+            this.txtEstado.Text = "TIJUANA";
             // 
             // lblEstado
             // 
@@ -86,25 +87,27 @@
             // 
             this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Font = new System.Drawing.Font("Farsi Simple Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNombre.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtNombre.Location = new System.Drawing.Point(146, 57);
+            this.txtNombre.Location = new System.Drawing.Point(146, 55);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(187, 29);
+            this.txtNombre.Size = new System.Drawing.Size(187, 19);
             this.txtNombre.TabIndex = 24;
-            this.txtNombre.Text = "Tijuana";
+            this.txtNombre.Text = "TIJUANA";
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.White;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Font = new System.Drawing.Font("Farsi Simple Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtId.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtId.Location = new System.Drawing.Point(19, 57);
+            this.txtId.Location = new System.Drawing.Point(19, 55);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(104, 29);
+            this.txtId.Size = new System.Drawing.Size(104, 19);
             this.txtId.TabIndex = 23;
-            this.txtId.Text = "Tijuana";
+            this.txtId.Text = "122354";
             // 
             // lblNombre
             // 
@@ -132,7 +135,7 @@
             // 
             // Title
             // 
-            this.Title.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
             this.Title.Controls.Add(this.lblTitle);
             this.Title.Controls.Add(this.cmdCerrar);
             this.Title.Dock = System.Windows.Forms.DockStyle.Top;
@@ -232,13 +235,14 @@
             // 
             this.txtPais.BackColor = System.Drawing.Color.White;
             this.txtPais.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPais.Font = new System.Drawing.Font("Farsi Simple Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtPais.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPais.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtPais.Location = new System.Drawing.Point(188, 107);
+            this.txtPais.Location = new System.Drawing.Point(188, 105);
             this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(142, 29);
+            this.txtPais.Size = new System.Drawing.Size(142, 19);
             this.txtPais.TabIndex = 35;
-            this.txtPais.Text = "Tijuana";
+            this.txtPais.Text = "TIJUANA";
             // 
             // panel6
             // 
@@ -252,13 +256,14 @@
             // 
             this.txtPoblacion.BackColor = System.Drawing.Color.White;
             this.txtPoblacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPoblacion.Font = new System.Drawing.Font("Farsi Simple Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtPoblacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPoblacion.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPoblacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtPoblacion.Location = new System.Drawing.Point(19, 156);
+            this.txtPoblacion.Location = new System.Drawing.Point(19, 154);
             this.txtPoblacion.Name = "txtPoblacion";
-            this.txtPoblacion.Size = new System.Drawing.Size(110, 29);
+            this.txtPoblacion.Size = new System.Drawing.Size(110, 19);
             this.txtPoblacion.TabIndex = 37;
-            this.txtPoblacion.Text = "Tijuana";
+            this.txtPoblacion.Text = "TIJUANA";
             // 
             // linea
             // 
@@ -272,13 +277,14 @@
             // 
             this.txtTamaño.BackColor = System.Drawing.Color.White;
             this.txtTamaño.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTamaño.Font = new System.Drawing.Font("Farsi Simple Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.txtTamaño.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTamaño.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTamaño.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtTamaño.Location = new System.Drawing.Point(152, 156);
+            this.txtTamaño.Location = new System.Drawing.Point(152, 154);
             this.txtTamaño.Name = "txtTamaño";
-            this.txtTamaño.Size = new System.Drawing.Size(110, 29);
+            this.txtTamaño.Size = new System.Drawing.Size(110, 19);
             this.txtTamaño.TabIndex = 39;
-            this.txtTamaño.Text = "Tijuana";
+            this.txtTamaño.Text = "TIJUANA";
             // 
             // cmdAgregar
             // 
@@ -290,7 +296,7 @@
             this.cmdAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAgregar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgregar.ForeColor = System.Drawing.Color.Maroon;
-            this.cmdAgregar.Location = new System.Drawing.Point(44, 195);
+            this.cmdAgregar.Location = new System.Drawing.Point(60, 191);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(91, 31);
             this.cmdAgregar.TabIndex = 41;
@@ -311,7 +317,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(182, 195);
+            this.button1.Location = new System.Drawing.Point(198, 191);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 31);
             this.button1.TabIndex = 42;
@@ -320,26 +326,29 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.panel7.Location = new System.Drawing.Point(342, 23);
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(344, 25);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(10, 226);
+            this.panel7.Size = new System.Drawing.Size(5, 222);
             this.panel7.TabIndex = 43;
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.panel5.Location = new System.Drawing.Point(-4, 22);
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 25);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 226);
+            this.panel5.Size = new System.Drawing.Size(5, 222);
             this.panel5.TabIndex = 44;
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.panel8.Location = new System.Drawing.Point(0, 239);
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Location = new System.Drawing.Point(5, 242);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(349, 10);
+            this.panel8.Size = new System.Drawing.Size(339, 5);
             this.panel8.TabIndex = 45;
             // 
             // cmdCerrar
