@@ -19,7 +19,9 @@ namespace Proyecto_FARMACIA.PL
             
         }
 
-        //SqlConnection conexion = new SqlConnection(@"server = ANVORGUEZA\\SQLEXPRESS; Initial Catalog=DB_FARMACIA_TOPICOS; Integrated Security = true");
+        //OBJETOS DE CLASES Y FORMAS
+        Conexion conectar = new Conexion();
+        frmAciudad aciudad = new frmAciudad();
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
@@ -33,20 +35,33 @@ namespace Proyecto_FARMACIA.PL
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmAciudad aciudad = new frmAciudad();
             aciudad.ShowDialog();
         }
 
         private void frmCiudad_Load(object sender, EventArgs e)
         {
-            Conexion conectar = new Conexion();
             dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
         }
 
         private void pbRefrescar_Click(object sender, EventArgs e)
         {
-            Conexion conectar = new Conexion();
             dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
+        }
+
+        private void SeleccionarDK(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            frmModifi_Ciudad modificar = new frmModifi_Ciudad();
+            int indice = e.RowIndex;
+
+            modificar.txtId.Text = dgvCiudades.Rows[indice].Cells[0].Value.ToString();
+            modificar.txtNombre.Text = dgvCiudades.Rows[indice].Cells[1].Value.ToString();
+            modificar.txtEstado.Text = dgvCiudades.Rows[indice].Cells[2].Value.ToString();
+            modificar.txtPais.Text = dgvCiudades.Rows[indice].Cells[3].Value.ToString();
+            modificar.txtPoblacion.Text = dgvCiudades.Rows[indice].Cells[4].Value.ToString();
+            modificar.txtTamaño.Text = dgvCiudades.Rows[indice].Cells[5].Value.ToString();
+
+            modificar.ShowDialog();
+
         }
     }
 }

@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="BLL\CiudadBLL.cs" />
     <Compile Include="BLL\PropietarioBLL.cs" />
+    <Compile Include="DAL\ComboBoxConexion.cs" />
     <Compile Include="DAL\Conexion.cs" />
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
@@ -115,6 +116,12 @@
     <Compile Include="PL\frmPropietarios.Designer.cs">
       <DependentUpon>frmPropietarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\Modifi_Ciudad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Modifi_Ciudad.Designer.cs">
+      <DependentUpon>Modifi_Ciudad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmInicio.resx">
@@ -144,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmPropietarios.resx">
       <DependentUpon>frmPropietarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Modifi_Ciudad.resx">
+      <DependentUpon>Modifi_Ciudad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

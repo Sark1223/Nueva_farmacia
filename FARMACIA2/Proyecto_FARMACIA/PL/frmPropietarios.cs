@@ -34,5 +34,11 @@ namespace Proyecto_FARMACIA.PL
             frmAPropietario aPropietario = new frmAPropietario();
             aPropietario.ShowDialog();
         }
+
+        private void pbRefrescar_Click(object sender, EventArgs e)
+        {
+            Conexion conectar = new Conexion();
+            dgvPropietarios.DataSource = conectar.MostrarPropietarios().Tables[0];
+        }
     }
 }

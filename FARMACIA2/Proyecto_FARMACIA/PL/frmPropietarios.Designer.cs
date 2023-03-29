@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCiudad = new System.Windows.Forms.Label();
             this.dgvPropietarios = new System.Windows.Forms.DataGridView();
+            this.pbRefrescar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.lblAgregar = new System.Windows.Forms.Label();
+            this.cmdAgregar = new System.Windows.Forms.PictureBox();
+            this.lblNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRefrescar)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdAgregar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCiudad
@@ -46,7 +49,7 @@
             this.lblCiudad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCiudad.AutoSize = true;
             this.lblCiudad.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCiudad.Location = new System.Drawing.Point(309, 9);
+            this.lblCiudad.Location = new System.Drawing.Point(280, 5);
             this.lblCiudad.Name = "lblCiudad";
             this.lblCiudad.Size = new System.Drawing.Size(235, 31);
             this.lblCiudad.TabIndex = 31;
@@ -54,90 +57,100 @@
             // 
             // dgvPropietarios
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPropietarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(198)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPropietarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPropietarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvPropietarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgvPropietarios.BackgroundColor = System.Drawing.Color.White;
             this.dgvPropietarios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvPropietarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvPropietarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPropietarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPropietarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPropietarios.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(142)))), ((int)(((byte)(173)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPropietarios.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(142)))), ((int)(((byte)(173)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPropietarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPropietarios.EnableHeadersVisualStyles = false;
-            this.dgvPropietarios.Location = new System.Drawing.Point(24, 55);
+            this.dgvPropietarios.Location = new System.Drawing.Point(14, 61);
             this.dgvPropietarios.Name = "dgvPropietarios";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(88)))), ((int)(((byte)(113)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPropietarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(88)))), ((int)(((byte)(113)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPropietarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPropietarios.RowHeadersVisible = false;
             this.dgvPropietarios.RowHeadersWidth = 30;
             this.dgvPropietarios.RowTemplate.Height = 30;
-            this.dgvPropietarios.Size = new System.Drawing.Size(748, 362);
+            this.dgvPropietarios.Size = new System.Drawing.Size(748, 428);
             this.dgvPropietarios.TabIndex = 48;
+            // 
+            // pbRefrescar
+            // 
+            this.pbRefrescar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbRefrescar.Image = global::Proyecto_FARMACIA.Properties.Resources.actualizar;
+            this.pbRefrescar.Location = new System.Drawing.Point(723, 26);
+            this.pbRefrescar.Name = "pbRefrescar";
+            this.pbRefrescar.Size = new System.Drawing.Size(39, 33);
+            this.pbRefrescar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbRefrescar.TabIndex = 50;
+            this.pbRefrescar.TabStop = false;
+            this.pbRefrescar.Click += new System.EventHandler(this.pbRefrescar_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.btnAgregar);
-            this.panel1.Controls.Add(this.lblAgregar);
-            this.panel1.Location = new System.Drawing.Point(390, 423);
+            this.panel1.Controls.Add(this.lblNombre);
+            this.panel1.Controls.Add(this.cmdAgregar);
+            this.panel1.Controls.Add(this.pbRefrescar);
+            this.panel1.Controls.Add(this.dgvPropietarios);
+            this.panel1.Controls.Add(this.lblCiudad);
+            this.panel1.Location = new System.Drawing.Point(12, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(51, 70);
-            this.panel1.TabIndex = 49;
+            this.panel1.Size = new System.Drawing.Size(776, 509);
+            this.panel1.TabIndex = 51;
             // 
-            // btnAgregar
+            // cmdAgregar
             // 
-            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.Image = global::Proyecto_FARMACIA.Properties.Resources.add;
-            this.btnAgregar.Location = new System.Drawing.Point(3, 3);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(43, 42);
-            this.btnAgregar.TabIndex = 29;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.cmdAgregar.Image = global::Proyecto_FARMACIA.Properties.Resources.add;
+            this.cmdAgregar.Location = new System.Drawing.Point(14, 22);
+            this.cmdAgregar.Name = "cmdAgregar";
+            this.cmdAgregar.Size = new System.Drawing.Size(39, 41);
+            this.cmdAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdAgregar.TabIndex = 51;
+            this.cmdAgregar.TabStop = false;
+            this.cmdAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // lblAgregar
+            // lblNombre
             // 
-            this.lblAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblAgregar.AutoSize = true;
-            this.lblAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.lblAgregar.Font = new System.Drawing.Font("Tw Cen MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAgregar.Location = new System.Drawing.Point(0, 48);
-            this.lblAgregar.Name = "lblAgregar";
-            this.lblAgregar.Size = new System.Drawing.Size(50, 16);
-            this.lblAgregar.TabIndex = 30;
-            this.lblAgregar.Text = "AÑADIR";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNombre.Location = new System.Drawing.Point(127, 36);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(538, 17);
+            this.lblNombre.TabIndex = 52;
+            this.lblNombre.Text = "Para MODIFICAR o ELIMINAR cualquier REGRISTRO haga doble click sobre el mismo";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmPropietarios
             // 
@@ -146,25 +159,25 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 517);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvPropietarios);
-            this.Controls.Add(this.lblCiudad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPropietarios";
             this.Text = "frmPropietarios";
             this.Load += new System.EventHandler(this.frmPropietarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRefrescar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdAgregar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         public System.Windows.Forms.Label lblCiudad;
         public System.Windows.Forms.DataGridView dgvPropietarios;
-        private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.Button btnAgregar;
-        public System.Windows.Forms.Label lblAgregar;
+        public System.Windows.Forms.PictureBox pbRefrescar;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.PictureBox cmdAgregar;
+        public System.Windows.Forms.Label lblNombre;
     }
 }

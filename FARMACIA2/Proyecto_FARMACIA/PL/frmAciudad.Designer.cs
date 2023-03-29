@@ -54,6 +54,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.lblKm = new System.Windows.Forms.Label();
             this.Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(148, 19);
             this.txtEstado.TabIndex = 26;
-            this.txtEstado.Text = "TIJUANA";
+            this.txtEstado.Text = "ESTADO";
             // 
             // lblEstado
             // 
@@ -94,7 +95,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(187, 19);
             this.txtNombre.TabIndex = 24;
-            this.txtNombre.Text = "TIJUANA";
+            this.txtNombre.Text = "NOMBRE";
             // 
             // txtId
             // 
@@ -255,7 +256,7 @@
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(142, 19);
             this.txtPais.TabIndex = 35;
-            this.txtPais.Text = "TIJUANA";
+            this.txtPais.Text = "PAIS";
             // 
             // panel6
             // 
@@ -276,7 +277,7 @@
             this.txtPoblacion.Name = "txtPoblacion";
             this.txtPoblacion.Size = new System.Drawing.Size(110, 19);
             this.txtPoblacion.TabIndex = 37;
-            this.txtPoblacion.Text = "TIJUANA";
+            this.txtPoblacion.Text = "122234";
             // 
             // linea
             // 
@@ -297,7 +298,7 @@
             this.txtTamaño.Name = "txtTamaño";
             this.txtTamaño.Size = new System.Drawing.Size(110, 19);
             this.txtTamaño.TabIndex = 39;
-            this.txtTamaño.Text = "TIJUANA";
+            this.txtTamaño.Text = "1231.45";
             // 
             // cmdAgregar
             // 
@@ -364,12 +365,25 @@
             this.panel8.Size = new System.Drawing.Size(339, 5);
             this.panel8.TabIndex = 45;
             // 
+            // lblKm
+            // 
+            this.lblKm.AutoSize = true;
+            this.lblKm.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKm.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblKm.Location = new System.Drawing.Point(262, 158);
+            this.lblKm.Name = "lblKm";
+            this.lblKm.Size = new System.Drawing.Size(26, 17);
+            this.lblKm.TabIndex = 98;
+            this.lblKm.Text = "Km";
+            this.lblKm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmAciudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(349, 247);
+            this.Controls.Add(this.lblKm);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.button1);
@@ -435,5 +449,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
+        public System.Windows.Forms.Label lblKm;
     }
 }

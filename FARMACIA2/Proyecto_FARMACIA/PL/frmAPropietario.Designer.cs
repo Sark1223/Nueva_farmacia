@@ -67,7 +67,7 @@
             this.lblCP = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbCiudad = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -76,6 +76,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cmdAgregar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
             this.SuspendLayout();
@@ -292,7 +293,7 @@
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(400, 25);
             this.Title.TabIndex = 68;
-            this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Title_MouseDown);
+            this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // lblTitle
             // 
@@ -306,7 +307,7 @@
             this.lblTitle.Size = new System.Drawing.Size(244, 21);
             this.lblTitle.TabIndex = 34;
             this.lblTitle.Text = "AÑADIR PROPIETARIO";
-            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Title_MouseDown);
+            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // cmdCerrar
             // 
@@ -457,9 +458,9 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.IndianRed;
-            this.panel13.Location = new System.Drawing.Point(217, 301);
+            this.panel13.Location = new System.Drawing.Point(213, 301);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(64, 1);
+            this.panel13.Size = new System.Drawing.Size(54, 1);
             this.panel13.TabIndex = 84;
             // 
             // txtCP
@@ -469,9 +470,9 @@
             this.txtCP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCP.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtCP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtCP.Location = new System.Drawing.Point(221, 279);
+            this.txtCP.Location = new System.Drawing.Point(214, 279);
             this.txtCP.Name = "txtCP";
-            this.txtCP.Size = new System.Drawing.Size(60, 19);
+            this.txtCP.Size = new System.Drawing.Size(50, 19);
             this.txtCP.TabIndex = 83;
             this.txtCP.Text = "22330";
             // 
@@ -480,7 +481,7 @@
             this.lblCP.AutoSize = true;
             this.lblCP.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblCP.Location = new System.Drawing.Point(211, 264);
+            this.lblCP.Location = new System.Drawing.Point(207, 264);
             this.lblCP.Name = "lblCP";
             this.lblCP.Size = new System.Drawing.Size(30, 17);
             this.lblCP.TabIndex = 82;
@@ -490,9 +491,9 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.IndianRed;
-            this.panel14.Location = new System.Drawing.Point(299, 301);
+            this.panel14.Location = new System.Drawing.Point(277, 301);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(85, 1);
+            this.panel14.Size = new System.Drawing.Size(107, 1);
             this.panel14.TabIndex = 87;
             // 
             // label3
@@ -500,21 +501,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(294, 262);
+            this.label3.Location = new System.Drawing.Point(280, 262);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 85;
             this.label3.Text = "Ciudad";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox1
+            // cbCiudad
             // 
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(299, 279);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(84, 21);
-            this.comboBox1.TabIndex = 88;
+            this.cbCiudad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbCiudad.FormattingEnabled = true;
+            this.cbCiudad.Location = new System.Drawing.Point(277, 279);
+            this.cbCiudad.Name = "cbCiudad";
+            this.cbCiudad.Size = new System.Drawing.Size(106, 21);
+            this.cbCiudad.TabIndex = 88;
+            this.cbCiudad.SelectedIndexChanged += new System.EventHandler(this.cbCiudad_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -556,7 +558,7 @@
             this.panel16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel16.Location = new System.Drawing.Point(20, 182);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(306, 1);
+            this.panel16.Size = new System.Drawing.Size(239, 1);
             this.panel16.TabIndex = 94;
             // 
             // txtCorreo
@@ -568,9 +570,9 @@
             this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
             this.txtCorreo.Location = new System.Drawing.Point(26, 162);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(296, 19);
+            this.txtCorreo.Size = new System.Drawing.Size(229, 19);
             this.txtCorreo.TabIndex = 93;
-            this.txtCorreo.Text = "SANTOSKARLA122308@GMAIL.COM";
+            this.txtCorreo.Text = "SANTOSKARLA1";
             // 
             // label5
             // 
@@ -619,12 +621,25 @@
             this.cmdAgregar.UseVisualStyleBackColor = false;
             this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(252, 162);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.TabIndex = 97;
+            this.label2.Text = "@GMAIL.COM";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmAPropietario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(400, 380);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmdAgregar);
             this.Controls.Add(this.panel16);
@@ -633,7 +648,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbCiudad);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel13);
@@ -675,6 +690,7 @@
             this.Name = "frmAPropietario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAEmpleados";
+            this.Load += new System.EventHandler(this.frmAPropietario_Load);
             this.Title.ResumeLayout(false);
             this.Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
@@ -723,7 +739,7 @@
         public System.Windows.Forms.Label lblCP;
         public System.Windows.Forms.Panel panel14;
         public System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbCiudad;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Panel panel15;
         public System.Windows.Forms.TextBox textBox1;
@@ -732,5 +748,6 @@
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button cmdAgregar;
+        public System.Windows.Forms.Label label2;
     }
 }

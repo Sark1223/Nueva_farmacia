@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCiudad = new System.Windows.Forms.Label();
             this.dgvCiudades = new System.Windows.Forms.DataGridView();
-            this.lblAgregar = new System.Windows.Forms.Label();
+            this.cmdRefrescar = new System.Windows.Forms.PictureBox();
+            this.cmdAgregar = new System.Windows.Forms.PictureBox();
+            this.HoverControl = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbRefrescar = new System.Windows.Forms.PictureBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.lblNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiudades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRefrescar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdAgregar)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRefrescar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCiudad
@@ -48,7 +51,7 @@
             this.lblCiudad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCiudad.AutoSize = true;
             this.lblCiudad.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCiudad.Location = new System.Drawing.Point(350, 20);
+            this.lblCiudad.Location = new System.Drawing.Point(308, 4);
             this.lblCiudad.Name = "lblCiudad";
             this.lblCiudad.Size = new System.Drawing.Size(169, 31);
             this.lblCiudad.TabIndex = 8;
@@ -87,7 +90,7 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCiudades.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCiudades.EnableHeadersVisualStyles = false;
-            this.dgvCiudades.Location = new System.Drawing.Point(28, 54);
+            this.dgvCiudades.Location = new System.Drawing.Point(15, 63);
             this.dgvCiudades.Name = "dgvCiudades";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(88)))), ((int)(((byte)(113)))));
@@ -100,58 +103,59 @@
             this.dgvCiudades.RowHeadersVisible = false;
             this.dgvCiudades.RowHeadersWidth = 30;
             this.dgvCiudades.RowTemplate.Height = 30;
-            this.dgvCiudades.Size = new System.Drawing.Size(748, 362);
+            this.dgvCiudades.Size = new System.Drawing.Size(748, 422);
             this.dgvCiudades.TabIndex = 28;
+            this.dgvCiudades.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SeleccionarDK);
             // 
-            // lblAgregar
+            // cmdRefrescar
             // 
-            this.lblAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblAgregar.AutoSize = true;
-            this.lblAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.lblAgregar.Font = new System.Drawing.Font("Tw Cen MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblAgregar.Location = new System.Drawing.Point(0, 48);
-            this.lblAgregar.Name = "lblAgregar";
-            this.lblAgregar.Size = new System.Drawing.Size(50, 16);
-            this.lblAgregar.TabIndex = 30;
-            this.lblAgregar.Text = "AÑADIR";
+            this.cmdRefrescar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmdRefrescar.Image = global::Proyecto_FARMACIA.Properties.Resources.actualizar;
+            this.cmdRefrescar.Location = new System.Drawing.Point(724, 25);
+            this.cmdRefrescar.Name = "cmdRefrescar";
+            this.cmdRefrescar.Size = new System.Drawing.Size(39, 33);
+            this.cmdRefrescar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdRefrescar.TabIndex = 32;
+            this.cmdRefrescar.TabStop = false;
+            this.HoverControl.SetToolTip(this.cmdRefrescar, "Actualizar tabla");
+            this.cmdRefrescar.Click += new System.EventHandler(this.pbRefrescar_Click);
+            // 
+            // cmdAgregar
+            // 
+            this.cmdAgregar.Image = global::Proyecto_FARMACIA.Properties.Resources.add;
+            this.cmdAgregar.Location = new System.Drawing.Point(15, 15);
+            this.cmdAgregar.Name = "cmdAgregar";
+            this.cmdAgregar.Size = new System.Drawing.Size(39, 41);
+            this.cmdAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdAgregar.TabIndex = 33;
+            this.cmdAgregar.TabStop = false;
+            this.HoverControl.SetToolTip(this.cmdAgregar, "Agregar una nueva CIUDAD");
+            this.cmdAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.btnAgregar);
-            this.panel1.Controls.Add(this.lblAgregar);
-            this.panel1.Location = new System.Drawing.Point(379, 428);
+            this.panel1.Controls.Add(this.lblNombre);
+            this.panel1.Controls.Add(this.cmdAgregar);
+            this.panel1.Controls.Add(this.lblCiudad);
+            this.panel1.Controls.Add(this.cmdRefrescar);
+            this.panel1.Controls.Add(this.dgvCiudades);
+            this.panel1.Location = new System.Drawing.Point(12, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(51, 70);
-            this.panel1.TabIndex = 31;
+            this.panel1.Size = new System.Drawing.Size(776, 509);
+            this.panel1.TabIndex = 34;
             // 
-            // pbRefrescar
+            // lblNombre
             // 
-            this.pbRefrescar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbRefrescar.Image = global::Proyecto_FARMACIA.Properties.Resources.actualizar;
-            this.pbRefrescar.Location = new System.Drawing.Point(727, 20);
-            this.pbRefrescar.Name = "pbRefrescar";
-            this.pbRefrescar.Size = new System.Drawing.Size(39, 33);
-            this.pbRefrescar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbRefrescar.TabIndex = 32;
-            this.pbRefrescar.TabStop = false;
-            this.pbRefrescar.Click += new System.EventHandler(this.pbRefrescar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAgregar.Image = global::Proyecto_FARMACIA.Properties.Resources.add;
-            this.btnAgregar.Location = new System.Drawing.Point(3, 3);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(43, 42);
-            this.btnAgregar.TabIndex = 29;
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNombre.Location = new System.Drawing.Point(118, 37);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(538, 17);
+            this.lblNombre.TabIndex = 34;
+            this.lblNombre.Text = "Para MODIFICAR o ELIMINAR cualquier REGRISTRO haga doble click sobre el mismo";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmCiudad
             // 
@@ -159,29 +163,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 517);
-            this.Controls.Add(this.pbRefrescar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvCiudades);
-            this.Controls.Add(this.lblCiudad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCiudad";
             this.Text = "frmCiudad";
             this.Load += new System.EventHandler(this.frmCiudad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCiudades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRefrescar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdAgregar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbRefrescar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         public System.Windows.Forms.Label lblCiudad;
-        public System.Windows.Forms.Button btnAgregar;
-        public System.Windows.Forms.Label lblAgregar;
-        private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.DataGridView dgvCiudades;
-        private System.Windows.Forms.PictureBox pbRefrescar;
+        public System.Windows.Forms.PictureBox cmdRefrescar;
+        public System.Windows.Forms.PictureBox cmdAgregar;
+        public System.Windows.Forms.ToolTip HoverControl;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label lblNombre;
     }
 }

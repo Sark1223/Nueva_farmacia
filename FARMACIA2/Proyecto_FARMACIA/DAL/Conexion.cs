@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using Proyecto_FARMACIA.PL;
 using Proyecto_FARMACIA.BLL;
+using System.Drawing;
 
 namespace Proyecto_FARMACIA.DAL
 {
@@ -47,7 +48,41 @@ namespace Proyecto_FARMACIA.DAL
                 return DS;
             }
         }
-        
+
+        public void RellenarCB(ComboBox cb, string sentencia, string textoCB)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            cb.Items.Clear();
+            conexion.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cb.Items.Add(dr[1].ToString());
+            }
+            conexion.Close();
+            cb.Items.Insert(0, textoCB);
+            cb.SelectedIndex = 0;
+        }
+
+        public int captar_info(string sentencia)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            conexion.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            int ID = 0;
+            while (dr.Read())
+            {
+                ID = int.Parse(dr[0].ToString());
+            }
+            conexion.Close();
+            return ID;
+        }
+
+
         public bool AgregarCiudad(CiudadBLL ciudad)
         {
             try
@@ -76,7 +111,54 @@ namespace Proyecto_FARMACIA.DAL
             }
                 
         }
-    
+
+        public bool AgregarPropietario(PropietarioBLL propietario)
+        {
+            try
+            {
+                SqlCommand agregar = new SqlCommand(
+            "insert into PROPIETARIO(" +
+                        "id_propietario," +
+                        "a_paterno," +
+                        "a_materno," +
+                        "nombre_s," +
+                        "calle," +
+                        "no_exterior," +
+                        "no_interior," +
+                        "colonia," +
+                        "CP," +
+                        "telefono," +
+                        "correo_e," +
+                        "id_ciudad)" +
+            "values(@id_propietario,@a_paterno,@a_materno,@nombre_s,@calle,@no_exterior,@no_interior,@colonia,@CP,@telefono,@correo,@id_ciudad)");
+
+                agregar.Parameters.AddWithValue("id_propietario", propietario.ID);
+                agregar.Parameters.AddWithValue("a_paterno", propietario.A_paterno);
+                agregar.Parameters.AddWithValue("a_materno", propietario.A_materno);
+                agregar.Parameters.AddWithValue("nombre_s", propietario.Nombre_s);
+                agregar.Parameters.AddWithValue("calle", propietario.Calle);
+                agregar.Parameters.AddWithValue("no_exterior", propietario.No_exterior);
+                agregar.Parameters.AddWithValue("no_interior", propietario.No_interior);
+                agregar.Parameters.AddWithValue("colonia", propietario.Colonia);
+                agregar.Parameters.AddWithValue("CP", propietario.CP);
+                agregar.Parameters.AddWithValue("telefono", propietario.telefono);
+                agregar.Parameters.AddWithValue("correo", propietario.correo_e);
+                agregar.Parameters.AddWithValue("id_ciudad", propietario.id_ciudad);
+
+                agregar.Connection = EstablecerConexion();
+                conexion.Open();
+                agregar.ExecuteNonQuery();
+                conexion.Close();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
         public DataSet MostrarCiudades()
         {
             SqlCommand sentencia = new SqlCommand("SELECT * FROM CIUDAD");
@@ -88,5 +170,8 @@ namespace Proyecto_FARMACIA.DAL
             SqlCommand sentencia = new SqlCommand("SELECT * FROM PROPIETARIO");
             return EjecutarSentencia(sentencia);
         }
+
+        //public 
+
     }
 }

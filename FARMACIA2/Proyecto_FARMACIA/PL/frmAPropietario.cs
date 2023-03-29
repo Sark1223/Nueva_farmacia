@@ -27,21 +27,29 @@ namespace Proyecto_FARMACIA.PL
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        //OBJETOS DE CLASES Y FORMAS
+        Conexion conexion = new Conexion();
+        PropietarioBLL OpropiBLL = new PropietarioBLL();
+
+        //VARIABLES AUXILIARES
+        bool datos_llenos = false;
+
+        //ACTIVAR EL ENCABEZADO PARA QUE SE MUEVA
+        private void Mover(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
 
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void Title_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+        
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            PropietarioBLL OpropiBLL = new PropietarioBLL();
             OpropiBLL.ID = int.Parse(txtIdPro.Text);
             OpropiBLL.A_paterno = txtPaterno.Text;
             OpropiBLL.A_materno = txtMaterno.Text;
@@ -52,39 +60,24 @@ namespace Proyecto_FARMACIA.PL
             OpropiBLL.Colonia = txtcolonia.Text;
             OpropiBLL.CP = int.Parse(txtIdPro.Text);
             OpropiBLL.telefono = int.Parse(txtIdPro.Text);
-            OpropiBLL.correo_e = txtCorreo.Text;
-            //OpropiBLL.id_ciudad = comboBox1.Text;
+            OpropiBLL.correo_e = txtCorreo.Text+"@GMAIL.COM";
 
-            //Conexion conexion = new Conexion();
-            //MessageBox.Show("conexion = " + conexion.AgregarCiudad(ObjciudadBLL));
+            
+            MessageBox.Show("conexion = " + conexion.AgregarPropietario(OpropiBLL));
         }
 
-        /*int ID;
-         *string  
-         *string  
-         *string 
-         *string Calle; 
-         *int No_exterior; 
-         *string No_interio 
-         *string Colonia; 
-         *int CP; 
-         *long telefono; 
-         *string correo_e; 
-         *int id_ciudad; 
-         * 
-         * CREATE TABLE PROPIETARIO (
-    id_propietario   VARCHAR(10) NOT NULL PRIMARY KEY,
-    a_paterno        VARCHAR(50) NOT NULL,
-    a_materno        VARCHAR(50) NOT NULL,
-    nombre_s      VARCHAR(100) NOT NULL,
-    calle            VARCHAR(100) NOT NULL,
-    no_exterior      VARCHAR(6) NOT NULL,
-    no_interior      VARCHAR(4),
-    colonia          VARCHAR(100) NOT NULL,
-    CP           VARCHAR(7) NOT NULL unique,
-    telefono         varchar (15)  unique,
-    correo_e         VARCHAR(100) unique,
-    id_ciudad VARCHAR(10) NOT NULL 
-*/
+        private void frmAPropietario_Load(object sender, EventArgs e)
+        {
+            conexion.RellenarCB(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
+        }
+
+        private void cbCiudad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbCiudad.SelectedIndex > 0)
+            {
+                OpropiBLL.id_ciudad = conexion.captar_info("SELECT * FROM CIUDAD WHERE nombre_ciudad='" + cbCiudad.Text + "'") ;
+                
+            }
+        }
     }
 }
