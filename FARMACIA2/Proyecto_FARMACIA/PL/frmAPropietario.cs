@@ -53,10 +53,10 @@ namespace Proyecto_FARMACIA.PL
             OpropiBLL.CP = int.Parse(txtIdPro.Text);
             OpropiBLL.telefono = int.Parse(txtIdPro.Text);
             OpropiBLL.correo_e = txtCorreo.Text;
-            OpropiBLL.id_ciudad = comboBox1.Text;
+            //OpropiBLL.id_ciudad = comboBox1.Text;
 
-            Conexion conexion = new Conexion();
-            MessageBox.Show("conexion = " + conexion.AgregarCiudad(ObjciudadBLL));
+            //Conexion conexion = new Conexion();
+            //MessageBox.Show("conexion = " + conexion.AgregarCiudad(ObjciudadBLL));
         }
 
         /*int ID;
