@@ -33,7 +33,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.cmdCerrar = new System.Windows.Forms.PictureBox();
             this.cmdEliminar = new System.Windows.Forms.Button();
             this.cmdModificar = new System.Windows.Forms.Button();
             this.linea = new System.Windows.Forms.Panel();
@@ -55,8 +54,11 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCiudad = new System.Windows.Forms.Label();
             this.cmdCancelar = new System.Windows.Forms.Button();
+            this.cmdCerrar = new System.Windows.Forms.PictureBox();
+            this.PanelModificar = new System.Windows.Forms.Panel();
             this.Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
+            this.PanelModificar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel8
@@ -112,19 +114,6 @@
             this.lblTitle.Text = "AÑADIR CIUDAD";
             this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
-            // cmdCerrar
-            // 
-            this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdCerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.iconCerrarblanco;
-            this.cmdCerrar.Location = new System.Drawing.Point(324, 3);
-            this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(23, 20);
-            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdCerrar.TabIndex = 0;
-            this.cmdCerrar.TabStop = false;
-            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
-            // 
             // cmdEliminar
             // 
             this.cmdEliminar.BackColor = System.Drawing.Color.LightCoral;
@@ -135,7 +124,7 @@
             this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdEliminar.ForeColor = System.Drawing.Color.White;
-            this.cmdEliminar.Location = new System.Drawing.Point(139, 187);
+            this.cmdEliminar.Location = new System.Drawing.Point(131, 7);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(91, 31);
             this.cmdEliminar.TabIndex = 69;
@@ -153,7 +142,7 @@
             this.cmdModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdModificar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdModificar.ForeColor = System.Drawing.Color.Maroon;
-            this.cmdModificar.Location = new System.Drawing.Point(14, 187);
+            this.cmdModificar.Location = new System.Drawing.Point(6, 7);
             this.cmdModificar.Name = "cmdModificar";
             this.cmdModificar.Size = new System.Drawing.Size(107, 31);
             this.cmdModificar.TabIndex = 68;
@@ -373,7 +362,7 @@
             this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.ForeColor = System.Drawing.Color.LightCoral;
-            this.cmdCancelar.Location = new System.Drawing.Point(247, 187);
+            this.cmdCancelar.Location = new System.Drawing.Point(239, 7);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(91, 31);
             this.cmdCancelar.TabIndex = 70;
@@ -383,15 +372,36 @@
             this.cmdCancelar.MouseLeave += new System.EventHandler(this.cmdCancelar_MouseLeave);
             this.cmdCancelar.MouseHover += new System.EventHandler(this.cmdCancelar_MouseHover);
             // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdCerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.iconCerrarblanco;
+            this.cmdCerrar.Location = new System.Drawing.Point(324, 3);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(23, 20);
+            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdCerrar.TabIndex = 0;
+            this.cmdCerrar.TabStop = false;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
+            // 
+            // PanelModificar
+            // 
+            this.PanelModificar.Controls.Add(this.cmdCancelar);
+            this.PanelModificar.Controls.Add(this.cmdEliminar);
+            this.PanelModificar.Controls.Add(this.cmdModificar);
+            this.PanelModificar.Location = new System.Drawing.Point(8, 180);
+            this.PanelModificar.Name = "PanelModificar";
+            this.PanelModificar.Size = new System.Drawing.Size(336, 47);
+            this.PanelModificar.TabIndex = 71;
+            // 
             // frmModifi_Ciudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(350, 245);
-            this.Controls.Add(this.cmdCancelar);
-            this.Controls.Add(this.cmdEliminar);
-            this.Controls.Add(this.cmdModificar);
+            this.Controls.Add(this.PanelModificar);
             this.Controls.Add(this.linea);
             this.Controls.Add(this.txtTamaño);
             this.Controls.Add(this.panel6);
@@ -420,6 +430,7 @@
             this.Title.ResumeLayout(false);
             this.Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
+            this.PanelModificar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,5 +465,6 @@
         public System.Windows.Forms.Label lblNombre;
         public System.Windows.Forms.Label lblCiudad;
         public System.Windows.Forms.Button cmdCancelar;
+        private System.Windows.Forms.Panel PanelModificar;
     }
 }

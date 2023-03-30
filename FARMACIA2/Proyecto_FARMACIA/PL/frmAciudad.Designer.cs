@@ -36,7 +36,6 @@
             this.lblCiudad = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.cmdCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -55,8 +54,16 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblKm = new System.Windows.Forms.Label();
+            this.cmdCerrar = new System.Windows.Forms.PictureBox();
+            this.PanelAñadir = new System.Windows.Forms.Panel();
+            this.PanelModificar = new System.Windows.Forms.Panel();
+            this.cmdCancelar = new System.Windows.Forms.Button();
+            this.cmdEliminar = new System.Windows.Forms.Button();
+            this.cmdModificar = new System.Windows.Forms.Button();
             this.Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
+            this.PanelAñadir.SuspendLayout();
+            this.PanelModificar.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtEstado
@@ -159,19 +166,6 @@
             this.lblTitle.TabIndex = 34;
             this.lblTitle.Text = "AÑADIR CIUDAD";
             this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Title_MouseDown);
-            // 
-            // cmdCerrar
-            // 
-            this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdCerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.iconCerrarblanco;
-            this.cmdCerrar.Location = new System.Drawing.Point(323, 3);
-            this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(23, 20);
-            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdCerrar.TabIndex = 0;
-            this.cmdCerrar.TabStop = false;
-            this.cmdCerrar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -310,7 +304,7 @@
             this.cmdAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAgregar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgregar.ForeColor = System.Drawing.Color.Maroon;
-            this.cmdAgregar.Location = new System.Drawing.Point(60, 191);
+            this.cmdAgregar.Location = new System.Drawing.Point(16, 7);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(91, 31);
             this.cmdAgregar.TabIndex = 41;
@@ -331,7 +325,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(198, 191);
+            this.button1.Location = new System.Drawing.Point(154, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 31);
             this.button1.TabIndex = 42;
@@ -377,17 +371,100 @@
             this.lblKm.Text = "Km";
             this.lblKm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdCerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.iconCerrarblanco;
+            this.cmdCerrar.Location = new System.Drawing.Point(323, 3);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(23, 20);
+            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdCerrar.TabIndex = 0;
+            this.cmdCerrar.TabStop = false;
+            this.cmdCerrar.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // PanelAñadir
+            // 
+            this.PanelAñadir.Controls.Add(this.button1);
+            this.PanelAñadir.Controls.Add(this.cmdAgregar);
+            this.PanelAñadir.Location = new System.Drawing.Point(44, 184);
+            this.PanelAñadir.Name = "PanelAñadir";
+            this.PanelAñadir.Size = new System.Drawing.Size(257, 47);
+            this.PanelAñadir.TabIndex = 99;
+            // 
+            // PanelModificar
+            // 
+            this.PanelModificar.Controls.Add(this.cmdCancelar);
+            this.PanelModificar.Controls.Add(this.cmdEliminar);
+            this.PanelModificar.Controls.Add(this.cmdModificar);
+            this.PanelModificar.Location = new System.Drawing.Point(8, 184);
+            this.PanelModificar.Name = "PanelModificar";
+            this.PanelModificar.Size = new System.Drawing.Size(336, 47);
+            this.PanelModificar.TabIndex = 100;
+            // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.BackColor = System.Drawing.Color.White;
+            this.cmdCancelar.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
+            this.cmdCancelar.FlatAppearance.BorderSize = 2;
+            this.cmdCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.ForeColor = System.Drawing.Color.LightCoral;
+            this.cmdCancelar.Location = new System.Drawing.Point(239, 7);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(91, 31);
+            this.cmdCancelar.TabIndex = 70;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.UseVisualStyleBackColor = false;
+            // 
+            // cmdEliminar
+            // 
+            this.cmdEliminar.BackColor = System.Drawing.Color.LightCoral;
+            this.cmdEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
+            this.cmdEliminar.FlatAppearance.BorderSize = 2;
+            this.cmdEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEliminar.ForeColor = System.Drawing.Color.White;
+            this.cmdEliminar.Location = new System.Drawing.Point(131, 7);
+            this.cmdEliminar.Name = "cmdEliminar";
+            this.cmdEliminar.Size = new System.Drawing.Size(91, 31);
+            this.cmdEliminar.TabIndex = 69;
+            this.cmdEliminar.Text = "Eliminar";
+            this.cmdEliminar.UseVisualStyleBackColor = false;
+            // 
+            // cmdModificar
+            // 
+            this.cmdModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdModificar.FlatAppearance.BorderColor = System.Drawing.Color.LightCoral;
+            this.cmdModificar.FlatAppearance.BorderSize = 2;
+            this.cmdModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.cmdModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdModificar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdModificar.ForeColor = System.Drawing.Color.Maroon;
+            this.cmdModificar.Location = new System.Drawing.Point(6, 7);
+            this.cmdModificar.Name = "cmdModificar";
+            this.cmdModificar.Size = new System.Drawing.Size(107, 31);
+            this.cmdModificar.TabIndex = 68;
+            this.cmdModificar.Text = "Modificar";
+            this.cmdModificar.UseVisualStyleBackColor = false;
+            // 
             // frmAciudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(349, 247);
+            this.Controls.Add(this.PanelModificar);
+            this.Controls.Add(this.PanelAñadir);
             this.Controls.Add(this.lblKm);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.cmdAgregar);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.linea);
             this.Controls.Add(this.txtTamaño);
@@ -416,6 +493,8 @@
             this.Title.ResumeLayout(false);
             this.Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
+            this.PanelAñadir.ResumeLayout(false);
+            this.PanelModificar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,5 +529,10 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel8;
         public System.Windows.Forms.Label lblKm;
+        private System.Windows.Forms.Panel PanelAñadir;
+        private System.Windows.Forms.Panel PanelModificar;
+        public System.Windows.Forms.Button cmdCancelar;
+        public System.Windows.Forms.Button cmdEliminar;
+        public System.Windows.Forms.Button cmdModificar;
     }
 }

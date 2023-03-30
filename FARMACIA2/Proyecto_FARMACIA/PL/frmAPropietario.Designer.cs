@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.linea = new System.Windows.Forms.Panel();
-            this.txtTamaño = new System.Windows.Forms.TextBox();
+            this.txtNo_exte = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNombres = new System.Windows.Forms.TextBox();
-            this.txtNoExte = new System.Windows.Forms.Label();
+            this.lblNo_exte = new System.Windows.Forms.Label();
             this.lblCalle = new System.Windows.Forms.Label();
             this.lblNombres = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -48,7 +48,6 @@
             this.lblPropietario = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.cmdCerrar = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -70,15 +69,23 @@
             this.cbCiudad = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmdLimpiar = new System.Windows.Forms.Button();
             this.cmdAgregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmdCerrar = new System.Windows.Forms.PictureBox();
+            this.PanelAñadir = new System.Windows.Forms.Panel();
+            this.PanelModificar = new System.Windows.Forms.Panel();
+            this.cmdCancelar = new System.Windows.Forms.Button();
+            this.cmdEliminar = new System.Windows.Forms.Button();
+            this.cmdModificar = new System.Windows.Forms.Button();
             this.Title.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).BeginInit();
+            this.PanelAñadir.SuspendLayout();
+            this.PanelModificar.SuspendLayout();
             this.SuspendLayout();
             // 
             // linea
@@ -89,18 +96,18 @@
             this.linea.Size = new System.Drawing.Size(64, 1);
             this.linea.TabIndex = 67;
             // 
-            // txtTamaño
+            // txtNo_exte
             // 
-            this.txtTamaño.BackColor = System.Drawing.Color.White;
-            this.txtTamaño.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTamaño.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTamaño.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
-            this.txtTamaño.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtTamaño.Location = new System.Drawing.Point(218, 233);
-            this.txtTamaño.Name = "txtTamaño";
-            this.txtTamaño.Size = new System.Drawing.Size(60, 19);
-            this.txtTamaño.TabIndex = 66;
-            this.txtTamaño.Text = "5714";
+            this.txtNo_exte.BackColor = System.Drawing.Color.White;
+            this.txtNo_exte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNo_exte.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNo_exte.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
+            this.txtNo_exte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
+            this.txtNo_exte.Location = new System.Drawing.Point(218, 233);
+            this.txtNo_exte.Name = "txtNo_exte";
+            this.txtNo_exte.Size = new System.Drawing.Size(60, 19);
+            this.txtNo_exte.TabIndex = 66;
+            this.txtNo_exte.Text = "5714";
             // 
             // panel6
             // 
@@ -145,17 +152,17 @@
             this.txtNombres.TabIndex = 62;
             this.txtNombres.Text = "KARLA JUDITH";
             // 
-            // txtNoExte
+            // lblNo_exte
             // 
-            this.txtNoExte.AutoSize = true;
-            this.txtNoExte.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoExte.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txtNoExte.Location = new System.Drawing.Point(208, 218);
-            this.txtNoExte.Name = "txtNoExte";
-            this.txtNoExte.Size = new System.Drawing.Size(75, 17);
-            this.txtNoExte.TabIndex = 61;
-            this.txtNoExte.Text = "No_Exterior";
-            this.txtNoExte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNo_exte.AutoSize = true;
+            this.lblNo_exte.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNo_exte.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblNo_exte.Location = new System.Drawing.Point(208, 218);
+            this.lblNo_exte.Name = "lblNo_exte";
+            this.lblNo_exte.Size = new System.Drawing.Size(75, 17);
+            this.lblNo_exte.TabIndex = 61;
+            this.lblNo_exte.Text = "No_Exterior";
+            this.lblNo_exte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCalle
             // 
@@ -308,19 +315,6 @@
             this.lblTitle.TabIndex = 34;
             this.lblTitle.Text = "AÑADIR PROPIETARIO";
             this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
-            // 
-            // cmdCerrar
-            // 
-            this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmdCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdCerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.iconCerrarblanco;
-            this.cmdCerrar.Location = new System.Drawing.Point(374, 3);
-            this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(23, 20);
-            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cmdCerrar.TabIndex = 0;
-            this.cmdCerrar.TabStop = false;
-            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // panel8
             // 
@@ -539,18 +533,18 @@
             this.panel15.Size = new System.Drawing.Size(109, 1);
             this.panel15.TabIndex = 91;
             // 
-            // textBox1
+            // txtTelefono
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.textBox1.Location = new System.Drawing.Point(200, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(105, 19);
-            this.textBox1.TabIndex = 90;
-            this.textBox1.Text = "6641978732";
+            this.txtTelefono.BackColor = System.Drawing.Color.White;
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTelefono.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
+            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
+            this.txtTelefono.Location = new System.Drawing.Point(200, 117);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(105, 19);
+            this.txtTelefono.TabIndex = 90;
+            this.txtTelefono.Text = "6641978732";
             // 
             // panel16
             // 
@@ -586,22 +580,23 @@
             this.label5.Text = "Correo electronico";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // cmdLimpiar
             // 
-            this.button1.BackColor = System.Drawing.Color.LightCoral;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(211, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 31);
-            this.button1.TabIndex = 96;
-            this.button1.Text = "Limpiar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.cmdLimpiar.BackColor = System.Drawing.Color.LightCoral;
+            this.cmdLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.cmdLimpiar.FlatAppearance.BorderSize = 2;
+            this.cmdLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.cmdLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLimpiar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdLimpiar.ForeColor = System.Drawing.Color.White;
+            this.cmdLimpiar.Location = new System.Drawing.Point(147, 10);
+            this.cmdLimpiar.Name = "cmdLimpiar";
+            this.cmdLimpiar.Size = new System.Drawing.Size(91, 31);
+            this.cmdLimpiar.TabIndex = 96;
+            this.cmdLimpiar.Text = "Limpiar";
+            this.cmdLimpiar.UseVisualStyleBackColor = false;
+            this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
             // 
             // cmdAgregar
             // 
@@ -613,7 +608,7 @@
             this.cmdAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAgregar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgregar.ForeColor = System.Drawing.Color.Maroon;
-            this.cmdAgregar.Location = new System.Drawing.Point(73, 321);
+            this.cmdAgregar.Location = new System.Drawing.Point(9, 10);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(91, 31);
             this.cmdAgregar.TabIndex = 95;
@@ -633,21 +628,108 @@
             this.label2.Text = "@GMAIL.COM";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cmdCerrar
+            // 
+            this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmdCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdCerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.iconCerrarblanco;
+            this.cmdCerrar.Location = new System.Drawing.Point(374, 3);
+            this.cmdCerrar.Name = "cmdCerrar";
+            this.cmdCerrar.Size = new System.Drawing.Size(23, 20);
+            this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cmdCerrar.TabIndex = 0;
+            this.cmdCerrar.TabStop = false;
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
+            // 
+            // PanelAñadir
+            // 
+            this.PanelAñadir.Controls.Add(this.cmdLimpiar);
+            this.PanelAñadir.Controls.Add(this.cmdAgregar);
+            this.PanelAñadir.Location = new System.Drawing.Point(64, 311);
+            this.PanelAñadir.Name = "PanelAñadir";
+            this.PanelAñadir.Size = new System.Drawing.Size(242, 51);
+            this.PanelAñadir.TabIndex = 98;
+            // 
+            // PanelModificar
+            // 
+            this.PanelModificar.Controls.Add(this.cmdCancelar);
+            this.PanelModificar.Controls.Add(this.cmdEliminar);
+            this.PanelModificar.Controls.Add(this.cmdModificar);
+            this.PanelModificar.Location = new System.Drawing.Point(22, 314);
+            this.PanelModificar.Name = "PanelModificar";
+            this.PanelModificar.Size = new System.Drawing.Size(352, 49);
+            this.PanelModificar.TabIndex = 145;
+            this.PanelModificar.Visible = false;
+            // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.BackColor = System.Drawing.Color.White;
+            this.cmdCancelar.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
+            this.cmdCancelar.FlatAppearance.BorderSize = 2;
+            this.cmdCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.ForeColor = System.Drawing.Color.LightCoral;
+            this.cmdCancelar.Location = new System.Drawing.Point(248, 7);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(91, 31);
+            this.cmdCancelar.TabIndex = 143;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.UseVisualStyleBackColor = false;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
+            // 
+            // cmdEliminar
+            // 
+            this.cmdEliminar.BackColor = System.Drawing.Color.LightCoral;
+            this.cmdEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Brown;
+            this.cmdEliminar.FlatAppearance.BorderSize = 2;
+            this.cmdEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEliminar.ForeColor = System.Drawing.Color.White;
+            this.cmdEliminar.Location = new System.Drawing.Point(140, 7);
+            this.cmdEliminar.Name = "cmdEliminar";
+            this.cmdEliminar.Size = new System.Drawing.Size(91, 31);
+            this.cmdEliminar.TabIndex = 142;
+            this.cmdEliminar.Text = "Eliminar";
+            this.cmdEliminar.UseVisualStyleBackColor = false;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
+            // 
+            // cmdModificar
+            // 
+            this.cmdModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdModificar.FlatAppearance.BorderColor = System.Drawing.Color.LightCoral;
+            this.cmdModificar.FlatAppearance.BorderSize = 2;
+            this.cmdModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmdModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightCoral;
+            this.cmdModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdModificar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdModificar.ForeColor = System.Drawing.Color.Maroon;
+            this.cmdModificar.Location = new System.Drawing.Point(15, 7);
+            this.cmdModificar.Name = "cmdModificar";
+            this.cmdModificar.Size = new System.Drawing.Size(107, 31);
+            this.cmdModificar.TabIndex = 141;
+            this.cmdModificar.Text = "Modificar";
+            this.cmdModificar.UseVisualStyleBackColor = false;
+            this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
+            // 
             // frmAPropietario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(400, 380);
+            this.Controls.Add(this.PanelModificar);
+            this.Controls.Add(this.PanelAñadir);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.cmdAgregar);
             this.Controls.Add(this.panel16);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel15);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.cbCiudad);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.label3);
@@ -670,13 +752,13 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.linea);
-            this.Controls.Add(this.txtTamaño);
+            this.Controls.Add(this.txtNo_exte);
             this.Controls.Add(this.lblMaterno);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtNombres);
-            this.Controls.Add(this.txtNoExte);
+            this.Controls.Add(this.lblNo_exte);
             this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.lblNombres);
             this.Controls.Add(this.panel4);
@@ -694,6 +776,8 @@
             this.Title.ResumeLayout(false);
             this.Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
+            this.PanelAñadir.ResumeLayout(false);
+            this.PanelModificar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -701,12 +785,12 @@
 
         #endregion
         public System.Windows.Forms.Panel linea;
-        public System.Windows.Forms.TextBox txtTamaño;
+        public System.Windows.Forms.TextBox txtNo_exte;
         public System.Windows.Forms.Panel panel6;
         public System.Windows.Forms.TextBox txtCalle;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.TextBox txtNombres;
-        public System.Windows.Forms.Label txtNoExte;
+        public System.Windows.Forms.Label lblNo_exte;
         public System.Windows.Forms.Label lblCalle;
         public System.Windows.Forms.Label lblNombres;
         public System.Windows.Forms.Panel panel4;
@@ -742,12 +826,17 @@
         private System.Windows.Forms.ComboBox cbCiudad;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Panel panel15;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.Panel panel16;
         public System.Windows.Forms.TextBox txtCorreo;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button cmdLimpiar;
         public System.Windows.Forms.Button cmdAgregar;
         public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel PanelAñadir;
+        private System.Windows.Forms.Panel PanelModificar;
+        public System.Windows.Forms.Button cmdCancelar;
+        public System.Windows.Forms.Button cmdEliminar;
+        public System.Windows.Forms.Button cmdModificar;
     }
 }

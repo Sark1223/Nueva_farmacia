@@ -59,7 +59,7 @@ namespace Proyecto_FARMACIA.PL
             OpropiBLL.No_interior = txtInterios.Text;
             OpropiBLL.Colonia = txtcolonia.Text;
             OpropiBLL.CP = int.Parse(txtIdPro.Text);
-            OpropiBLL.telefono = int.Parse(txtIdPro.Text);
+            OpropiBLL.telefono = int.Parse(txtTelefono.Text);
             OpropiBLL.correo_e = txtCorreo.Text+"@GMAIL.COM";
 
             
@@ -78,6 +78,46 @@ namespace Proyecto_FARMACIA.PL
                 OpropiBLL.id_ciudad = conexion.captar_info("SELECT * FROM CIUDAD WHERE nombre_ciudad='" + cbCiudad.Text + "'") ;
                 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cmdLimpiar_Click(object sender, EventArgs e)
+        {
+            txtIdPro.Clear();txtMaterno.Clear();txtPaterno.Clear();
+            txtCalle.Clear();txtcolonia.Clear();txtInterios.Clear();  
+            txtNo_exte.Clear();txtCP.Clear();txtNombres.Clear();           
+            txtCorreo.Clear();txtTelefono.Clear();
+            conexion.RellenarCB(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
+
+
+        }
+
+        private void cmdModificar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            if (conexion.Eliminar("DELETE FROM PROPIETARIO WHERE id_propietario =" + txtIdPro.Text))
+            {
+                MessageBox.Show("El propietario " + txtPaterno.Text + " " + txtMaterno.Text + " " + txtNombres.Text + " de ID " + txtIdPro.Text + " ha sido eliminado", "REGISTRO ELIMINADO");
+
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
+            }
+        }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

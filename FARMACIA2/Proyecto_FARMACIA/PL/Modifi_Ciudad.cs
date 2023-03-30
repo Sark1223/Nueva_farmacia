@@ -78,10 +78,10 @@ namespace Proyecto_FARMACIA.PL
             ObjciudadBLL.no_habitantes = int.Parse(txtPoblacion.Text);
             ObjciudadBLL.superficie = Double.Parse(txtTamaño.Text);
             //id_ciudad,nombre_ciudad,estado_ciudad,pais_ciudad,no_habitantes_ciudad,tama_superficie_ciudad
-            if (conexion.Modificar("UPDATE CIUDAD SET nombre_ciudad = '"+ ObjciudadBLL.nombre + ", " +
+            if (conexion.Modificar("UPDATE CIUDAD SET nombre_ciudad = '"+ ObjciudadBLL.nombre + "', " +
                 "estado_ciudad = '"+ ObjciudadBLL.estado + "',pais_ciudad = '"+txtPais.Text+"'," +
                 "no_habitantes_ciudad = "+ ObjciudadBLL.no_habitantes + ",tama_superficie_ciudad = "+ ObjciudadBLL.superficie + 
-                " WHERE 'id_ciudad =" + txtId.Text))
+                " WHERE id_ciudad =" + txtId.Text))
             {
                 MessageBox.Show("La ciudad " + txtNombre.Text + " de ID " + txtId.Text + " ha sido modificada", "REGISTRO MODIFICADO");
 

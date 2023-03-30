@@ -55,3 +55,4 @@ C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmAciudad.resources
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmAPropietario.resources
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmModifi_Ciudad.resources
+C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.Modifi_Propietarios.resources
