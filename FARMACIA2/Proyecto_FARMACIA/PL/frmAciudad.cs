@@ -29,6 +29,9 @@ namespace Proyecto_FARMACIA.PL
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+
+        Conexion conexion = new Conexion();
+
         private void Title_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -68,11 +71,53 @@ namespace Proyecto_FARMACIA.PL
             ObjciudadBLL.no_habitantes = int.Parse(txtPoblacion.Text);
             ObjciudadBLL.superficie = Double.Parse(txtTamaño.Text);
             
-            Conexion conexion = new Conexion();
-
             if (conexion.AgregarCiudad(ObjciudadBLL))
             {
                 MessageBox.Show("La ciudad " + txtNombre.Text + " de ID " + txtId.Text + " se INGRESO correctamente", "REGISTRO AGREGADO", MessageBoxButtons.OK);
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
+            }
+        }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            if (conexion.Eliminar("DELETE FROM CIUDAD WHERE id_ciudad =" + txtId.Text))
+            {
+                MessageBox.Show("La ciudad " + txtNombre.Text + " de ID " + txtId.Text + " ha sido eliminada", "REGISTRO ELIMINADO");
+
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
+            }
+        }
+
+        private void cmdModificar_Click(object sender, EventArgs e)
+        {
+            CiudadBLL ObjciudadBLL = new CiudadBLL();
+            ObjciudadBLL.ID = int.Parse(txtId.Text);
+            ObjciudadBLL.nombre = txtNombre.Text;
+            ObjciudadBLL.estado = txtEstado.Text;
+            ObjciudadBLL.pais = txtPais.Text;
+            ObjciudadBLL.no_habitantes = int.Parse(txtPoblacion.Text);
+            ObjciudadBLL.superficie = Double.Parse(txtTamaño.Text);
+            //id_ciudad,nombre_ciudad,estado_ciudad,pais_ciudad,no_habitantes_ciudad,tama_superficie_ciudad
+            if (conexion.Modificar("UPDATE CIUDAD SET id_ciudad = "+ObjciudadBLL.ID+", nombre_ciudad = '" + ObjciudadBLL.nombre + "', " +
+                "estado_ciudad = '" + ObjciudadBLL.estado + "',pais_ciudad = '" + txtPais.Text + "'," +
+                "no_habitantes_ciudad = " + ObjciudadBLL.no_habitantes + ",tama_superficie_ciudad = " + ObjciudadBLL.superficie +
+                " WHERE id_ciudad =" + ObjciudadBLL.ID))
+            {
+                MessageBox.Show("La ciudad " + txtNombre.Text + " de ID " + txtId.Text + " ha sido modificada", "REGISTRO MODIFICADO");
+
                 Close();
             }
             else

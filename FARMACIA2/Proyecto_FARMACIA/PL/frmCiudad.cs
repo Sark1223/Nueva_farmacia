@@ -16,7 +16,7 @@ namespace Proyecto_FARMACIA.PL
         public frmCiudad()
         {
             InitializeComponent();
-            
+
         }
 
         //OBJETOS DE CLASES Y FORMAS
@@ -35,6 +35,10 @@ namespace Proyecto_FARMACIA.PL
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            aciudad.lblTitle.Text = "AÑADIR CIUDAD";
+            aciudad.lblTitle.Location = new Point(80, 6);
+            aciudad.PanelModificar.Visible = false;
+            aciudad.PanelAñadir.Visible = true;
             aciudad.ShowDialog();
             dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
         }
@@ -51,17 +55,20 @@ namespace Proyecto_FARMACIA.PL
 
         private void SeleccionarDK(object sender, DataGridViewCellMouseEventArgs e)
         {
-            frmModifi_Ciudad modificar = new frmModifi_Ciudad();
             int indice = e.RowIndex;
+            aciudad.PanelModificar.Visible = true;
+            aciudad.PanelAñadir.Visible = false;
+            aciudad.lblTitle.Text = "MODIFICAR CIUDAD";
+            aciudad.lblTitle.Location = new Point(60, 6);
 
-            modificar.txtId.Text = dgvCiudades.Rows[indice].Cells[0].Value.ToString();
-            modificar.txtNombre.Text = dgvCiudades.Rows[indice].Cells[1].Value.ToString();
-            modificar.txtEstado.Text = dgvCiudades.Rows[indice].Cells[2].Value.ToString();
-            modificar.txtPais.Text = dgvCiudades.Rows[indice].Cells[3].Value.ToString();
-            modificar.txtPoblacion.Text = dgvCiudades.Rows[indice].Cells[4].Value.ToString();
-            modificar.txtTamaño.Text = dgvCiudades.Rows[indice].Cells[5].Value.ToString();
+            aciudad.txtId.Text = dgvCiudades.Rows[indice].Cells[0].Value.ToString();
+            aciudad.txtNombre.Text = dgvCiudades.Rows[indice].Cells[1].Value.ToString();
+            aciudad.txtEstado.Text = dgvCiudades.Rows[indice].Cells[2].Value.ToString();
+            aciudad.txtPais.Text = dgvCiudades.Rows[indice].Cells[3].Value.ToString();
+            aciudad.txtPoblacion.Text = dgvCiudades.Rows[indice].Cells[4].Value.ToString();
+            aciudad.txtTamaño.Text = dgvCiudades.Rows[indice].Cells[5].Value.ToString();
 
-            modificar.ShowDialog();
+            aciudad.ShowDialog();
 
             dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
         }

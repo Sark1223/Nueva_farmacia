@@ -18,9 +18,6 @@ namespace Proyecto_FARMACIA.DAL
         private string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = DB_FARMACIA_TOPICOS; Integrated Security = true";
         SqlConnection conexion;
 
-        //Objetos de formas
-        frmAciudad Aciudad = new frmAciudad();
-
         public SqlConnection EstablecerConexion()
         {
             this.conexion = new SqlConnection(this.CadenaConexion);
