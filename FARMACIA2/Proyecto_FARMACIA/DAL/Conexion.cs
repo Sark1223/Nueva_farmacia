@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Proyecto_FARMACIA.PL;
 using Proyecto_FARMACIA.BLL;
 using System.Drawing;
+using System.Runtime.Remoting.Messaging;
 
 namespace Proyecto_FARMACIA.DAL
 {
@@ -117,20 +118,20 @@ namespace Proyecto_FARMACIA.DAL
             try
             {
                 SqlCommand agregar = new SqlCommand(
-            "insert into PROPIETARIO(" +
-                        "id_propietario," +
-                        "a_paterno," +
-                        "a_materno," +
-                        "nombre_s," +
-                        "calle," +
-                        "no_exterior," +
-                        "no_interior," +
-                        "colonia," +
-                        "CP," +
-                        "telefono," +
-                        "correo_e," +
-                        "id_ciudad)" +
-            "values(@id_propietario,@a_paterno,@a_materno,@nombre_s,@calle,@no_exterior,@no_interior,@colonia,@CP,@telefono,@correo,@id_ciudad)");
+                "insert into PROPIETARIO(" +
+                            "id_propietario," +
+                            "a_paterno," +
+                            "a_materno," +
+                            "nombre_s," +
+                            "calle," +
+                            "no_exterior," +
+                            "no_interior," +
+                            "colonia," +
+                            "CP," +
+                            "telefono," +
+                            "correo_e," +
+                            "id_ciudad)" +
+                "values(@id_propietario,@a_paterno,@a_materno,@nombre_s,@calle,@no_exterior,@no_interior,@colonia,@CP,@telefono,@correo,@id_ciudad)");
 
                 agregar.Parameters.AddWithValue("id_propietario", propietario.ID);
                 agregar.Parameters.AddWithValue("a_paterno", propietario.A_paterno);
@@ -163,6 +164,39 @@ namespace Proyecto_FARMACIA.DAL
         {
             SqlCommand sentencia = new SqlCommand("SELECT * FROM CIUDAD");
             return EjecutarSentencia(sentencia);
+        }
+
+        public bool Eliminar(string codigoSQL)
+        {
+            try
+            {
+                //    MessageBox.Show("El registro sera eliminado permanente, ¿Desea CONTINUAR?", "ATENCION", MessageBoxButtons.OKCancel);
+                //    if (MessageBox == DialogResult.Cancel)
+                //    {
+
+                //    }
+                SqlCommand sentencia = new SqlCommand(codigoSQL);
+                EjecutarSentencia(sentencia);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool Modificar(string codigoSQL)
+        {
+            try
+            {
+                SqlCommand sentencia = new SqlCommand(codigoSQL);
+                EjecutarSentencia(sentencia);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public DataSet MostrarPropietarios()

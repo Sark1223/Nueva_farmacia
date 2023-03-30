@@ -69,10 +69,16 @@ namespace Proyecto_FARMACIA.PL
             ObjciudadBLL.superficie = Double.Parse(txtTamaño.Text);
             
             Conexion conexion = new Conexion();
-            MessageBox.Show("conexion = " + conexion.AgregarCiudad(ObjciudadBLL));
 
-            frmCiudad ciudad = new frmCiudad();
-            ciudad.dgvCiudades.DataSource = conexion.MostrarCiudades().Tables[0];
+            if (conexion.AgregarCiudad(ObjciudadBLL))
+            {
+                MessageBox.Show("La ciudad " + txtNombre.Text + " de ID " + txtId.Text + " se INGRESO correctamente", "REGISTRO AGREGADO", MessageBoxButtons.OK);
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
+            }
         }
     }
 }

@@ -60,7 +60,6 @@
   <ItemGroup>
     <Compile Include="BLL\CiudadBLL.cs" />
     <Compile Include="BLL\PropietarioBLL.cs" />
-    <Compile Include="DAL\ComboBoxConexion.cs" />
     <Compile Include="DAL\Conexion.cs" />
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>

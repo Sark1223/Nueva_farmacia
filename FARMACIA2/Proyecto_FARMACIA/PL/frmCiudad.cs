@@ -36,6 +36,7 @@ namespace Proyecto_FARMACIA.PL
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             aciudad.ShowDialog();
+            dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
         }
 
         private void frmCiudad_Load(object sender, EventArgs e)
@@ -62,6 +63,7 @@ namespace Proyecto_FARMACIA.PL
 
             modificar.ShowDialog();
 
+            dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
         }
     }
 }

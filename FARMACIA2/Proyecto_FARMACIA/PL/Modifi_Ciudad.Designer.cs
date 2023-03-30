@@ -110,6 +110,7 @@
             this.lblTitle.Size = new System.Drawing.Size(179, 21);
             this.lblTitle.TabIndex = 34;
             this.lblTitle.Text = "AÑADIR CIUDAD";
+            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // cmdCerrar
             // 
@@ -134,12 +135,13 @@
             this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdEliminar.ForeColor = System.Drawing.Color.White;
-            this.cmdEliminar.Location = new System.Drawing.Point(242, 187);
+            this.cmdEliminar.Location = new System.Drawing.Point(139, 187);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(91, 31);
             this.cmdEliminar.TabIndex = 69;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = false;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // cmdModificar
             // 
@@ -157,6 +159,7 @@
             this.cmdModificar.TabIndex = 68;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.UseVisualStyleBackColor = false;
+            this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
             // linea
             // 
@@ -370,7 +373,7 @@
             this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.ForeColor = System.Drawing.Color.LightCoral;
-            this.cmdCancelar.Location = new System.Drawing.Point(137, 187);
+            this.cmdCancelar.Location = new System.Drawing.Point(247, 187);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(91, 31);
             this.cmdCancelar.TabIndex = 70;
