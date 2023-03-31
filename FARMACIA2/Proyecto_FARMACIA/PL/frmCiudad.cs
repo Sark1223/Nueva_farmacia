@@ -34,6 +34,7 @@ namespace Proyecto_FARMACIA.PL
 
         }
 
+        //AGREGAR una ciudad dando click sobre el comando agregar
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             aciudad.lblTitle.Text = "AÑADIR CIUDAD";
@@ -45,13 +46,13 @@ namespace Proyecto_FARMACIA.PL
             dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
         }
 
-        
-
+        //Refrescar la tabla en caso de que no se observen los cambios
         private void pbRefrescar_Click(object sender, EventArgs e)
         {
             dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
         }
 
+        //MODIFICAR una ciudad dando doble click sobre el registro
         private void SeleccionarDK(object sender, DataGridViewCellMouseEventArgs e)
         {
             //Modificar los valores para que La ventana cambie a Modificar

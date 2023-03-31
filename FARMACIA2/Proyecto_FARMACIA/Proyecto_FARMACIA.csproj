@@ -115,12 +115,6 @@
     <Compile Include="PL\frmPropietarios.Designer.cs">
       <DependentUpon>frmPropietarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Modifi_Ciudad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Modifi_Ciudad.Designer.cs">
-      <DependentUpon>Modifi_Ciudad.cs</DependentUpon>
-    </Compile>
     <Compile Include="PL\Modifi_Propietarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,9 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmPropietarios.resx">
       <DependentUpon>frmPropietarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Modifi_Ciudad.resx">
-      <DependentUpon>Modifi_Ciudad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Modifi_Propietarios.resx">
       <DependentUpon>Modifi_Propietarios.cs</DependentUpon>

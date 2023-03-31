@@ -44,6 +44,7 @@ namespace Proyecto_FARMACIA.PL
         private void frmAciudad_Load(object sender, EventArgs e)
         {
             ID_Actual = int.Parse(txtId.Text);
+
         }
 
         public void ObtenerValoresCiudad()
@@ -83,7 +84,7 @@ namespace Proyecto_FARMACIA.PL
                 "no_habitantes_ciudad = " + ObjciudadBLL.no_habitantes + ",tama_superficie_ciudad = " + ObjciudadBLL.superficie +
                 " WHERE id_ciudad =" + ID_Actual))
             {
-                MessageBox.Show("La ciudad " + txtNombre.Text + " de ID " + txtId.Text + " ha sido modificada", "REGISTRO MODIFICADO");
+                MessageBox.Show("La ciudad " + txtNombre.Text + " de ID " + ID_Actual + " ha sido modificada", "REGISTRO MODIFICADO");
 
                 Close();
             }
