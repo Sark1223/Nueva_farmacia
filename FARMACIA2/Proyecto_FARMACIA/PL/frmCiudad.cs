@@ -23,14 +23,15 @@ namespace Proyecto_FARMACIA.PL
         Conexion conectar = new Conexion();
         frmAciudad aciudad = new frmAciudad();
 
+        //Mostrar tabl al cargar la forma
+        private void frmCiudad_Load(object sender, EventArgs e)
+        {
+            dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
+        }
+
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -39,14 +40,12 @@ namespace Proyecto_FARMACIA.PL
             aciudad.lblTitle.Location = new Point(80, 6);
             aciudad.PanelModificar.Visible = false;
             aciudad.PanelAñadir.Visible = true;
+
             aciudad.ShowDialog();
             dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
         }
 
-        private void frmCiudad_Load(object sender, EventArgs e)
-        {
-            dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
-        }
+        
 
         private void pbRefrescar_Click(object sender, EventArgs e)
         {
@@ -55,12 +54,14 @@ namespace Proyecto_FARMACIA.PL
 
         private void SeleccionarDK(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int indice = e.RowIndex;
+            //Modificar los valores para que La ventana cambie a Modificar
             aciudad.PanelModificar.Visible = true;
             aciudad.PanelAñadir.Visible = false;
             aciudad.lblTitle.Text = "MODIFICAR CIUDAD";
-            aciudad.lblTitle.Location = new Point(60, 6);
+            aciudad.lblTitle.Location = new Point(60, 6);//Se ubica en diferente posicion
 
+            //Obtener los valores de la tabla y agregarlos a los TextBox
+            int indice = e.RowIndex;
             aciudad.txtId.Text = dgvCiudades.Rows[indice].Cells[0].Value.ToString();
             aciudad.txtNombre.Text = dgvCiudades.Rows[indice].Cells[1].Value.ToString();
             aciudad.txtEstado.Text = dgvCiudades.Rows[indice].Cells[2].Value.ToString();
@@ -71,6 +72,12 @@ namespace Proyecto_FARMACIA.PL
             aciudad.ShowDialog();
 
             dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
+        }
+        
+        //Cerrar desde el icono predetermimnado para cerrar
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

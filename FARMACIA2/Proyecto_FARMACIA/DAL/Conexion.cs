@@ -80,6 +80,23 @@ namespace Proyecto_FARMACIA.DAL
             return ID;
         }
 
+        //public void ObtenerValoresCiudad(string Metodo)
+        //{
+
+        //    if(Metodo == "Agregar")
+        //    {
+
+        //    }
+        //    else if(Metodo == "Modificar")
+        //    {
+
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Se presento un error al intentar agregar o modificar su registro.", "Error");
+        //    }
+        //}
+
 
         public bool AgregarCiudad(CiudadBLL ciudad)
         {

@@ -187,7 +187,7 @@
             this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cmdCerrar.TabIndex = 0;
             this.cmdCerrar.TabStop = false;
-            this.cmdCerrar.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // panel2
             // 
@@ -346,9 +346,9 @@
             this.cmdAgregar.Text = "Añadir";
             this.cmdAgregar.UseVisualStyleBackColor = false;
             this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
-            this.cmdAgregar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button1_MouseDown);
+            this.cmdAgregar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmdAgregar_MouseDown);
             this.cmdAgregar.MouseLeave += new System.EventHandler(this.cmdAgregar_MouseLeave);
-            this.cmdAgregar.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            this.cmdAgregar.MouseHover += new System.EventHandler(this.cmdAgregar_MouseHover);
             // 
             // button1
             // 
@@ -527,6 +527,7 @@
             this.Name = "frmAciudad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAciudad";
+            this.Load += new System.EventHandler(this.frmAciudad_Load);
             this.Title.ResumeLayout(false);
             this.Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();
