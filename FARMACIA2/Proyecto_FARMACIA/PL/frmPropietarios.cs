@@ -26,7 +26,7 @@ namespace Proyecto_FARMACIA.PL
         private void frmPropietarios_Load(object sender, EventArgs e)
         {
             Conexion conectar = new Conexion();
-            dgvPropietarios.DataSource = conectar.MostrarPropietarios().Tables[0];
+            //dgvPropietarios.DataSource = conectar.MostrarPropietarios().Tables[0];
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Proyecto_FARMACIA.DAL;
 
 namespace Proyecto_FARMACIA.PL
 {
@@ -30,12 +31,15 @@ namespace Proyecto_FARMACIA.PL
         bool primerCmd = true;
 
         //OBJETOS DE PANTALLAS
-        frmCiudad frmCiudad = new frmCiudad();
-        frmPropietarios frmPropietarios = new frmPropietarios();
-        //frmCiudad frmCiudad = new frmCiudad();
-        //frmCiudad frmCiudad = new frmCiudad();
-        //frmCiudad frmCiudad = new frmCiudad();
-        //frmCiudad frmCiudad = new frmCiudad();
+        frmCiudad ciudad = new frmCiudad();
+        frmPropietarios propi = new frmPropietarios();
+        //ciudad ciudad = new ciudad();
+        //ciudad ciudad = new ciudad();
+        //ciudad ciudad = new ciudad();
+        //ciudad ciudad = new ciudad();
+
+        //OBJETO CONEXION
+        Conexion conectar = new Conexion();
 
         private void pbSeemore_Click(object sender, EventArgs e)
         {
@@ -117,7 +121,7 @@ namespace Proyecto_FARMACIA.PL
                 lblMenosMAs.Location = new Point(4, 37);
 
 
-                frmCiudad.panel1.Size = new Size(776, 509);
+                ciudad.panel1.Size = new Size(776, 509);
 
             }
             else
@@ -131,8 +135,8 @@ namespace Proyecto_FARMACIA.PL
                 lblMenosMAs.Location = new Point(9, 37);
                 lblMenosMAs.Text = "Mas";
 
-                frmCiudad.panel1.Size = new Size(776 + 115, 509);
-                frmCiudad.panel1.BackColor = Color.Aquamarine;
+                ciudad.panel1.Size = new Size(776 + 115, 509);
+                ciudad.panel1.BackColor = Color.Aquamarine;
             }
         }
 
@@ -151,18 +155,56 @@ namespace Proyecto_FARMACIA.PL
             control.BackColor = Color.FromArgb(7, 200, 216);
         }
 
+        //Obtener nombre opcion forma
+        public void CargarTabla(string forma)
+        {
+            if (forma == cmdciudad.Name)
+            {
+                ciudad.lblCiudad.Text = "CIUDADES";
+                ciudad.dgvTablaDB.DataSource = conectar.MostrarCiudades().Tables[0];
+            }
+            else if (forma == cmdProp.Name)
+            {
+                ciudad.lblCiudad.Text = "PROPIETARIOS";
+                ciudad.dgvTablaDB.DataSource = conectar.MostrarPropietarios().Tables[0];
+            }
+            else if (forma == cmdEmpleado.Name)
+            {
+
+            }
+            else if (forma == cmdSucursales.Name)
+            {
+
+            }
+            else if (forma == cmdVentas.Name)
+            {
+
+            }
+            else if (forma == cmdMedi.Name)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("error");
+            }
+        }
+
+
         //Cambiar de color cuando el cursor este sobre los controles
 
         private void pbCiudad_Click(object sender, EventArgs e)
         {
-            AbrirForm(new frmCiudad());
+            CargarTabla(cmdciudad.Name);
+            AbrirForm(ciudad);
             PanelActual = cmdciudad;
             Ponerfoco();
         }
 
         private void pbPropi_Click(object sender, EventArgs e)
         {
-            AbrirForm(new frmPropietarios());
+            CargarTabla(cmdProp.Name);
+            AbrirForm(ciudad);
             PanelActual = cmdProp;
             Ponerfoco();
         }

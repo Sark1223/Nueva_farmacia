@@ -152,7 +152,7 @@
             this.lblNombre.Text = "Para MODIFICAR o ELIMINAR cualquier REGRISTRO haga doble click sobre el mismo";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // frmPropietarios
+            // propi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,8 +160,8 @@
             this.ClientSize = new System.Drawing.Size(800, 517);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmPropietarios";
-            this.Text = "frmPropietarios";
+            this.Name = "propi";
+            this.Text = "propi";
             this.Load += new System.EventHandler(this.frmPropietarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefrescar)).EndInit();

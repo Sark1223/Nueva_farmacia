@@ -23,10 +23,13 @@ namespace Proyecto_FARMACIA.PL
         Conexion conectar = new Conexion();
         frmAciudad aciudad = new frmAciudad();
 
+
+        
+
         //Mostrar tabl al cargar la forma
         private void frmCiudad_Load(object sender, EventArgs e)
         {
-            dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
+            //dgvTablaDB.DataSource = conectar.MostrarCiudades().Tables[0];
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -43,13 +46,13 @@ namespace Proyecto_FARMACIA.PL
             aciudad.PanelAñadir.Visible = true;
 
             aciudad.ShowDialog();
-            dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
+            dgvTablaDB.DataSource = conectar.MostrarCiudades().Tables[0];
         }
 
         //Refrescar la tabla en caso de que no se observen los cambios
         private void pbRefrescar_Click(object sender, EventArgs e)
         {
-            dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
+            dgvTablaDB.DataSource = conectar.MostrarCiudades().Tables[0];
         }
 
         //MODIFICAR una ciudad dando doble click sobre el registro
@@ -63,16 +66,16 @@ namespace Proyecto_FARMACIA.PL
 
             //Obtener los valores de la tabla y agregarlos a los TextBox
             int indice = e.RowIndex;
-            aciudad.txtId.Text = dgvCiudades.Rows[indice].Cells[0].Value.ToString();
-            aciudad.txtNombre.Text = dgvCiudades.Rows[indice].Cells[1].Value.ToString();
-            aciudad.txtEstado.Text = dgvCiudades.Rows[indice].Cells[2].Value.ToString();
-            aciudad.txtPais.Text = dgvCiudades.Rows[indice].Cells[3].Value.ToString();
-            aciudad.txtPoblacion.Text = dgvCiudades.Rows[indice].Cells[4].Value.ToString();
-            aciudad.txtTamaño.Text = dgvCiudades.Rows[indice].Cells[5].Value.ToString();
+            aciudad.txtId.Text = dgvTablaDB.Rows[indice].Cells[0].Value.ToString();
+            aciudad.txtNombre.Text = dgvTablaDB.Rows[indice].Cells[1].Value.ToString();
+            aciudad.txtEstado.Text = dgvTablaDB.Rows[indice].Cells[2].Value.ToString();
+            aciudad.txtPais.Text = dgvTablaDB.Rows[indice].Cells[3].Value.ToString();
+            aciudad.txtPoblacion.Text = dgvTablaDB.Rows[indice].Cells[4].Value.ToString();
+            aciudad.txtTamaño.Text = dgvTablaDB.Rows[indice].Cells[5].Value.ToString();
 
             aciudad.ShowDialog();
 
-            dgvCiudades.DataSource = conectar.MostrarCiudades().Tables[0];
+            dgvTablaDB.DataSource = conectar.MostrarCiudades().Tables[0];
         }
         
         //Cerrar desde el icono predetermimnado para cerrar

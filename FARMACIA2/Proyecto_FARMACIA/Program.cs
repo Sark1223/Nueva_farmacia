@@ -19,7 +19,7 @@ namespace Proyecto_FARMACIA
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmInicio());
             Application.Run(new frmMenuAdmin());
-            //Application.Run(new frmCiudad());
+            //Application.Run(new ciudad());
         }
     }
 }
