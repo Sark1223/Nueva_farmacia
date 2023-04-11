@@ -85,17 +85,11 @@
     <Compile Include="PL\frmAPropietario.Designer.cs">
       <DependentUpon>frmAPropietario.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\frmCiudad.cs">
+    <Compile Include="PL\frmMostrarOp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\frmCiudad.Designer.cs">
-      <DependentUpon>frmCiudad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\frmMasMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\frmMasMenu.Designer.cs">
-      <DependentUpon>frmMasMenu.cs</DependentUpon>
+    <Compile Include="PL\frmMostrarOp.Designer.cs">
+      <DependentUpon>frmMostrarOp.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\frmMenuAdmin.cs">
       <SubType>Form</SubType>
@@ -108,18 +102,6 @@
     </Compile>
     <Compile Include="PL\frmMenuEmpleados.Designer.cs">
       <DependentUpon>frmMenuEmpleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\frmPropietarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\frmPropietarios.Designer.cs">
-      <DependentUpon>frmPropietarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PL\Modifi_Propietarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PL\Modifi_Propietarios.Designer.cs">
-      <DependentUpon>Modifi_Propietarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -135,24 +117,15 @@
     <EmbeddedResource Include="PL\frmAPropietario.resx">
       <DependentUpon>frmAPropietario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\frmCiudad.resx">
-      <DependentUpon>frmCiudad.cs</DependentUpon>
+    <EmbeddedResource Include="PL\frmMostrarOp.resx">
+      <DependentUpon>frmMostrarOp.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\frmMasMenu.resx">
-      <DependentUpon>frmMasMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmMenuAdmin.resx">
       <DependentUpon>frmMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmMenuEmpleados.resx">
       <DependentUpon>frmMenuEmpleados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\frmPropietarios.resx">
-      <DependentUpon>frmPropietarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PL\Modifi_Propietarios.resx">
-      <DependentUpon>Modifi_Propietarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

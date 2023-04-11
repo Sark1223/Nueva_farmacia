@@ -18,6 +18,7 @@ namespace Proyecto_FARMACIA.DAL
         private string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = DB_FARMACIA_TOPICOS; Integrated Security = true";
         SqlConnection conexion;
 
+        //METODOS DE CONEXION
         public SqlConnection EstablecerConexion()
         {
             this.conexion = new SqlConnection(this.CadenaConexion);
@@ -47,6 +48,8 @@ namespace Proyecto_FARMACIA.DAL
             }
         }
 
+
+        //METODOS COMBO BOX
         public void RellenarCB(ComboBox cb, string sentencia, string textoCB)
         {
             SqlCommand cmd = new SqlCommand(sentencia);
@@ -80,24 +83,59 @@ namespace Proyecto_FARMACIA.DAL
             return ID;
         }
 
-        //public void ObtenerValoresCiudad(string Metodo)
-        //{
+        public string Retornar_info(string sentencia)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            conexion.Open();
 
-        //    if(Metodo == "Agregar")
-        //    {
-
-        //    }
-        //    else if(Metodo == "Modificar")
-        //    {
-
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Se presento un error al intentar agregar o modificar su registro.", "Error");
-        //    }
-        //}
+            SqlDataReader dr = cmd.ExecuteReader();
+            string nombre = "";
+            while (dr.Read())
+            {
+                nombre = dr[1].ToString();
+            }
+            conexion.Close();
+            return nombre;
+        }
 
 
+        //METODOS GENERALES DE EDICION
+        public bool Eliminar(string codigoSQL)
+        {
+            try
+            {
+                //    MessageBox.Show("El registro sera eliminado permanente, ¿Desea CONTINUAR?", "ATENCION", MessageBoxButtons.OKCancel);
+                //    if (MessageBox == DialogResult.Cancel)
+                //    {
+
+                //    }
+                SqlCommand sentencia = new SqlCommand(codigoSQL);
+                EjecutarSentencia(sentencia);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool Modificar(string codigoSQL)
+        {
+            try
+            {
+                SqlCommand sentencia = new SqlCommand(codigoSQL);
+                EjecutarSentencia(sentencia);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        
+
+        //METODOS CIUDAD
         public bool AgregarCiudad(CiudadBLL ciudad)
         {
             try
@@ -127,6 +165,14 @@ namespace Proyecto_FARMACIA.DAL
                 
         }
 
+        public DataSet MostrarCiudades()
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * FROM CIUDAD");
+            return EjecutarSentencia(sentencia);
+        }
+
+
+        //METODOS PROPIETARIO
         public bool AgregarPropietario(PropietarioBLL propietario)
         {
             try
@@ -174,52 +220,13 @@ namespace Proyecto_FARMACIA.DAL
 
         }
 
-        public DataSet MostrarCiudades()
-        {
-            SqlCommand sentencia = new SqlCommand("SELECT * FROM CIUDAD");
-            return EjecutarSentencia(sentencia);
-        }
-
-        public bool Eliminar(string codigoSQL)
-        {
-            try
-            {
-                //    MessageBox.Show("El registro sera eliminado permanente, ¿Desea CONTINUAR?", "ATENCION", MessageBoxButtons.OKCancel);
-                //    if (MessageBox == DialogResult.Cancel)
-                //    {
-
-                //    }
-                SqlCommand sentencia = new SqlCommand(codigoSQL);
-                EjecutarSentencia(sentencia);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        public bool Modificar(string codigoSQL)
-        {
-            try
-            {
-                SqlCommand sentencia = new SqlCommand(codigoSQL);
-                EjecutarSentencia(sentencia);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
         public DataSet MostrarPropietarios()
         {
             SqlCommand sentencia = new SqlCommand("SELECT * FROM PROPIETARIO");
             return EjecutarSentencia(sentencia);
         }
 
-        //public 
+
 
     }
 }

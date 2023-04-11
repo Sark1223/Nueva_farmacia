@@ -33,6 +33,7 @@ namespace Proyecto_FARMACIA.PL
         Conexion conexion = new Conexion();
         CiudadBLL ObjciudadBLL = new CiudadBLL();
         int ID_Actual;
+
         //Metodo para moer la ventana del marco superior
         private void Title_MouseDown(object sender, MouseEventArgs e)
         {
@@ -43,8 +44,10 @@ namespace Proyecto_FARMACIA.PL
         //Operaciones que se realizan al cargar la forma
         private void frmAciudad_Load(object sender, EventArgs e)
         {
-            ID_Actual = int.Parse(txtId.Text);
-
+            if(txtId.Text != "")
+            {
+                ID_Actual = int.Parse(txtId.Text);
+            }
         }
 
         public void ObtenerValoresCiudad()
@@ -57,14 +60,15 @@ namespace Proyecto_FARMACIA.PL
             ObjciudadBLL.superficie = Double.Parse(txtTamaño.Text);
         }
 
-        //AGREGAR un nuevo REGISTRO
+
+        //METODOS CIUDAD
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
             ObtenerValoresCiudad();
 
             if (conexion.AgregarCiudad(ObjciudadBLL))
             {
-                MessageBox.Show("La ciudad " + txtNombre.Text + " de ID " + txtId.Text + " se INGRESO correctamente", "REGISTRO AGREGADO", MessageBoxButtons.OK);
+                MessageBox.Show("La Ciudad: " + txtNombre.Text + " de ID: " + txtId.Text + " se INGRESO correctamente", "REGISTRO AGREGADO", MessageBoxButtons.OK);
                 Close();
             }
             else
@@ -73,18 +77,22 @@ namespace Proyecto_FARMACIA.PL
             }
         }
 
-        //MODIFICAR un registro
         private void cmdModificar_Click(object sender, EventArgs e)
         {
             ObtenerValoresCiudad();
 
+            string COMANDO = "UPDATE CIUDAD SET id_ciudad = " + ObjciudadBLL.ID + ", " +
+                             "nombre_ciudad = '" + ObjciudadBLL.nombre + "', " +
+                             "estado_ciudad = '" + ObjciudadBLL.estado + "'," +
+                             "pais_ciudad = '" + txtPais.Text + "'," +
+                             "no_habitantes_ciudad = " + ObjciudadBLL.no_habitantes + "," +
+                             "tama_superficie_ciudad = " + ObjciudadBLL.superficie +
+                             " WHERE id_ciudad =" + ID_Actual;
+
             //id_ciudad,nombre_ciudad,estado_ciudad,pais_ciudad,no_habitantes_ciudad,tama_superficie_ciudad
-            if (conexion.Modificar("UPDATE CIUDAD SET id_ciudad = " + ObjciudadBLL.ID + ", nombre_ciudad = '" + ObjciudadBLL.nombre + "', " +
-                "estado_ciudad = '" + ObjciudadBLL.estado + "',pais_ciudad = '" + txtPais.Text + "'," +
-                "no_habitantes_ciudad = " + ObjciudadBLL.no_habitantes + ",tama_superficie_ciudad = " + ObjciudadBLL.superficie +
-                " WHERE id_ciudad =" + ID_Actual))
+            if (conexion.Modificar(COMANDO))
             {
-                MessageBox.Show("La ciudad " + txtNombre.Text + " de ID " + ID_Actual + " ha sido modificada", "REGISTRO MODIFICADO");
+                MessageBox.Show("La opAdmin " + txtNombre.Text + " de ID " + ID_Actual + " ha sido modificada", "REGISTRO MODIFICADO");
 
                 Close();
             }
@@ -94,7 +102,6 @@ namespace Proyecto_FARMACIA.PL
             }
         }
 
-        //ELIMINAR un registro
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
             if (conexion.Eliminar("DELETE FROM CIUDAD WHERE id_ciudad =" + txtId.Text))
@@ -109,25 +116,25 @@ namespace Proyecto_FARMACIA.PL
             }
         }
 
-        //Cerrar desde el boton X de cerrar
+
+        //METODOS PARA CERRAR
         private void cmdCerrar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        //Cerrar desde el comando CANCELAR
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        //Al presionar el boton AGREGAR
+        
+        //CARACTCERISTICAS DE LOS BOTONES
         private void cmdAgregar_MouseDown(object sender, MouseEventArgs e)
         {
             cmdAgregar.ForeColor = Color.Maroon;
         }
 
-        //Al posicionarse sobre el boton AGREGAR
         private void cmdAgregar_MouseHover(object sender, EventArgs e)
         {
             cmdAgregar.ForeColor = Color.White;
@@ -135,7 +142,6 @@ namespace Proyecto_FARMACIA.PL
             
         }
 
-        //Al estar fuera del boton AGREGAR
         private void cmdAgregar_MouseLeave(object sender, EventArgs e)
         {
             cmdAgregar.ForeColor = Color.Maroon;

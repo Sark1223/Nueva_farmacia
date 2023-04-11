@@ -17,6 +17,7 @@ namespace Proyecto_FARMACIA.PL
         public frmMenuAdmin()
         {
             InitializeComponent();
+            this.Size = new Size(1460, 860);
         }
 
         ///Drag Form
@@ -31,67 +32,12 @@ namespace Proyecto_FARMACIA.PL
         bool primerCmd = true;
 
         //OBJETOS DE PANTALLAS
-        frmCiudad ciudad = new frmCiudad();
-        frmPropietarios propi = new frmPropietarios();
-        //ciudad ciudad = new ciudad();
-        //ciudad ciudad = new ciudad();
-        //ciudad ciudad = new ciudad();
-        //ciudad ciudad = new ciudad();
+        frmMostrarOp opAdmin = new frmMostrarOp();
 
         //OBJETO CONEXION
         Conexion conectar = new Conexion();
 
-        private void pbSeemore_Click(object sender, EventArgs e)
-        {
-
-            //AbrirForm(new frmMasMenu());
-            lblMenosMAs.Text = "Sirvoooo";
-        }
-
-        public void AbrirForm(object mas)
-        {
-            if (this.PanelContenedor.Controls.Count > 0)
-            {
-                this.PanelContenedor.Controls.RemoveAt(0);
-            }
-
-            Form admin = mas as Form; 
-            admin.TopLevel = false;
-            admin.Dock = DockStyle.Fill;
-            this.PanelContenedor.Controls.Add(admin);
-            this.PanelContenedor.Tag = admin;
-
-            admin.Show();
-        }
-
-        public void ComandoActivo(Panel panel)
-        {
-            panel.BackColor = Color.FromArgb(7, 200, 216);
-        }
-
-        public void ComandoSleep(Panel panel)
-        {
-            panel.BackColor = Color.FromArgb(27, 138, 158);
-        }
-
-        public void Ponerfoco()
-        {
-            if (primerCmd == true)
-            {
-                ComandoActivo(PanelActual);
-                PanelAnterior = PanelActual;
-                primerCmd = false;
-            }
-            else
-            {
-                ComandoSleep(PanelAnterior);
-                ComandoActivo(PanelActual);
-                PanelAnterior = PanelActual;
-            }
-            
-        }
-
-
+        
         private void cerrar_Click(object sender, EventArgs e)
         {
             //Cerrar
@@ -120,9 +66,6 @@ namespace Proyecto_FARMACIA.PL
                 lblMenosMAs.Text = "Menos";
                 lblMenosMAs.Location = new Point(4, 37);
 
-
-                ciudad.panel1.Size = new Size(776, 509);
-
             }
             else
             {
@@ -134,39 +77,24 @@ namespace Proyecto_FARMACIA.PL
                 MenosMas.Location = new Point(15, 465);
                 lblMenosMAs.Location = new Point(9, 37);
                 lblMenosMAs.Text = "Mas";
-
-                ciudad.panel1.Size = new Size(776 + 115, 509);
-                ciudad.panel1.BackColor = Color.Aquamarine;
             }
         }
 
+        
 
-        public void FuncionLeave(Control control)
-        {
-            if (control != PanelActual)
-            {
-                control.BackColor = Color.FromArgb(27, 138, 158);
-            }
-            
-        }
-
-        public void funcionHover(Control control)
-        {
-            control.BackColor = Color.FromArgb(7, 200, 216);
-        }
-
-        //Obtener nombre opcion forma
+        //CARGAR LA TABLA DEPENDIENDO DE LA OPCION SELECCIONADA
         public void CargarTabla(string forma)
         {
             if (forma == cmdciudad.Name)
             {
-                ciudad.lblCiudad.Text = "CIUDADES";
-                ciudad.dgvTablaDB.DataSource = conectar.MostrarCiudades().Tables[0];
+                opAdmin.lblOpcion.Text = "CIUDADES";
+                opAdmin.dgvTablaDB.DataSource = conectar.MostrarCiudades().Tables[0];
             }
             else if (forma == cmdProp.Name)
             {
-                ciudad.lblCiudad.Text = "PROPIETARIOS";
-                ciudad.dgvTablaDB.DataSource = conectar.MostrarPropietarios().Tables[0];
+                opAdmin.lblOpcion.Text = "PROPIETARIOS";
+                opAdmin.dgvTablaDB.DataSource = conectar.MostrarPropietarios().Tables[0];
+
             }
             else if (forma == cmdEmpleado.Name)
             {
@@ -190,13 +118,55 @@ namespace Proyecto_FARMACIA.PL
             }
         }
 
+        public void AbrirForm(object mas)
+        {
+            if (this.PanelContenedor.Controls.Count > 0)
+            {
+                this.PanelContenedor.Controls.RemoveAt(0);
+            }
 
-        //Cambiar de color cuando el cursor este sobre los controles
+            Form admin = mas as Form;
+            admin.TopLevel = false;
+            admin.Dock = DockStyle.Fill;
+            this.PanelContenedor.Controls.Add(admin);
+            this.PanelContenedor.Tag = admin;
+
+            admin.Show();
+        }
+
+
+        //CLICK EN LOS COMANDOS 
+        public void ComandoActivo(Panel panel)
+        {
+            panel.BackColor = Color.FromArgb(7, 200, 216);
+        }
+
+        public void ComandoSleep(Panel panel)
+        {
+            panel.BackColor = Color.FromArgb(27, 138, 158);
+        }
+
+        public void Ponerfoco()
+        {
+            if (primerCmd == true)
+            {
+                ComandoActivo(PanelActual);
+                PanelAnterior = PanelActual;
+                primerCmd = false;
+            }
+            else
+            {
+                ComandoSleep(PanelAnterior);
+                ComandoActivo(PanelActual);
+                PanelAnterior = PanelActual;
+            }
+
+        }
 
         private void pbCiudad_Click(object sender, EventArgs e)
         {
             CargarTabla(cmdciudad.Name);
-            AbrirForm(ciudad);
+            AbrirForm(opAdmin);
             PanelActual = cmdciudad;
             Ponerfoco();
         }
@@ -204,11 +174,22 @@ namespace Proyecto_FARMACIA.PL
         private void pbPropi_Click(object sender, EventArgs e)
         {
             CargarTabla(cmdProp.Name);
-            AbrirForm(ciudad);
+            AbrirForm(opAdmin);
             PanelActual = cmdProp;
             Ponerfoco();
         }
-        
+
+
+        //ACCIONES CUANDO EL CURSOR ESTA FUERA DEL CONTROL
+        public void FuncionLeave(Control control)
+        {
+            if (control != PanelActual)
+            {
+                control.BackColor = Color.FromArgb(27, 138, 158);
+            }
+
+        }
+
         private void cmdMedi_MouseLeave(object sender, EventArgs e)
         {
             FuncionLeave(cmdMedi);
@@ -237,6 +218,13 @@ namespace Proyecto_FARMACIA.PL
         private void cmdciudad_MouseLeave_1(object sender, EventArgs e)
         {
             FuncionLeave(cmdciudad);
+        }
+
+
+        //ACCIONES CUANDO EL CURSOR ESTAR SOBRE EL CONTROL
+        public void funcionHover(Control control)
+        {
+            control.BackColor = Color.FromArgb(7, 200, 216);
         }
 
         private void cmdciudad_MouseHover(object sender, EventArgs e)

@@ -103,16 +103,6 @@ namespace Proyecto_FARMACIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ciudad {
-            get {
-                object obj = ResourceManager.GetObject("ciudad", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap dueno {
             get {
                 object obj = ResourceManager.GetObject("dueno", resourceCulture);
@@ -246,6 +236,16 @@ namespace Proyecto_FARMACIA.Properties {
         internal static System.Drawing.Bitmap mujer {
             get {
                 object obj = ResourceManager.GetObject("mujer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pbCiu {
+            get {
+                object obj = ResourceManager.GetObject("pbCiu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

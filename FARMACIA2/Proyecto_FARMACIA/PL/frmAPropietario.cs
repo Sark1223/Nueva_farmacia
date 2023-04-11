@@ -33,6 +33,8 @@ namespace Proyecto_FARMACIA.PL
 
         //VARIABLES AUXILIARES
         bool datos_llenos = false;
+        int ID_Actual;
+
 
         //ACTIVAR EL ENCABEZADO PARA QUE SE MUEVA
         private void Mover(object sender, MouseEventArgs e)
@@ -41,14 +43,21 @@ namespace Proyecto_FARMACIA.PL
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void cmdCerrar_Click(object sender, EventArgs e)
+        private void frmAPropietario_Load(object sender, EventArgs e)
         {
-            Close();
+            if (lblTitle.Text == "AÑADIR PROPIETARIO")
+            {
+                conexion.RellenarCB(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
+            }
+
+            if(txtIdPro.Text != "")
+            {
+                ID_Actual = int.Parse(txtIdPro.Text);
+            }
+            
         }
 
-        
-
-        private void cmdAgregar_Click(object sender, EventArgs e)
+        public void ObtenerValoresPropi()
         {
             OpropiBLL.ID = int.Parse(txtIdPro.Text);
             OpropiBLL.A_paterno = txtPaterno.Text;
@@ -59,46 +68,54 @@ namespace Proyecto_FARMACIA.PL
             OpropiBLL.No_interior = txtInterios.Text;
             OpropiBLL.Colonia = txtcolonia.Text;
             OpropiBLL.CP = int.Parse(txtIdPro.Text);
-            OpropiBLL.telefono = int.Parse(txtTelefono.Text);
-            OpropiBLL.correo_e = txtCorreo.Text+"@GMAIL.COM";
-
-            
-            MessageBox.Show("conexion = " + conexion.AgregarPropietario(OpropiBLL));
+            OpropiBLL.telefono = long.Parse(txtTelefono.Text);
+            OpropiBLL.correo_e = txtCorreo.Text + "@GMAIL.COM";
         }
 
-        private void frmAPropietario_Load(object sender, EventArgs e)
-        {
-            conexion.RellenarCB(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
-        }
 
-        private void cbCiudad_SelectedIndexChanged(object sender, EventArgs e)
+        //METODO DE PROPIETARIO
+        private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            if(cbCiudad.SelectedIndex > 0)
+            ObtenerValoresPropi();
+
+            if (conexion.AgregarPropietario(OpropiBLL))
             {
-                OpropiBLL.id_ciudad = conexion.captar_info("SELECT * FROM CIUDAD WHERE nombre_ciudad='" + cbCiudad.Text + "'") ;
-                
+                MessageBox.Show("El propietario: " + txtNombres.Text + " de ID: " + txtIdPro.Text + " se INGRESO correctamente", "REGISTRO AGREGADO", MessageBoxButtons.OK);
+                Close();
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void cmdLimpiar_Click(object sender, EventArgs e)
-        {
-            txtIdPro.Clear();txtMaterno.Clear();txtPaterno.Clear();
-            txtCalle.Clear();txtcolonia.Clear();txtInterios.Clear();  
-            txtNo_exte.Clear();txtCP.Clear();txtNombres.Clear();           
-            txtCorreo.Clear();txtTelefono.Clear();
-            conexion.RellenarCB(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
-
-
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
+            }
         }
 
         private void cmdModificar_Click(object sender, EventArgs e)
         {
-            
+            ObtenerValoresPropi();
+
+            string COMANDO = "update PROPIETARIO set id_propietario = " + OpropiBLL.ID + ", " +
+                            "a_paterno = '" + OpropiBLL.A_paterno + "', " +
+                            "a_materno = '" + OpropiBLL.A_materno + "', " +
+                            "nombre_s = '" + OpropiBLL.Nombre_s + "', " +
+                            "calle = '" + OpropiBLL.Calle + "', " +
+                            "no_exterior = " + OpropiBLL.No_exterior + ", " +
+                            "no_interior = '" + OpropiBLL.No_interior + "', " +
+                            "colonia = '" + OpropiBLL.Colonia + "', " +
+                            "CP = " + OpropiBLL.CP + ", " +
+                            "telefono = " + OpropiBLL.telefono + ", " +
+                            "correo_e = '" + OpropiBLL.correo_e + "', " +
+                            "WHERE id_ciudad =" + ID_Actual;
+
+           if (conexion.Modificar(COMANDO))
+            {
+                MessageBox.Show("El propietario " + txtNombres.Text + " de ID " + ID_Actual + " ha sido modificada", "REGISTRO MODIFICADO");
+
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
+            }
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)
@@ -115,9 +132,43 @@ namespace Proyecto_FARMACIA.PL
             }
         }
 
+
+        //RELLENAR COMBOBOX CIUDADES - LLAVE FORANEA
+        private void cbCiudad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbCiudad.SelectedIndex > 0)
+            {
+                OpropiBLL.id_ciudad = conexion.captar_info("SELECT * FROM CIUDAD WHERE nombre_ciudad='" + cbCiudad.Text + "'") ;
+                
+            }
+        }
+
+        
+        //METODOS PARA CERRAR
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        //METODOS PARA LIMPIAR
+        private void cmdLimpiar_Click(object sender, EventArgs e)
+        {
+            txtIdPro.Clear();txtMaterno.Clear();txtPaterno.Clear();
+            txtCalle.Clear();txtcolonia.Clear();txtInterios.Clear();  
+            txtNo_exte.Clear();txtCP.Clear();txtNombres.Clear();           
+            txtCorreo.Clear();txtTelefono.Clear();
+            conexion.RellenarCB(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
+        }
+
     }
 }
