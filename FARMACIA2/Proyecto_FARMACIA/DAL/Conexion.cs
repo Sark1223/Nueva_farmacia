@@ -226,7 +226,53 @@ namespace Proyecto_FARMACIA.DAL
             return EjecutarSentencia(sentencia);
         }
 
+        //METODOS SUCURSAL
+        public bool AgregarSucursal(PropietarioBLL propietario)
+        {
+            try
+            {
+                SqlCommand agregar = new SqlCommand(
+                "insert into PROPIETARIO(" +
+                            "id_farmacia," +
+                            "nombre_farm," +
+                            "calle_farm," +
+                            "no_exterior_farm," +
+                            "no_interior_farm," +
+                            "colonia_farm," +
+                            "CP_FARM," +
+                            "id_propietario," +
+                            "id_ciudad)" +
+                "values(@id,@nombre,@calle,@no_exterior,@no_interior,@colonia,@CP,@id_propietario,@id_ciudad)");
 
+                agregar.Parameters.AddWithValue("id", propietario.ID);
+                agregar.Parameters.AddWithValue("nombre", propietario.Nombre_s);
+                agregar.Parameters.AddWithValue("calle", propietario.Calle);
+                agregar.Parameters.AddWithValue("no_exterior", propietario.No_exterior);
+                agregar.Parameters.AddWithValue("no_interior", propietario.No_interior);
+                agregar.Parameters.AddWithValue("colonia", propietario.Colonia);
+                agregar.Parameters.AddWithValue("CP", propietario.CP);
+                agregar.Parameters.AddWithValue("id_propietario", propietario.correo_e);
+                agregar.Parameters.AddWithValue("id_ciudad", propietario.id_ciudad);
+
+                agregar.Connection = EstablecerConexion();
+                conexion.Open();
+                agregar.ExecuteNonQuery();
+                conexion.Close();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+        public DataSet MostrarSucursales()
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * FROM FARMACIA");
+            return EjecutarSentencia(sentencia);
+        }
 
     }
 }

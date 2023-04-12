@@ -23,6 +23,7 @@ namespace Proyecto_FARMACIA.PL
         Conexion conectar = new Conexion();
         frmAPropietario aPropietario = new frmAPropietario();
         frmAciudad aciudad = new frmAciudad();
+        frmASucursal aSucursal = new frmASucursal();
 
 
         //METODOS COMUNES DE LAS DIFERENTES OPCIONES
@@ -58,6 +59,15 @@ namespace Proyecto_FARMACIA.PL
             }
             else if (lblOpcion.Text == "SUCURSALES")
             {
+                aSucursal.PanelModificar.Visible = false;
+                aSucursal.PanelAñadir.Visible = true;
+                aSucursal.lblTitle.Text = "AÑADIR SUCURSAL";
+                aSucursal.lblTitle.Location = new Point((aSucursal.Title.Width / 2) - (aSucursal.lblTitle.Width / 2), 6);//Se ubica en diferente posicion
+
+                aSucursal.ShowDialog();
+
+                //Refrescar tabla
+                dgvTablaDB.DataSource = conectar.MostrarSucursales().Tables[0];
 
             }
             else if (lblOpcion.Text == "VENTAS")

@@ -43,7 +43,6 @@ C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.frmInicio.resources
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmAdmin.resources
-C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmMasMenu.resources
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmMenuAdmin.resources
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmMenuEmpleados.resources
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.Properties.Resources.resources
@@ -53,3 +52,4 @@ C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmAciudad.resources
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmAPropietario.resources
 C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmMostrarOp.resources
+C:\Users\perro\OneDrive - tec tijuana\TOPICOS\FARMACIA\Nueva_farmacia\FARMACIA2\Proyecto_FARMACIA\obj\Debug\Proyecto_FARMACIA.PL.frmASucursal.resources

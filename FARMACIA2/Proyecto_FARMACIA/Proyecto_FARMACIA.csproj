@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="BLL\CiudadBLL.cs" />
     <Compile Include="BLL\PropietarioBLL.cs" />
+    <Compile Include="BLL\SucursalBLL.cs" />
     <Compile Include="DAL\Conexion.cs" />
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
@@ -84,6 +85,12 @@
     </Compile>
     <Compile Include="PL\frmAPropietario.Designer.cs">
       <DependentUpon>frmAPropietario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmASucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmASucursal.Designer.cs">
+      <DependentUpon>frmASucursal.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\frmMostrarOp.cs">
       <SubType>Form</SubType>
@@ -116,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmAPropietario.resx">
       <DependentUpon>frmAPropietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmASucursal.resx">
+      <DependentUpon>frmASucursal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmMostrarOp.resx">
       <DependentUpon>frmMostrarOp.cs</DependentUpon>

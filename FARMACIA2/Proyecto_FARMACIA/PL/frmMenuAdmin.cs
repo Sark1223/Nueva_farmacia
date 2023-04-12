@@ -179,6 +179,30 @@ namespace Proyecto_FARMACIA.PL
             Ponerfoco();
         }
 
+        private void pbSucursales_Click(object sender, EventArgs e)
+        {
+            CargarTabla(cmdSucursales.Name);
+            AbrirForm(opAdmin);
+            PanelActual = cmdSucursales;
+            Ponerfoco();
+        }
+
+        private void pbEmple_Click(object sender, EventArgs e)
+        {
+            CargarTabla(cmdEmpleado.Name);
+            AbrirForm(opAdmin);
+            PanelActual = cmdEmpleado;
+            Ponerfoco();
+        }
+
+        private void pbMedi_Click(object sender, EventArgs e)
+        {
+            CargarTabla(cmdMedi.Name);
+            AbrirForm(opAdmin);
+            PanelActual = cmdMedi;
+            Ponerfoco();
+        }
+
 
         //ACCIONES CUANDO EL CURSOR ESTA FUERA DEL CONTROL
         public void FuncionLeave(Control control)
@@ -256,8 +280,6 @@ namespace Proyecto_FARMACIA.PL
         {
             funcionHover(cmdEmpleado);
         }
-
-
-        
+                
     }
 }
