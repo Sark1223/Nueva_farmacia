@@ -98,11 +98,13 @@ namespace Proyecto_FARMACIA.PL
             }
             else if (forma == cmdEmpleado.Name)
             {
-
+                opAdmin.lblOpcion.Text = "EMPLEADOS";
+                opAdmin.dgvTablaDB.DataSource = conectar.MostrarEmpleados().Tables[0];
             }
             else if (forma == cmdSucursales.Name)
             {
-
+                opAdmin.lblOpcion.Text = "SUCURSALES";
+                opAdmin.dgvTablaDB.DataSource = conectar.MostrarSucursales().Tables[0];
             }
             else if (forma == cmdVentas.Name)
             {
@@ -110,7 +112,8 @@ namespace Proyecto_FARMACIA.PL
             }
             else if (forma == cmdMedi.Name)
             {
-
+                opAdmin.lblOpcion.Text = "MEDICAMENTOS";
+                opAdmin.dgvTablaDB.DataSource = conectar.MostrarMedicamenntos().Tables[0];
             }
             else
             {

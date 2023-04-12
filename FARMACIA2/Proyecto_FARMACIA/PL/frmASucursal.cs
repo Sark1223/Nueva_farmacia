@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto_FARMACIA.BLL;
+using Proyecto_FARMACIA.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,24 +19,44 @@ namespace Proyecto_FARMACIA.PL
             InitializeComponent();
         }
 
+        //Objetos de Clase
+        SucursalBLL objSucursal = new SucursalBLL();
+        Conexion conexion = new Conexion();
+
         public void ObtenerValoresSucursal()
         {
-            OpropiBLL.ID = int.Parse(txtIdPro.Text);
-            OpropiBLL.A_paterno = txtPaterno.Text;
-            OpropiBLL.A_materno = txtMaterno.Text;
-            OpropiBLL.Nombre_s = txtNombres.Text;
-            OpropiBLL.Calle = txtCalle.Text;
-            OpropiBLL.No_exterior = int.Parse(txtIdPro.Text);
-            OpropiBLL.No_interior = txtInterios.Text;
-            OpropiBLL.Colonia = txtcolonia.Text;
-            OpropiBLL.CP = int.Parse(txtIdPro.Text);
-            OpropiBLL.telefono = long.Parse(txtTelefono.Text);
-            OpropiBLL.correo_e = txtCorreo.Text + "@GMAIL.COM";
+            objSucursal.id_Ciudad_farm = int.Parse(txtIdFarmacia.Text);
+            objSucursal.nombre_farm = txtNombre.Text;
+            objSucursal.calle_farm = txtCalle.Text;
+            objSucursal.no_exterior_farm = int.Parse(txtNo_exte.Text);
+            objSucursal.no_interior_farm = txtCalle.Text;
+            objSucursal.colonia_farm = txtcolonia.Text;
+            objSucursal.CP_farm = int.Parse(txtCP.Text);
+            //objSucursal.id_propi_farm = txtcolonia.Text;
+            //objSucursal.id_Ciudad_farm = int.Parse(txtIdPro.Text);
         }
 
+        //METODOS DE SUCURSALES
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
+            ObtenerValoresSucursal();
 
+            if (conexion.AgregarSucursal(objSucursal))
+            {
+                MessageBox.Show("La sucursal " + txtNombre.Text + " de ID: " + txtIdFarmacia.Text + " se INGRESO correctamente", "REGISTRO AGREGADO", MessageBoxButtons.OK);
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
+            }
+        }
+
+
+        //CERRAR FORMA 
+        private void cmdCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

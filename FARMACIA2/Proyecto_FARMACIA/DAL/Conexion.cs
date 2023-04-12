@@ -226,8 +226,9 @@ namespace Proyecto_FARMACIA.DAL
             return EjecutarSentencia(sentencia);
         }
 
+
         //METODOS SUCURSAL
-        public bool AgregarSucursal(PropietarioBLL propietario)
+        public bool AgregarSucursal(SucursalBLL sucursal)
         {
             try
             {
@@ -244,15 +245,15 @@ namespace Proyecto_FARMACIA.DAL
                             "id_ciudad)" +
                 "values(@id,@nombre,@calle,@no_exterior,@no_interior,@colonia,@CP,@id_propietario,@id_ciudad)");
 
-                agregar.Parameters.AddWithValue("id", propietario.ID);
-                agregar.Parameters.AddWithValue("nombre", propietario.Nombre_s);
-                agregar.Parameters.AddWithValue("calle", propietario.Calle);
-                agregar.Parameters.AddWithValue("no_exterior", propietario.No_exterior);
-                agregar.Parameters.AddWithValue("no_interior", propietario.No_interior);
-                agregar.Parameters.AddWithValue("colonia", propietario.Colonia);
-                agregar.Parameters.AddWithValue("CP", propietario.CP);
-                agregar.Parameters.AddWithValue("id_propietario", propietario.correo_e);
-                agregar.Parameters.AddWithValue("id_ciudad", propietario.id_ciudad);
+                agregar.Parameters.AddWithValue("id", sucursal.id_Ciudad_farm);
+                agregar.Parameters.AddWithValue("nombre", sucursal.nombre_farm);
+                agregar.Parameters.AddWithValue("calle", sucursal.calle_farm);
+                agregar.Parameters.AddWithValue("no_exterior", sucursal.no_exterior_farm);
+                agregar.Parameters.AddWithValue("no_interior", sucursal.no_interior_farm);
+                agregar.Parameters.AddWithValue("colonia", sucursal.colonia_farm);
+                agregar.Parameters.AddWithValue("CP", sucursal.CP_farm);
+                agregar.Parameters.AddWithValue("id_propietario", sucursal.id_propi_farm);
+                agregar.Parameters.AddWithValue("id_ciudad", sucursal.id_Ciudad_farm);
 
                 agregar.Connection = EstablecerConexion();
                 conexion.Open();
@@ -271,6 +272,24 @@ namespace Proyecto_FARMACIA.DAL
         public DataSet MostrarSucursales()
         {
             SqlCommand sentencia = new SqlCommand("SELECT * FROM FARMACIA");
+            return EjecutarSentencia(sentencia);
+        }
+
+
+        //METODOS MEDICAMENTO
+
+        public DataSet MostrarMedicamenntos()
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * FROM MEDICAMENTO");
+            return EjecutarSentencia(sentencia);
+        }
+
+
+        //METODOS EMPLEADOS
+
+        public DataSet MostrarEmpleados()
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * FROM EMPLEADO");
             return EjecutarSentencia(sentencia);
         }
 
