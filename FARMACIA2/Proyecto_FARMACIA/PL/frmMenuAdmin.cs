@@ -114,6 +114,7 @@ namespace Proyecto_FARMACIA.PL
             {
                 opAdmin.lblOpcion.Text = "MEDICAMENTOS";
                 opAdmin.dgvTablaDB.DataSource = conectar.MostrarMedicamenntos().Tables[0];
+                opAdmin.dgvTablaDB.DataSource = conectar.MostrarPrecio().Tables[0];
             }
             else
             {

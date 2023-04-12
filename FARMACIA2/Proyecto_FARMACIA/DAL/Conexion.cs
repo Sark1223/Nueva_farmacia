@@ -284,6 +284,11 @@ namespace Proyecto_FARMACIA.DAL
             return EjecutarSentencia(sentencia);
         }
 
+        public DataSet MostrarPrecio()
+        {
+            SqlCommand sentencia = new SqlCommand("SELECT * FROM MED_FARM");
+            return EjecutarSentencia(sentencia);
+        }
 
         //METODOS EMPLEADOS
 
