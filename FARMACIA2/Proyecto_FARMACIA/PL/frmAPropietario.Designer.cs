@@ -91,11 +91,10 @@
             // linea
             // 
             this.linea.BackColor = System.Drawing.Color.IndianRed;
-            this.linea.Location = new System.Drawing.Point(321, 392);
-            this.linea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.linea.Location = new System.Drawing.Point(214, 255);
             this.linea.Name = "linea";
-            this.linea.Size = new System.Drawing.Size(96, 2);
-            this.linea.TabIndex = 67;
+            this.linea.Size = new System.Drawing.Size(64, 1);
+            this.linea.TabIndex = 26;
             // 
             // txtNo_exte
             // 
@@ -104,21 +103,19 @@
             this.txtNo_exte.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNo_exte.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtNo_exte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtNo_exte.Location = new System.Drawing.Point(327, 358);
-            this.txtNo_exte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNo_exte.Location = new System.Drawing.Point(218, 233);
             this.txtNo_exte.Name = "txtNo_exte";
-            this.txtNo_exte.Size = new System.Drawing.Size(90, 29);
-            this.txtNo_exte.TabIndex = 66;
+            this.txtNo_exte.Size = new System.Drawing.Size(60, 19);
+            this.txtNo_exte.TabIndex = 24;
             this.txtNo_exte.Text = "5714";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.IndianRed;
-            this.panel6.Location = new System.Drawing.Point(33, 392);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Location = new System.Drawing.Point(22, 255);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(270, 2);
-            this.panel6.TabIndex = 65;
+            this.panel6.Size = new System.Drawing.Size(180, 1);
+            this.panel6.TabIndex = 23;
             // 
             // txtCalle
             // 
@@ -127,22 +124,20 @@
             this.txtCalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCalle.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtCalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtCalle.Location = new System.Drawing.Point(39, 358);
-            this.txtCalle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCalle.Location = new System.Drawing.Point(26, 233);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(264, 29);
-            this.txtCalle.TabIndex = 64;
-            this.txtCalle.Text = "VALLE ENCANTADO";
+            this.txtCalle.Size = new System.Drawing.Size(176, 19);
+            this.txtCalle.TabIndex = 21;
+            this.txtCalle.Text = "CALLE";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(30, 214);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(20, 139);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 2);
-            this.panel1.TabIndex = 63;
+            this.panel1.Size = new System.Drawing.Size(152, 1);
+            this.panel1.TabIndex = 11;
             // 
             // txtNombres
             // 
@@ -151,23 +146,21 @@
             this.txtNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombres.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtNombres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtNombres.Location = new System.Drawing.Point(39, 183);
-            this.txtNombres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombres.Location = new System.Drawing.Point(26, 119);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(213, 29);
-            this.txtNombres.TabIndex = 62;
-            this.txtNombres.Text = "KARLA JUDITH";
+            this.txtNombres.Size = new System.Drawing.Size(142, 19);
+            this.txtNombres.TabIndex = 9;
+            this.txtNombres.Text = "NOMBRE(S)";
             // 
             // lblNo_exte
             // 
             this.lblNo_exte.AutoSize = true;
             this.lblNo_exte.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNo_exte.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblNo_exte.Location = new System.Drawing.Point(312, 335);
-            this.lblNo_exte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNo_exte.Location = new System.Drawing.Point(208, 218);
             this.lblNo_exte.Name = "lblNo_exte";
-            this.lblNo_exte.Size = new System.Drawing.Size(107, 21);
-            this.lblNo_exte.TabIndex = 61;
+            this.lblNo_exte.Size = new System.Drawing.Size(75, 17);
+            this.lblNo_exte.TabIndex = 25;
             this.lblNo_exte.Text = "No_Exterior";
             this.lblNo_exte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -176,11 +169,10 @@
             this.lblCalle.AutoSize = true;
             this.lblCalle.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalle.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblCalle.Location = new System.Drawing.Point(28, 335);
-            this.lblCalle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCalle.Location = new System.Drawing.Point(19, 218);
             this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(55, 21);
-            this.lblCalle.TabIndex = 60;
+            this.lblCalle.Size = new System.Drawing.Size(39, 17);
+            this.lblCalle.TabIndex = 22;
             this.lblCalle.Text = "Calle";
             this.lblCalle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -189,11 +181,10 @@
             this.lblNombres.AutoSize = true;
             this.lblNombres.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombres.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblNombres.Location = new System.Drawing.Point(26, 162);
-            this.lblNombres.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombres.Location = new System.Drawing.Point(17, 105);
             this.lblNombres.Name = "lblNombres";
-            this.lblNombres.Size = new System.Drawing.Size(100, 21);
-            this.lblNombres.TabIndex = 59;
+            this.lblNombres.Size = new System.Drawing.Size(70, 17);
+            this.lblNombres.TabIndex = 10;
             this.lblNombres.Text = "Nombre(s)";
             this.lblNombres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -201,31 +192,28 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.IndianRed;
             this.panel4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel4.Location = new System.Drawing.Point(386, 148);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Location = new System.Drawing.Point(257, 96);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(178, 2);
-            this.panel4.TabIndex = 58;
+            this.panel4.Size = new System.Drawing.Size(119, 1);
+            this.panel4.TabIndex = 8;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.IndianRed;
             this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(186, 148);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(124, 96);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(168, 2);
-            this.panel3.TabIndex = 57;
+            this.panel3.Size = new System.Drawing.Size(112, 1);
+            this.panel3.TabIndex = 5;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.IndianRed;
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(30, 148);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(20, 96);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(120, 2);
-            this.panel2.TabIndex = 50;
+            this.panel2.Size = new System.Drawing.Size(80, 1);
+            this.panel2.TabIndex = 2;
             // 
             // txtMaterno
             // 
@@ -234,23 +222,21 @@
             this.txtMaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMaterno.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtMaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtMaterno.Location = new System.Drawing.Point(388, 114);
-            this.txtMaterno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtMaterno.Location = new System.Drawing.Point(259, 74);
             this.txtMaterno.Name = "txtMaterno";
-            this.txtMaterno.Size = new System.Drawing.Size(172, 29);
-            this.txtMaterno.TabIndex = 56;
-            this.txtMaterno.Text = "RIVERA";
+            this.txtMaterno.Size = new System.Drawing.Size(115, 19);
+            this.txtMaterno.TabIndex = 6;
+            this.txtMaterno.Text = "A_MATERNO";
             // 
             // lblMaterno
             // 
             this.lblMaterno.AutoSize = true;
             this.lblMaterno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaterno.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblMaterno.Location = new System.Drawing.Point(381, 94);
-            this.lblMaterno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMaterno.Location = new System.Drawing.Point(254, 61);
             this.lblMaterno.Name = "lblMaterno";
-            this.lblMaterno.Size = new System.Drawing.Size(163, 21);
-            this.lblMaterno.TabIndex = 55;
+            this.lblMaterno.Size = new System.Drawing.Size(112, 17);
+            this.lblMaterno.TabIndex = 7;
             this.lblMaterno.Text = "Apellido Materno";
             this.lblMaterno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -261,12 +247,11 @@
             this.txtPaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPaterno.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtPaterno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtPaterno.Location = new System.Drawing.Point(188, 114);
-            this.txtPaterno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPaterno.Location = new System.Drawing.Point(125, 74);
             this.txtPaterno.Name = "txtPaterno";
-            this.txtPaterno.Size = new System.Drawing.Size(160, 29);
-            this.txtPaterno.TabIndex = 54;
-            this.txtPaterno.Text = "SANTOS";
+            this.txtPaterno.Size = new System.Drawing.Size(107, 19);
+            this.txtPaterno.TabIndex = 3;
+            this.txtPaterno.Text = "A_PATERNO";
             // 
             // txtIdPro
             // 
@@ -275,23 +260,22 @@
             this.txtIdPro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdPro.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtIdPro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtIdPro.Location = new System.Drawing.Point(30, 115);
-            this.txtIdPro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIdPro.Location = new System.Drawing.Point(20, 75);
             this.txtIdPro.Name = "txtIdPro";
-            this.txtIdPro.Size = new System.Drawing.Size(156, 29);
-            this.txtIdPro.TabIndex = 53;
-            this.txtIdPro.Text = "1212";
+            this.txtIdPro.Size = new System.Drawing.Size(104, 19);
+            this.txtIdPro.TabIndex = 0;
+            this.txtIdPro.Text = "0";
+            this.txtIdPro.TextChanged += new System.EventHandler(this.txtIdPro_TextChanged);
             // 
             // lblPaterno
             // 
             this.lblPaterno.AutoSize = true;
             this.lblPaterno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaterno.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblPaterno.Location = new System.Drawing.Point(182, 94);
-            this.lblPaterno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPaterno.Location = new System.Drawing.Point(121, 61);
             this.lblPaterno.Name = "lblPaterno";
-            this.lblPaterno.Size = new System.Drawing.Size(157, 21);
-            this.lblPaterno.TabIndex = 52;
+            this.lblPaterno.Size = new System.Drawing.Size(108, 17);
+            this.lblPaterno.TabIndex = 4;
             this.lblPaterno.Text = "Apellido Paterno";
             this.lblPaterno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -300,11 +284,10 @@
             this.lblPropietario.AutoSize = true;
             this.lblPropietario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPropietario.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblPropietario.Location = new System.Drawing.Point(26, 94);
-            this.lblPropietario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPropietario.Location = new System.Drawing.Point(17, 61);
             this.lblPropietario.Name = "lblPropietario";
-            this.lblPropietario.Size = new System.Drawing.Size(130, 21);
-            this.lblPropietario.TabIndex = 51;
+            this.lblPropietario.Size = new System.Drawing.Size(91, 17);
+            this.lblPropietario.TabIndex = 1;
             this.lblPropietario.Text = "Id_Propietario";
             this.lblPropietario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -315,10 +298,9 @@
             this.Title.Controls.Add(this.cmdCerrar);
             this.Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.Title.Location = new System.Drawing.Point(0, 0);
-            this.Title.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(600, 38);
-            this.Title.TabIndex = 68;
+            this.Title.Size = new System.Drawing.Size(400, 25);
+            this.Title.TabIndex = 44;
             this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
             // lblTitle
@@ -328,11 +310,10 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitle.Location = new System.Drawing.Point(110, 3);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(73, 2);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(356, 32);
-            this.lblTitle.TabIndex = 34;
+            this.lblTitle.Size = new System.Drawing.Size(244, 21);
+            this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "AÑADIR PROPIETARIO";
             this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mover);
             // 
@@ -341,10 +322,9 @@
             this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdCerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.iconCerrarblanco;
-            this.cmdCerrar.Location = new System.Drawing.Point(561, 5);
-            this.cmdCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdCerrar.Location = new System.Drawing.Point(374, 3);
             this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(34, 31);
+            this.cmdCerrar.Size = new System.Drawing.Size(23, 20);
             this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cmdCerrar.TabIndex = 0;
             this.cmdCerrar.TabStop = false;
@@ -354,51 +334,46 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(8, 577);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel8.Location = new System.Drawing.Point(5, 375);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(584, 8);
-            this.panel8.TabIndex = 71;
+            this.panel8.Size = new System.Drawing.Size(390, 5);
+            this.panel8.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 38);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel5.Location = new System.Drawing.Point(0, 25);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 547);
-            this.panel5.TabIndex = 70;
+            this.panel5.Size = new System.Drawing.Size(5, 355);
+            this.panel5.TabIndex = 45;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(592, 38);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel7.Location = new System.Drawing.Point(395, 25);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(8, 547);
-            this.panel7.TabIndex = 69;
+            this.panel7.Size = new System.Drawing.Size(5, 355);
+            this.panel7.TabIndex = 46;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
-            this.panel9.Location = new System.Drawing.Point(21, 71);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel9.Location = new System.Drawing.Point(14, 46);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(555, 5);
-            this.panel9.TabIndex = 72;
+            this.panel9.Size = new System.Drawing.Size(370, 3);
+            this.panel9.TabIndex = 43;
             // 
             // lblDatosPersonales
             // 
             this.lblDatosPersonales.AutoSize = true;
             this.lblDatosPersonales.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatosPersonales.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDatosPersonales.Location = new System.Drawing.Point(201, 60);
-            this.lblDatosPersonales.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosPersonales.Location = new System.Drawing.Point(134, 39);
             this.lblDatosPersonales.Name = "lblDatosPersonales";
-            this.lblDatosPersonales.Size = new System.Drawing.Size(188, 21);
-            this.lblDatosPersonales.TabIndex = 73;
+            this.lblDatosPersonales.Size = new System.Drawing.Size(125, 17);
+            this.lblDatosPersonales.TabIndex = 42;
             this.lblDatosPersonales.Text = "DATOS PERSONALES";
             this.lblDatosPersonales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -407,31 +382,28 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(188, 300);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(125, 195);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 21);
-            this.label1.TabIndex = 75;
+            this.label1.Size = new System.Drawing.Size(146, 17);
+            this.label1.TabIndex = 19;
             this.label1.Text = "DIRECCION PARTICULAR";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
-            this.panel10.Location = new System.Drawing.Point(22, 311);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel10.Location = new System.Drawing.Point(15, 202);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(555, 5);
-            this.panel10.TabIndex = 74;
+            this.panel10.Size = new System.Drawing.Size(370, 3);
+            this.panel10.TabIndex = 20;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.IndianRed;
-            this.panel11.Location = new System.Drawing.Point(446, 392);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel11.Location = new System.Drawing.Point(297, 255);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(96, 2);
-            this.panel11.TabIndex = 78;
+            this.panel11.Size = new System.Drawing.Size(64, 1);
+            this.panel11.TabIndex = 29;
             // 
             // txtInterios
             // 
@@ -440,11 +412,10 @@
             this.txtInterios.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtInterios.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtInterios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtInterios.Location = new System.Drawing.Point(452, 358);
-            this.txtInterios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtInterios.Location = new System.Drawing.Point(301, 233);
             this.txtInterios.Name = "txtInterios";
-            this.txtInterios.Size = new System.Drawing.Size(90, 29);
-            this.txtInterios.TabIndex = 77;
+            this.txtInterios.Size = new System.Drawing.Size(60, 19);
+            this.txtInterios.TabIndex = 27;
             this.txtInterios.Text = "SN";
             // 
             // lblInterior
@@ -452,22 +423,20 @@
             this.lblInterior.AutoSize = true;
             this.lblInterior.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInterior.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblInterior.Location = new System.Drawing.Point(436, 335);
-            this.lblInterior.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInterior.Location = new System.Drawing.Point(291, 218);
             this.lblInterior.Name = "lblInterior";
-            this.lblInterior.Size = new System.Drawing.Size(102, 21);
-            this.lblInterior.TabIndex = 76;
+            this.lblInterior.Size = new System.Drawing.Size(73, 17);
+            this.lblInterior.TabIndex = 28;
             this.lblInterior.Text = "No_interior";
             this.lblInterior.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.IndianRed;
-            this.panel12.Location = new System.Drawing.Point(33, 463);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel12.Location = new System.Drawing.Point(22, 301);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(270, 2);
-            this.panel12.TabIndex = 81;
+            this.panel12.Size = new System.Drawing.Size(180, 1);
+            this.panel12.TabIndex = 32;
             // 
             // txtcolonia
             // 
@@ -476,11 +445,10 @@
             this.txtcolonia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtcolonia.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtcolonia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtcolonia.Location = new System.Drawing.Point(39, 429);
-            this.txtcolonia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcolonia.Location = new System.Drawing.Point(26, 279);
             this.txtcolonia.Name = "txtcolonia";
-            this.txtcolonia.Size = new System.Drawing.Size(264, 29);
-            this.txtcolonia.TabIndex = 80;
+            this.txtcolonia.Size = new System.Drawing.Size(176, 19);
+            this.txtcolonia.TabIndex = 30;
             this.txtcolonia.Text = "VISTA DEL VALLE";
             // 
             // lblColonia
@@ -488,22 +456,20 @@
             this.lblColonia.AutoSize = true;
             this.lblColonia.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColonia.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblColonia.Location = new System.Drawing.Point(28, 406);
-            this.lblColonia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblColonia.Location = new System.Drawing.Point(19, 264);
             this.lblColonia.Name = "lblColonia";
-            this.lblColonia.Size = new System.Drawing.Size(78, 21);
-            this.lblColonia.TabIndex = 79;
+            this.lblColonia.Size = new System.Drawing.Size(54, 17);
+            this.lblColonia.TabIndex = 31;
             this.lblColonia.Text = "Colonia";
             this.lblColonia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.IndianRed;
-            this.panel13.Location = new System.Drawing.Point(320, 463);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel13.Location = new System.Drawing.Point(213, 301);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(81, 2);
-            this.panel13.TabIndex = 84;
+            this.panel13.Size = new System.Drawing.Size(54, 1);
+            this.panel13.TabIndex = 35;
             // 
             // txtCP
             // 
@@ -512,11 +478,10 @@
             this.txtCP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCP.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtCP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtCP.Location = new System.Drawing.Point(321, 429);
-            this.txtCP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCP.Location = new System.Drawing.Point(214, 279);
             this.txtCP.Name = "txtCP";
-            this.txtCP.Size = new System.Drawing.Size(75, 29);
-            this.txtCP.TabIndex = 83;
+            this.txtCP.Size = new System.Drawing.Size(50, 19);
+            this.txtCP.TabIndex = 33;
             this.txtCP.Text = "22330";
             // 
             // lblCP
@@ -524,33 +489,30 @@
             this.lblCP.AutoSize = true;
             this.lblCP.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblCP.Location = new System.Drawing.Point(310, 406);
-            this.lblCP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCP.Location = new System.Drawing.Point(207, 264);
             this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(46, 21);
-            this.lblCP.TabIndex = 82;
+            this.lblCP.Size = new System.Drawing.Size(30, 17);
+            this.lblCP.TabIndex = 34;
             this.lblCP.Text = "C.P.";
             this.lblCP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.IndianRed;
-            this.panel14.Location = new System.Drawing.Point(416, 463);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel14.Location = new System.Drawing.Point(277, 301);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(160, 2);
-            this.panel14.TabIndex = 87;
+            this.panel14.Size = new System.Drawing.Size(107, 1);
+            this.panel14.TabIndex = 38;
             // 
             // lblCiudad
             // 
             this.lblCiudad.AutoSize = true;
             this.lblCiudad.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCiudad.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblCiudad.Location = new System.Drawing.Point(420, 403);
-            this.lblCiudad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCiudad.Location = new System.Drawing.Point(280, 262);
             this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(75, 21);
-            this.lblCiudad.TabIndex = 85;
+            this.lblCiudad.Size = new System.Drawing.Size(51, 17);
+            this.lblCiudad.TabIndex = 37;
             this.lblCiudad.Text = "Ciudad";
             this.lblCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -558,11 +520,10 @@
             // 
             this.cbCiudad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCiudad.FormattingEnabled = true;
-            this.cbCiudad.Location = new System.Drawing.Point(416, 429);
-            this.cbCiudad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbCiudad.Location = new System.Drawing.Point(277, 279);
             this.cbCiudad.Name = "cbCiudad";
-            this.cbCiudad.Size = new System.Drawing.Size(157, 28);
-            this.cbCiudad.TabIndex = 88;
+            this.cbCiudad.Size = new System.Drawing.Size(106, 21);
+            this.cbCiudad.TabIndex = 36;
             this.cbCiudad.SelectedIndexChanged += new System.EventHandler(this.cbCiudad_SelectedIndexChanged);
             // 
             // lblFon
@@ -570,11 +531,10 @@
             this.lblFon.AutoSize = true;
             this.lblFon.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFon.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblFon.Location = new System.Drawing.Point(292, 160);
-            this.lblFon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFon.Location = new System.Drawing.Point(195, 104);
             this.lblFon.Name = "lblFon";
-            this.lblFon.Size = new System.Drawing.Size(86, 21);
-            this.lblFon.TabIndex = 89;
+            this.lblFon.Size = new System.Drawing.Size(59, 17);
+            this.lblFon.TabIndex = 13;
             this.lblFon.Text = "Telefono";
             this.lblFon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -582,11 +542,10 @@
             // 
             this.panel15.BackColor = System.Drawing.Color.IndianRed;
             this.panel15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel15.Location = new System.Drawing.Point(297, 214);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel15.Location = new System.Drawing.Point(198, 139);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(164, 2);
-            this.panel15.TabIndex = 91;
+            this.panel15.Size = new System.Drawing.Size(109, 1);
+            this.panel15.TabIndex = 14;
             // 
             // txtTelefono
             // 
@@ -595,22 +554,21 @@
             this.txtTelefono.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTelefono.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtTelefono.Location = new System.Drawing.Point(300, 180);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTelefono.Location = new System.Drawing.Point(200, 117);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(158, 29);
-            this.txtTelefono.TabIndex = 90;
-            this.txtTelefono.Text = "6641978732";
+            this.txtTelefono.Size = new System.Drawing.Size(105, 19);
+            this.txtTelefono.TabIndex = 12;
+            this.txtTelefono.Text = "XXXXXXXXXX";
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.IndianRed;
             this.panel16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel16.Location = new System.Drawing.Point(30, 280);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel16.Location = new System.Drawing.Point(20, 182);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(358, 2);
-            this.panel16.TabIndex = 94;
+            this.panel16.Size = new System.Drawing.Size(239, 1);
+            this.panel16.TabIndex = 17;
             // 
             // txtCorreo
             // 
@@ -619,23 +577,22 @@
             this.txtCorreo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCorreo.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtCorreo.Location = new System.Drawing.Point(39, 249);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCorreo.Location = new System.Drawing.Point(20, 162);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(344, 29);
-            this.txtCorreo.TabIndex = 93;
-            this.txtCorreo.Text = "SANTOSKARLA1";
+            this.txtCorreo.Size = new System.Drawing.Size(235, 19);
+            this.txtCorreo.TabIndex = 15;
+            this.txtCorreo.Text = "CORREO";
+            this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
             // 
             // lblCorreoE
             // 
             this.lblCorreoE.AutoSize = true;
             this.lblCorreoE.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreoE.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblCorreoE.Location = new System.Drawing.Point(26, 228);
-            this.lblCorreoE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCorreoE.Location = new System.Drawing.Point(17, 148);
             this.lblCorreoE.Name = "lblCorreoE";
-            this.lblCorreoE.Size = new System.Drawing.Size(177, 21);
-            this.lblCorreoE.TabIndex = 92;
+            this.lblCorreoE.Size = new System.Drawing.Size(122, 17);
+            this.lblCorreoE.TabIndex = 16;
             this.lblCorreoE.Text = "Correo electronico";
             this.lblCorreoE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -649,11 +606,10 @@
             this.cmdLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdLimpiar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdLimpiar.ForeColor = System.Drawing.Color.White;
-            this.cmdLimpiar.Location = new System.Drawing.Point(220, 15);
-            this.cmdLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdLimpiar.Location = new System.Drawing.Point(147, 10);
             this.cmdLimpiar.Name = "cmdLimpiar";
-            this.cmdLimpiar.Size = new System.Drawing.Size(136, 48);
-            this.cmdLimpiar.TabIndex = 96;
+            this.cmdLimpiar.Size = new System.Drawing.Size(91, 31);
+            this.cmdLimpiar.TabIndex = 1;
             this.cmdLimpiar.Text = "Limpiar";
             this.cmdLimpiar.UseVisualStyleBackColor = false;
             this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
@@ -668,11 +624,10 @@
             this.cmdAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAgregar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgregar.ForeColor = System.Drawing.Color.Maroon;
-            this.cmdAgregar.Location = new System.Drawing.Point(14, 15);
-            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdAgregar.Location = new System.Drawing.Point(9, 10);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(136, 48);
-            this.cmdAgregar.TabIndex = 95;
+            this.cmdAgregar.Size = new System.Drawing.Size(91, 31);
+            this.cmdAgregar.TabIndex = 0;
             this.cmdAgregar.Text = "Añadir";
             this.cmdAgregar.UseVisualStyleBackColor = false;
             this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
@@ -682,11 +637,10 @@
             this.lblGmal.AutoSize = true;
             this.lblGmal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGmal.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblGmal.Location = new System.Drawing.Point(378, 249);
-            this.lblGmal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGmal.Location = new System.Drawing.Point(252, 162);
             this.lblGmal.Name = "lblGmal";
-            this.lblGmal.Size = new System.Drawing.Size(140, 21);
-            this.lblGmal.TabIndex = 97;
+            this.lblGmal.Size = new System.Drawing.Size(90, 17);
+            this.lblGmal.TabIndex = 18;
             this.lblGmal.Text = "@GMAIL.COM";
             this.lblGmal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -694,22 +648,20 @@
             // 
             this.PanelAñadir.Controls.Add(this.cmdLimpiar);
             this.PanelAñadir.Controls.Add(this.cmdAgregar);
-            this.PanelAñadir.Location = new System.Drawing.Point(96, 478);
-            this.PanelAñadir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PanelAñadir.Location = new System.Drawing.Point(64, 311);
             this.PanelAñadir.Name = "PanelAñadir";
-            this.PanelAñadir.Size = new System.Drawing.Size(363, 78);
-            this.PanelAñadir.TabIndex = 98;
+            this.PanelAñadir.Size = new System.Drawing.Size(242, 51);
+            this.PanelAñadir.TabIndex = 41;
             // 
             // PanelModificar
             // 
             this.PanelModificar.Controls.Add(this.cmdCancelar);
             this.PanelModificar.Controls.Add(this.cmdEliminar);
             this.PanelModificar.Controls.Add(this.cmdModificar);
-            this.PanelModificar.Location = new System.Drawing.Point(33, 483);
-            this.PanelModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PanelModificar.Location = new System.Drawing.Point(22, 314);
             this.PanelModificar.Name = "PanelModificar";
-            this.PanelModificar.Size = new System.Drawing.Size(528, 75);
-            this.PanelModificar.TabIndex = 145;
+            this.PanelModificar.Size = new System.Drawing.Size(352, 49);
+            this.PanelModificar.TabIndex = 40;
             this.PanelModificar.Visible = false;
             // 
             // cmdCancelar
@@ -722,11 +674,10 @@
             this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.ForeColor = System.Drawing.Color.LightCoral;
-            this.cmdCancelar.Location = new System.Drawing.Point(372, 11);
-            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdCancelar.Location = new System.Drawing.Point(248, 7);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(136, 48);
-            this.cmdCancelar.TabIndex = 143;
+            this.cmdCancelar.Size = new System.Drawing.Size(91, 31);
+            this.cmdCancelar.TabIndex = 2;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = false;
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
@@ -741,11 +692,10 @@
             this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdEliminar.ForeColor = System.Drawing.Color.White;
-            this.cmdEliminar.Location = new System.Drawing.Point(210, 11);
-            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdEliminar.Location = new System.Drawing.Point(140, 7);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(136, 48);
-            this.cmdEliminar.TabIndex = 142;
+            this.cmdEliminar.Size = new System.Drawing.Size(91, 31);
+            this.cmdEliminar.TabIndex = 1;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = false;
             this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
@@ -760,21 +710,20 @@
             this.cmdModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdModificar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdModificar.ForeColor = System.Drawing.Color.Maroon;
-            this.cmdModificar.Location = new System.Drawing.Point(22, 11);
-            this.cmdModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdModificar.Location = new System.Drawing.Point(15, 7);
             this.cmdModificar.Name = "cmdModificar";
-            this.cmdModificar.Size = new System.Drawing.Size(160, 48);
-            this.cmdModificar.TabIndex = 141;
+            this.cmdModificar.Size = new System.Drawing.Size(107, 31);
+            this.cmdModificar.TabIndex = 0;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.UseVisualStyleBackColor = false;
             this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
             // frmAPropietario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(600, 585);
+            this.ClientSize = new System.Drawing.Size(400, 380);
             this.Controls.Add(this.PanelModificar);
             this.Controls.Add(this.PanelAñadir);
             this.Controls.Add(this.lblGmal);
@@ -823,7 +772,6 @@
             this.Controls.Add(this.txtIdPro);
             this.Controls.Add(this.lblPropietario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAPropietario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAEmpleados";

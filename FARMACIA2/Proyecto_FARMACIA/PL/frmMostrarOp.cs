@@ -45,6 +45,9 @@ namespace Proyecto_FARMACIA.PL
             {
                 aPropietario.PanelModificar.Visible = false;
                 aPropietario.PanelAñadir.Visible = true;
+                aPropietario.txtCorreo.Width = 235;
+                aPropietario.panel16.Width = 239;
+                aPropietario.lblGmal.Visible = true;
                 aPropietario.lblTitle.Text = "AÑADIR PROPIETARIO";
                 aPropietario.lblTitle.Location = new Point((aPropietario.Title.Width / 2) - (aPropietario.lblTitle.Width / 2), 6);//Se ubica en diferente posicion
 
@@ -147,6 +150,9 @@ namespace Proyecto_FARMACIA.PL
                 aPropietario.PanelModificar.Visible = true;
                 aPropietario.PanelAñadir.Visible = false;
                 aPropietario.lblTitle.Text = "MODIFICAR PROPIETARIO";
+                aPropietario.txtCorreo.Width = 320;
+                aPropietario.panel16.Width = 324;
+                aPropietario.lblGmal.Visible = false;
                 aPropietario.lblTitle.Location = new Point((aPropietario.Title.Width / 2) - (aPropietario.lblTitle.Width / 2), 6);//Se ubica en diferente posicion
 
                 //Obtener los valores de la tabla y agregarlos a los TextBox
@@ -167,9 +173,20 @@ namespace Proyecto_FARMACIA.PL
                 aPropietario.txtcolonia.Text = dgvTablaDB.Rows[indice].Cells[7].Value.ToString();
                 aPropietario.txtCP.Text = dgvTablaDB.Rows[indice].Cells[8].Value.ToString();
 
-                conectar.RellenarCB_1(aPropietario.cbCiudad, "SELECT * FROM CIUDAD", conectar.Retornar_info_2("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value));
+                conectar.RellenarCB_1(aPropietario.cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
+                bool bandera = false;
+                int i=0;
+                string ciudad = conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
+                while (bandera== false)
+                {
+                    if ((aPropietario.cbCiudad.SelectedIndex = i.ToString()) == ciudad)
+                    {
 
-                //aPropietario.cbCiudad.Text = conectar.Retornar_info_2("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
+                    }
+                }
+
+                //aPropietario.cbCiudad.SelectedIndex = conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
+                //aPropietario.cbCiudad.Text = conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
 
                 aPropietario.ShowDialog();
 
@@ -205,7 +222,7 @@ namespace Proyecto_FARMACIA.PL
                 aSucursal.txtcolonia.Text = dgvTablaDB.Rows[indice].Cells[5].Value.ToString();
                 aSucursal.txtCP.Text = dgvTablaDB.Rows[indice].Cells[6].Value.ToString();
 
-                conectar.RellenarCB_1(aSucursal.cbCiudad, "SELECT * FROM CIUDAD", conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[8].Value));
+                //conectar.RellenarCB_1(aSucursal.cbCiudad, "SELECT * FROM CIUDAD", conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[8].Value));
 
                 //aPropietario.cbCiudad.Text = conectar.Retornar_info_2("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
 

@@ -97,7 +97,7 @@ namespace Proyecto_FARMACIA.DAL
             string nombre = "";
             while (dr.Read())
             {
-                nombre = dr[1].ToString();
+                cb.Items.Add(dr[1].ToString());
             }
             conexion.Close();
             return nombre;
@@ -124,7 +124,7 @@ namespace Proyecto_FARMACIA.DAL
             cb.SelectedIndex = 0;
         }
 
-        public bool BuscarEnTabla(string sentencia, string valor, int posicion)
+        public bool BuscarEnTabla_AGREGAR(string sentencia, string valor, int posicion, string tipoValor)
         {
             try
             {
@@ -137,7 +137,7 @@ namespace Proyecto_FARMACIA.DAL
                 {
                     if (dr[posicion].ToString() == valor)
                     {
-                        MessageBox.Show("EL valor " + valor + "ya existe");
+                        MessageBox.Show("EL valor " + valor + " de "+tipoValor+" ya existe");
                         return false;
                     }
 
@@ -150,6 +150,44 @@ namespace Proyecto_FARMACIA.DAL
                 return false;
             }
             
+        }
+
+        public int BuscarEnTabla_MODIFICAR(string sentencia, string valor, int posicion, string valorCarga, string tipoValor)
+        {
+            int vecesRepetido=0;
+            try
+            {
+                if(valor == valorCarga)
+                {
+                    return 0;
+                }
+                else
+                {
+                    SqlCommand cmd = new SqlCommand(sentencia);
+                    cmd.Connection = EstablecerConexion();
+                    conexion.Open();
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        if (dr[posicion].ToString() == valor)
+                        {
+                            MessageBox.Show("EL valor " + valor + " de " + tipoValor + " ya existe");
+                            vecesRepetido++;
+                        }
+
+                    }
+                    conexion.Close();
+                    return vecesRepetido;
+                }
+                
+            }
+            catch
+            {
+                return 2;
+            }
+
         }
 
         public int captar_info_2Palabras(string sentencia)
@@ -311,7 +349,7 @@ namespace Proyecto_FARMACIA.DAL
 
 
         //METODOS PROPIETARIO
-        public void AgregarPropietario(PropietarioBLL propietario)
+        public bool AgregarPropietario(PropietarioBLL propietario)
         {
             //try
             //{
@@ -349,7 +387,8 @@ namespace Proyecto_FARMACIA.DAL
                 agregar.ExecuteNonQuery();
                 conexion.Close();
 
-            //    return true;
+            
+            return true;
             //}
             //catch
             //{
