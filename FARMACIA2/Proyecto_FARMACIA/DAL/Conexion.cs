@@ -50,7 +50,7 @@ namespace Proyecto_FARMACIA.DAL
 
 
         //METODOS COMBO BOX
-        public void RellenarCB(ComboBox cb, string sentencia, string textoCB)
+        public void RellenarCB_1(ComboBox cb, string sentencia, string textoCB)
         {
             SqlCommand cmd = new SqlCommand(sentencia);
             cmd.Connection = EstablecerConexion();
@@ -60,14 +60,18 @@ namespace Proyecto_FARMACIA.DAL
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                cb.Items.Add(dr[1].ToString());
+                if(dr[1].ToString() != textoCB)
+                {
+                    cb.Items.Add(dr[1].ToString());
+                }
+                
             }
             conexion.Close();
             cb.Items.Insert(0, textoCB);
             cb.SelectedIndex = 0;
         }
 
-        public int captar_info(string sentencia)
+        public int captar_info_1(string sentencia)
         {
             SqlCommand cmd = new SqlCommand(sentencia);
             cmd.Connection = EstablecerConexion();
@@ -81,9 +85,9 @@ namespace Proyecto_FARMACIA.DAL
             }
             conexion.Close();
             return ID;
-        }
+        }//lo que se guarda en la tabla
 
-        public string Retornar_info(string sentencia)
+        public string Retornar_info_1(string sentencia)
         {
             SqlCommand cmd = new SqlCommand(sentencia);
             cmd.Connection = EstablecerConexion();
@@ -97,6 +101,70 @@ namespace Proyecto_FARMACIA.DAL
             }
             conexion.Close();
             return nombre;
+        }//para el metodo modificar
+
+        public void RellenarCB_2Palabras(ComboBox cb, string sentencia, string textoCB)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            cb.Items.Clear();
+            conexion.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                if(dr[0].ToString() + "  " + dr[1].ToString() != textoCB)
+                {
+                    cb.Items.Add(dr[0].ToString() + "  " + dr[1].ToString());
+                }
+                
+            }
+            conexion.Close();
+            cb.Items.Insert(0, textoCB);
+            cb.SelectedIndex = 0;
+        }
+
+        public int captar_info_2Palabras(string sentencia)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            conexion.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            int ID = 0;
+            while (dr.Read())
+            {
+                ID = int.Parse(dr[0].ToString());
+            }
+            conexion.Close();
+            return ID;
+        }//lo que se guarda en la tabla
+
+        public string Retornar_info_2(string sentencia)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            conexion.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            string nombre = "";
+            while (dr.Read())
+            {
+                nombre = dr[0].ToString() + "  " + dr[1].ToString();
+            }
+            conexion.Close();
+            return nombre;
+        }//para el metodo modificar
+
+        public string SepararValores(string seleccion)
+        {
+            
+            //char[] characters = cuote.ToCharArray();
+            string[] palabraClave = seleccion.Split();
+
+            MessageBox.Show(palabraClave[2]);
+            //MessageBox.Show(""+characters[0]);
+            return palabraClave[2];
         }
 
 
@@ -133,7 +201,14 @@ namespace Proyecto_FARMACIA.DAL
                 return false;
             }
         }
-        
+
+        public void Modificar_2(string codigoSQL)
+        {
+           
+                SqlCommand sentencia = new SqlCommand(codigoSQL);
+                EjecutarSentencia(sentencia);
+            
+        }
 
         //METODOS CIUDAD
         public bool AgregarCiudad(CiudadBLL ciudad)
@@ -173,10 +248,10 @@ namespace Proyecto_FARMACIA.DAL
 
 
         //METODOS PROPIETARIO
-        public bool AgregarPropietario(PropietarioBLL propietario)
+        public void AgregarPropietario(PropietarioBLL propietario)
         {
-            try
-            {
+            //try
+            //{
                 SqlCommand agregar = new SqlCommand(
                 "insert into PROPIETARIO(" +
                             "id_propietario," +
@@ -211,12 +286,12 @@ namespace Proyecto_FARMACIA.DAL
                 agregar.ExecuteNonQuery();
                 conexion.Close();
 
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            //    return true;
+            //}
+            //catch
+            //{
+            //    return false;
+            //}
 
         }
 
@@ -228,44 +303,44 @@ namespace Proyecto_FARMACIA.DAL
 
 
         //METODOS SUCURSAL
-        public bool AgregarSucursal(SucursalBLL sucursal)
+        public void AgregarSucursal(SucursalBLL sucursal)
         {
-            try
-            {
-                SqlCommand agregar = new SqlCommand(
-                "insert into PROPIETARIO(" +
-                            "id_farmacia," +
-                            "nombre_farm," +
-                            "calle_farm," +
-                            "no_exterior_farm," +
-                            "no_interior_farm," +
-                            "colonia_farm," +
-                            "CP_FARM," +
-                            "id_propietario," +
-                            "id_ciudad)" +
-                "values(@id,@nombre,@calle,@no_exterior,@no_interior,@colonia,@CP,@id_propietario,@id_ciudad)");
+            //try
+            //{
+            SqlCommand agregar = new SqlCommand(
+            "insert into FARMACIA(" +
+                        "id_farmacia," +
+                        "nombre_farm," +
+                        "calle_farm," +
+                        "no_exterior_farm," +
+                        "no_interior_farm," +
+                        "colonia_farm," +
+                        "CP_FARM," +
+                        "id_propietario," +
+                        "id_ciudad)" +
+            "values(@id,@nombre,@calle,@no_exterior,@no_interior,@colonia,@CP,@id_propietario,@id_ciudad)");
 
-                agregar.Parameters.AddWithValue("id", sucursal.id_Ciudad_farm);
-                agregar.Parameters.AddWithValue("nombre", sucursal.nombre_farm);
-                agregar.Parameters.AddWithValue("calle", sucursal.calle_farm);
-                agregar.Parameters.AddWithValue("no_exterior", sucursal.no_exterior_farm);
-                agregar.Parameters.AddWithValue("no_interior", sucursal.no_interior_farm);
-                agregar.Parameters.AddWithValue("colonia", sucursal.colonia_farm);
-                agregar.Parameters.AddWithValue("CP", sucursal.CP_farm);
-                agregar.Parameters.AddWithValue("id_propietario", sucursal.id_propi_farm);
-                agregar.Parameters.AddWithValue("id_ciudad", sucursal.id_Ciudad_farm);
+            agregar.Parameters.AddWithValue("id", sucursal.id_farm);
+            agregar.Parameters.AddWithValue("nombre", sucursal.nombre_farm);
+            agregar.Parameters.AddWithValue("calle", sucursal.calle_farm);
+            agregar.Parameters.AddWithValue("no_exterior", sucursal.no_exterior_farm);
+            agregar.Parameters.AddWithValue("no_interior", sucursal.no_interior_farm);
+            agregar.Parameters.AddWithValue("colonia", sucursal.colonia_farm);
+            agregar.Parameters.AddWithValue("CP", sucursal.CP_farm);
+            agregar.Parameters.AddWithValue("id_propietario", sucursal.id_propi_farm);
+            agregar.Parameters.AddWithValue("id_ciudad", sucursal.id_Ciudad_farm);
 
-                agregar.Connection = EstablecerConexion();
-                conexion.Open();
-                agregar.ExecuteNonQuery();
-                conexion.Close();
+            agregar.Connection = EstablecerConexion();
+            conexion.Open();
+            agregar.ExecuteNonQuery();
+            conexion.Close();
 
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            //    return true;
+            //}
+            //catch
+            //{
+            //    return false;
+            //}
 
         }
 

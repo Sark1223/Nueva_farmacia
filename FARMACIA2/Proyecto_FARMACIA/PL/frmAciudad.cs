@@ -89,7 +89,6 @@ namespace Proyecto_FARMACIA.PL
                              "tama_superficie_ciudad = " + ObjciudadBLL.superficie +
                              " WHERE id_ciudad =" + ID_Actual;
 
-            //id_ciudad,nombre_ciudad,estado_ciudad,pais_ciudad,no_habitantes_ciudad,tama_superficie_ciudad
             if (conexion.Modificar(COMANDO))
             {
                 MessageBox.Show("La opAdmin " + txtNombre.Text + " de ID " + ID_Actual + " ha sido modificada", "REGISTRO MODIFICADO");

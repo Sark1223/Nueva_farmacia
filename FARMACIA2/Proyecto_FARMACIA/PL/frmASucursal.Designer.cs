@@ -80,30 +80,27 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(8, 444);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel8.Location = new System.Drawing.Point(5, 289);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(594, 8);
+            this.panel8.Size = new System.Drawing.Size(397, 5);
             this.panel8.TabIndex = 75;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 38);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel5.Location = new System.Drawing.Point(0, 25);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(8, 414);
+            this.panel5.Size = new System.Drawing.Size(5, 269);
             this.panel5.TabIndex = 74;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(602, 38);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel7.Location = new System.Drawing.Point(402, 25);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(8, 414);
+            this.panel7.Size = new System.Drawing.Size(5, 269);
             this.panel7.TabIndex = 73;
             // 
             // Title
@@ -113,10 +110,10 @@
             this.Title.Controls.Add(this.cmdCerrar);
             this.Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.Title.Location = new System.Drawing.Point(0, 0);
-            this.Title.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(610, 38);
+            this.Title.Size = new System.Drawing.Size(407, 25);
             this.Title.TabIndex = 72;
+            this.Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Title_MouseDown);
             // 
             // lblTitle
             // 
@@ -125,10 +122,9 @@
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitle.Location = new System.Drawing.Point(147, 5);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(98, 3);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(299, 32);
+            this.lblTitle.Size = new System.Drawing.Size(205, 21);
             this.lblTitle.TabIndex = 34;
             this.lblTitle.Text = "AÑADIR SUCURSAL";
             // 
@@ -137,10 +133,9 @@
             this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cmdCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdCerrar.Image = global::Proyecto_FARMACIA.Properties.Resources.iconCerrarblanco;
-            this.cmdCerrar.Location = new System.Drawing.Point(572, 5);
-            this.cmdCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdCerrar.Location = new System.Drawing.Point(381, 3);
             this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(34, 31);
+            this.cmdCerrar.Size = new System.Drawing.Size(23, 20);
             this.cmdCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cmdCerrar.TabIndex = 0;
             this.cmdCerrar.TabStop = false;
@@ -150,21 +145,20 @@
             // 
             this.cbCiudad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCiudad.FormattingEnabled = true;
-            this.cbCiudad.Location = new System.Drawing.Point(370, 288);
-            this.cbCiudad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbCiudad.Location = new System.Drawing.Point(247, 187);
             this.cbCiudad.Name = "cbCiudad";
-            this.cbCiudad.Size = new System.Drawing.Size(208, 28);
+            this.cbCiudad.Size = new System.Drawing.Size(140, 21);
             this.cbCiudad.TabIndex = 111;
+            this.cbCiudad.SelectedIndexChanged += new System.EventHandler(this.cbCiudad_SelectedIndexChanged);
             // 
             // lblCiudad
             // 
             this.lblCiudad.AutoSize = true;
             this.lblCiudad.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCiudad.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblCiudad.Location = new System.Drawing.Point(366, 262);
-            this.lblCiudad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCiudad.Location = new System.Drawing.Point(244, 170);
             this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(75, 21);
+            this.lblCiudad.Size = new System.Drawing.Size(51, 17);
             this.lblCiudad.TabIndex = 110;
             this.lblCiudad.Text = "Ciudad";
             this.lblCiudad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,10 +166,9 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.IndianRed;
-            this.panel13.Location = new System.Drawing.Point(272, 318);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel13.Location = new System.Drawing.Point(181, 207);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(81, 2);
+            this.panel13.Size = new System.Drawing.Size(54, 1);
             this.panel13.TabIndex = 109;
             // 
             // txtCP
@@ -185,10 +178,9 @@
             this.txtCP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCP.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtCP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtCP.Location = new System.Drawing.Point(273, 285);
-            this.txtCP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCP.Location = new System.Drawing.Point(182, 185);
             this.txtCP.Name = "txtCP";
-            this.txtCP.Size = new System.Drawing.Size(75, 29);
+            this.txtCP.Size = new System.Drawing.Size(50, 19);
             this.txtCP.TabIndex = 108;
             this.txtCP.Text = "22330";
             // 
@@ -197,10 +189,9 @@
             this.lblCP.AutoSize = true;
             this.lblCP.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCP.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblCP.Location = new System.Drawing.Point(262, 262);
-            this.lblCP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCP.Location = new System.Drawing.Point(175, 170);
             this.lblCP.Name = "lblCP";
-            this.lblCP.Size = new System.Drawing.Size(46, 21);
+            this.lblCP.Size = new System.Drawing.Size(30, 17);
             this.lblCP.TabIndex = 107;
             this.lblCP.Text = "C.P.";
             this.lblCP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,10 +199,9 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.IndianRed;
-            this.panel12.Location = new System.Drawing.Point(28, 318);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel12.Location = new System.Drawing.Point(19, 207);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(225, 2);
+            this.panel12.Size = new System.Drawing.Size(150, 1);
             this.panel12.TabIndex = 106;
             // 
             // txtcolonia
@@ -221,10 +211,9 @@
             this.txtcolonia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtcolonia.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtcolonia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtcolonia.Location = new System.Drawing.Point(34, 285);
-            this.txtcolonia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtcolonia.Location = new System.Drawing.Point(23, 185);
             this.txtcolonia.Name = "txtcolonia";
-            this.txtcolonia.Size = new System.Drawing.Size(264, 29);
+            this.txtcolonia.Size = new System.Drawing.Size(176, 19);
             this.txtcolonia.TabIndex = 105;
             this.txtcolonia.Text = "VISTA DEL VALLE";
             // 
@@ -233,10 +222,9 @@
             this.lblColonia.AutoSize = true;
             this.lblColonia.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColonia.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblColonia.Location = new System.Drawing.Point(24, 262);
-            this.lblColonia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblColonia.Location = new System.Drawing.Point(16, 170);
             this.lblColonia.Name = "lblColonia";
-            this.lblColonia.Size = new System.Drawing.Size(78, 21);
+            this.lblColonia.Size = new System.Drawing.Size(54, 17);
             this.lblColonia.TabIndex = 104;
             this.lblColonia.Text = "Colonia";
             this.lblColonia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,10 +232,9 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.IndianRed;
-            this.panel11.Location = new System.Drawing.Point(450, 248);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel11.Location = new System.Drawing.Point(300, 161);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(96, 2);
+            this.panel11.Size = new System.Drawing.Size(64, 1);
             this.panel11.TabIndex = 103;
             // 
             // txtInterios
@@ -257,10 +244,9 @@
             this.txtInterios.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtInterios.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtInterios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtInterios.Location = new System.Drawing.Point(456, 214);
-            this.txtInterios.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtInterios.Location = new System.Drawing.Point(304, 139);
             this.txtInterios.Name = "txtInterios";
-            this.txtInterios.Size = new System.Drawing.Size(90, 29);
+            this.txtInterios.Size = new System.Drawing.Size(60, 19);
             this.txtInterios.TabIndex = 102;
             this.txtInterios.Text = "SN";
             // 
@@ -269,10 +255,9 @@
             this.lblInterior.AutoSize = true;
             this.lblInterior.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInterior.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblInterior.Location = new System.Drawing.Point(441, 191);
-            this.lblInterior.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInterior.Location = new System.Drawing.Point(294, 124);
             this.lblInterior.Name = "lblInterior";
-            this.lblInterior.Size = new System.Drawing.Size(102, 21);
+            this.lblInterior.Size = new System.Drawing.Size(73, 17);
             this.lblInterior.TabIndex = 101;
             this.lblInterior.Text = "No_interior";
             this.lblInterior.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -280,10 +265,9 @@
             // linea
             // 
             this.linea.BackColor = System.Drawing.Color.IndianRed;
-            this.linea.Location = new System.Drawing.Point(326, 248);
-            this.linea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.linea.Location = new System.Drawing.Point(217, 161);
             this.linea.Name = "linea";
-            this.linea.Size = new System.Drawing.Size(96, 2);
+            this.linea.Size = new System.Drawing.Size(64, 1);
             this.linea.TabIndex = 100;
             // 
             // txtNo_exte
@@ -293,20 +277,18 @@
             this.txtNo_exte.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNo_exte.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtNo_exte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtNo_exte.Location = new System.Drawing.Point(332, 214);
-            this.txtNo_exte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNo_exte.Location = new System.Drawing.Point(221, 139);
             this.txtNo_exte.Name = "txtNo_exte";
-            this.txtNo_exte.Size = new System.Drawing.Size(90, 29);
+            this.txtNo_exte.Size = new System.Drawing.Size(60, 19);
             this.txtNo_exte.TabIndex = 99;
             this.txtNo_exte.Text = "5714";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.IndianRed;
-            this.panel6.Location = new System.Drawing.Point(28, 248);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Location = new System.Drawing.Point(19, 161);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(270, 2);
+            this.panel6.Size = new System.Drawing.Size(180, 1);
             this.panel6.TabIndex = 98;
             // 
             // txtCalle
@@ -316,10 +298,9 @@
             this.txtCalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCalle.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtCalle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtCalle.Location = new System.Drawing.Point(34, 214);
-            this.txtCalle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCalle.Location = new System.Drawing.Point(23, 139);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(264, 29);
+            this.txtCalle.Size = new System.Drawing.Size(176, 19);
             this.txtCalle.TabIndex = 97;
             this.txtCalle.Text = "VALLE ENCANTADO";
             // 
@@ -327,10 +308,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.IndianRed;
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(168, 137);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(112, 89);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(198, 2);
+            this.panel1.Size = new System.Drawing.Size(132, 1);
             this.panel1.TabIndex = 96;
             // 
             // txtNombre
@@ -340,10 +320,9 @@
             this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtNombre.Location = new System.Drawing.Point(168, 105);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNombre.Location = new System.Drawing.Point(112, 68);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(198, 29);
+            this.txtNombre.Size = new System.Drawing.Size(132, 19);
             this.txtNombre.TabIndex = 95;
             this.txtNombre.Text = "PHARMAKON";
             // 
@@ -352,10 +331,9 @@
             this.lblNo_exte.AutoSize = true;
             this.lblNo_exte.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNo_exte.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblNo_exte.Location = new System.Drawing.Point(316, 191);
-            this.lblNo_exte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNo_exte.Location = new System.Drawing.Point(211, 124);
             this.lblNo_exte.Name = "lblNo_exte";
-            this.lblNo_exte.Size = new System.Drawing.Size(107, 21);
+            this.lblNo_exte.Size = new System.Drawing.Size(75, 17);
             this.lblNo_exte.TabIndex = 94;
             this.lblNo_exte.Text = "No_Exterior";
             this.lblNo_exte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -365,10 +343,9 @@
             this.lblCalle.AutoSize = true;
             this.lblCalle.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalle.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblCalle.Location = new System.Drawing.Point(24, 191);
-            this.lblCalle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCalle.Location = new System.Drawing.Point(16, 124);
             this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(55, 21);
+            this.lblCalle.Size = new System.Drawing.Size(39, 17);
             this.lblCalle.TabIndex = 93;
             this.lblCalle.Text = "Calle";
             this.lblCalle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -378,10 +355,9 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblNombre.Location = new System.Drawing.Point(164, 82);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(109, 53);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(81, 21);
+            this.lblNombre.Size = new System.Drawing.Size(56, 17);
             this.lblNombre.TabIndex = 92;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -390,10 +366,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.IndianRed;
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(28, 137);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(19, 89);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(120, 2);
+            this.panel2.Size = new System.Drawing.Size(80, 1);
             this.panel2.TabIndex = 89;
             // 
             // txtIdFarmacia
@@ -403,10 +378,9 @@
             this.txtIdFarmacia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIdFarmacia.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F);
             this.txtIdFarmacia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(86)))), ((int)(((byte)(107)))));
-            this.txtIdFarmacia.Location = new System.Drawing.Point(28, 105);
-            this.txtIdFarmacia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIdFarmacia.Location = new System.Drawing.Point(19, 68);
             this.txtIdFarmacia.Name = "txtIdFarmacia";
-            this.txtIdFarmacia.Size = new System.Drawing.Size(120, 29);
+            this.txtIdFarmacia.Size = new System.Drawing.Size(80, 19);
             this.txtIdFarmacia.TabIndex = 91;
             this.txtIdFarmacia.Text = "1212";
             // 
@@ -415,10 +389,9 @@
             this.lblFarmacia.AutoSize = true;
             this.lblFarmacia.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFarmacia.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblFarmacia.Location = new System.Drawing.Point(24, 82);
-            this.lblFarmacia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFarmacia.Location = new System.Drawing.Point(16, 53);
             this.lblFarmacia.Name = "lblFarmacia";
-            this.lblFarmacia.Size = new System.Drawing.Size(118, 21);
+            this.lblFarmacia.Size = new System.Drawing.Size(81, 17);
             this.lblFarmacia.TabIndex = 90;
             this.lblFarmacia.Text = "Id_Farmacia";
             this.lblFarmacia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -427,21 +400,20 @@
             // 
             this.cbPropietario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbPropietario.FormattingEnabled = true;
-            this.cbPropietario.Location = new System.Drawing.Point(381, 108);
-            this.cbPropietario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbPropietario.Location = new System.Drawing.Point(254, 70);
             this.cbPropietario.Name = "cbPropietario";
-            this.cbPropietario.Size = new System.Drawing.Size(198, 28);
+            this.cbPropietario.Size = new System.Drawing.Size(133, 21);
             this.cbPropietario.TabIndex = 113;
+            this.cbPropietario.SelectedIndexChanged += new System.EventHandler(this.cbPropietario_SelectedIndexChanged);
             // 
             // lblPropietario
             // 
             this.lblPropietario.AutoSize = true;
             this.lblPropietario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPropietario.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblPropietario.Location = new System.Drawing.Point(378, 82);
-            this.lblPropietario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPropietario.Location = new System.Drawing.Point(252, 53);
             this.lblPropietario.Name = "lblPropietario";
-            this.lblPropietario.Size = new System.Drawing.Size(104, 21);
+            this.lblPropietario.Size = new System.Drawing.Size(74, 17);
             this.lblPropietario.TabIndex = 112;
             this.lblPropietario.Text = "Propietario";
             this.lblPropietario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -451,10 +423,9 @@
             this.lblDatosPersonales.AutoSize = true;
             this.lblDatosPersonales.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatosPersonales.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDatosPersonales.Location = new System.Drawing.Point(162, 51);
-            this.lblDatosPersonales.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosPersonales.Location = new System.Drawing.Point(108, 33);
             this.lblDatosPersonales.Name = "lblDatosPersonales";
-            this.lblDatosPersonales.Size = new System.Drawing.Size(254, 21);
+            this.lblDatosPersonales.Size = new System.Drawing.Size(164, 17);
             this.lblDatosPersonales.TabIndex = 115;
             this.lblDatosPersonales.Text = "DETALLES DE LA FARMACIA";
             this.lblDatosPersonales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -462,10 +433,9 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
-            this.panel9.Location = new System.Drawing.Point(24, 62);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel9.Location = new System.Drawing.Point(16, 40);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(555, 5);
+            this.panel9.Size = new System.Drawing.Size(370, 3);
             this.panel9.TabIndex = 114;
             // 
             // label3
@@ -473,10 +443,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(220, 157);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(147, 102);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 21);
+            this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 117;
             this.label3.Text = "DIRECCION";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -484,10 +453,9 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(100)))), ((int)(((byte)(121)))));
-            this.panel10.Location = new System.Drawing.Point(24, 169);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel10.Location = new System.Drawing.Point(16, 110);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(555, 5);
+            this.panel10.Size = new System.Drawing.Size(370, 3);
             this.panel10.TabIndex = 116;
             // 
             // PanelModificar
@@ -495,10 +463,9 @@
             this.PanelModificar.Controls.Add(this.cmdCancelar);
             this.PanelModificar.Controls.Add(this.cmdEliminar);
             this.PanelModificar.Controls.Add(this.cmdModificar);
-            this.PanelModificar.Location = new System.Drawing.Point(38, 352);
-            this.PanelModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PanelModificar.Location = new System.Drawing.Point(25, 229);
             this.PanelModificar.Name = "PanelModificar";
-            this.PanelModificar.Size = new System.Drawing.Size(528, 75);
+            this.PanelModificar.Size = new System.Drawing.Size(352, 49);
             this.PanelModificar.TabIndex = 147;
             this.PanelModificar.Visible = false;
             // 
@@ -512,13 +479,13 @@
             this.cmdCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCancelar.ForeColor = System.Drawing.Color.LightCoral;
-            this.cmdCancelar.Location = new System.Drawing.Point(372, 11);
-            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdCancelar.Location = new System.Drawing.Point(248, 7);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(136, 48);
+            this.cmdCancelar.Size = new System.Drawing.Size(91, 31);
             this.cmdCancelar.TabIndex = 143;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = false;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // cmdEliminar
             // 
@@ -530,13 +497,13 @@
             this.cmdEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdEliminar.ForeColor = System.Drawing.Color.White;
-            this.cmdEliminar.Location = new System.Drawing.Point(210, 11);
-            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdEliminar.Location = new System.Drawing.Point(140, 7);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(136, 48);
+            this.cmdEliminar.Size = new System.Drawing.Size(91, 31);
             this.cmdEliminar.TabIndex = 142;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = false;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // cmdModificar
             // 
@@ -548,22 +515,21 @@
             this.cmdModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdModificar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdModificar.ForeColor = System.Drawing.Color.Maroon;
-            this.cmdModificar.Location = new System.Drawing.Point(22, 11);
-            this.cmdModificar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdModificar.Location = new System.Drawing.Point(15, 7);
             this.cmdModificar.Name = "cmdModificar";
-            this.cmdModificar.Size = new System.Drawing.Size(160, 48);
+            this.cmdModificar.Size = new System.Drawing.Size(107, 31);
             this.cmdModificar.TabIndex = 141;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.UseVisualStyleBackColor = false;
+            this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
             // 
             // PanelAñadir
             // 
             this.PanelAñadir.Controls.Add(this.cmdLimpiar);
             this.PanelAñadir.Controls.Add(this.cmdAgregar);
-            this.PanelAñadir.Location = new System.Drawing.Point(100, 348);
-            this.PanelAñadir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PanelAñadir.Location = new System.Drawing.Point(67, 226);
             this.PanelAñadir.Name = "PanelAñadir";
-            this.PanelAñadir.Size = new System.Drawing.Size(363, 78);
+            this.PanelAñadir.Size = new System.Drawing.Size(242, 51);
             this.PanelAñadir.TabIndex = 146;
             // 
             // cmdLimpiar
@@ -576,13 +542,13 @@
             this.cmdLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdLimpiar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdLimpiar.ForeColor = System.Drawing.Color.White;
-            this.cmdLimpiar.Location = new System.Drawing.Point(220, 15);
-            this.cmdLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdLimpiar.Location = new System.Drawing.Point(147, 10);
             this.cmdLimpiar.Name = "cmdLimpiar";
-            this.cmdLimpiar.Size = new System.Drawing.Size(136, 48);
+            this.cmdLimpiar.Size = new System.Drawing.Size(91, 31);
             this.cmdLimpiar.TabIndex = 96;
             this.cmdLimpiar.Text = "Limpiar";
             this.cmdLimpiar.UseVisualStyleBackColor = false;
+            this.cmdLimpiar.Click += new System.EventHandler(this.cmdLimpiar_Click);
             // 
             // cmdAgregar
             // 
@@ -594,10 +560,9 @@
             this.cmdAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmdAgregar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAgregar.ForeColor = System.Drawing.Color.Maroon;
-            this.cmdAgregar.Location = new System.Drawing.Point(14, 15);
-            this.cmdAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmdAgregar.Location = new System.Drawing.Point(9, 10);
             this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(136, 48);
+            this.cmdAgregar.Size = new System.Drawing.Size(91, 31);
             this.cmdAgregar.TabIndex = 95;
             this.cmdAgregar.Text = "Añadir";
             this.cmdAgregar.UseVisualStyleBackColor = false;
@@ -605,10 +570,10 @@
             // 
             // frmASucursal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(610, 452);
+            this.ClientSize = new System.Drawing.Size(407, 294);
             this.Controls.Add(this.PanelModificar);
             this.Controls.Add(this.PanelAñadir);
             this.Controls.Add(this.label3);
@@ -645,9 +610,9 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmASucursal";
             this.Text = "frmASucursal";
+            this.Load += new System.EventHandler(this.frmASucursal_Load);
             this.Title.ResumeLayout(false);
             this.Title.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmdCerrar)).EndInit();

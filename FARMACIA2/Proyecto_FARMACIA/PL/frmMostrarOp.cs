@@ -167,8 +167,9 @@ namespace Proyecto_FARMACIA.PL
                 aPropietario.txtcolonia.Text = dgvTablaDB.Rows[indice].Cells[7].Value.ToString();
                 aPropietario.txtCP.Text = dgvTablaDB.Rows[indice].Cells[8].Value.ToString();
 
+                conectar.RellenarCB_1(aPropietario.cbCiudad, "SELECT * FROM CIUDAD", conectar.Retornar_info_2("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value));
 
-                aPropietario.cbCiudad.Text = conectar.Retornar_info("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
+                //aPropietario.cbCiudad.Text = conectar.Retornar_info_2("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
 
                 aPropietario.ShowDialog();
 
@@ -181,7 +182,36 @@ namespace Proyecto_FARMACIA.PL
             }
             else if (lblOpcion.Text == "SUCURSALES")
             {
+                
 
+                //Modificar los valores para que La ventana cambie a Modificar
+                aSucursal.PanelModificar.Visible = true;
+                aSucursal.PanelAñadir.Visible = false;
+                aSucursal.lblTitle.Text = "MODIFICAR SUCURSAL";
+                aSucursal.lblTitle.Location = new Point((aSucursal.Title.Width / 2) - (aSucursal.lblTitle.Width / 2), 6);//Se ubica en diferente posicion
+
+                //Obtener los valores de la tabla y agregarlos a los TextBox
+                int indice = e.RowIndex;
+                
+                //DATOS PERSONALES
+                aSucursal.txtIdFarmacia.Text = dgvTablaDB.Rows[indice].Cells[0].Value.ToString();
+                aSucursal.txtNombre.Text = dgvTablaDB.Rows[indice].Cells[1].Value.ToString();
+                conectar.RellenarCB_2Palabras(aSucursal.cbPropietario, "SELECT * FROM PROPIETARIO", conectar.Retornar_info_2("SELECT * FROM PROPIETARIO WHERE id_propietario=" + dgvTablaDB.Rows[indice].Cells[7].Value));
+
+                //DIRECCION PARTICULAR
+                aSucursal.txtCalle.Text = dgvTablaDB.Rows[indice].Cells[2].Value.ToString();
+                aSucursal.txtNo_exte.Text = dgvTablaDB.Rows[indice].Cells[3].Value.ToString();
+                aSucursal.txtInterios.Text = dgvTablaDB.Rows[indice].Cells[4].Value.ToString();
+                aSucursal.txtcolonia.Text = dgvTablaDB.Rows[indice].Cells[5].Value.ToString();
+                aSucursal.txtCP.Text = dgvTablaDB.Rows[indice].Cells[6].Value.ToString();
+
+                conectar.RellenarCB_1(aSucursal.cbCiudad, "SELECT * FROM CIUDAD", conectar.Retornar_info_2("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[8].Value));
+
+                //aPropietario.cbCiudad.Text = conectar.Retornar_info_2("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
+
+                aSucursal.ShowDialog();
+
+                dgvTablaDB.DataSource = conectar.MostrarSucursales().Tables[0];
             }
             else if (lblOpcion.Text == "VENTAS")
             {

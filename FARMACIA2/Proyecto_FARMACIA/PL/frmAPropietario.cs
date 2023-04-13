@@ -47,10 +47,10 @@ namespace Proyecto_FARMACIA.PL
         {
             if (lblTitle.Text == "AÑADIR PROPIETARIO")
             {
-                conexion.RellenarCB(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
+                conexion.RellenarCB_1(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
             }
 
-            if(txtIdPro.Text != "")
+            if (txtIdPro.Text != "")
             {
                 ID_Actual = int.Parse(txtIdPro.Text);
             }
@@ -64,10 +64,10 @@ namespace Proyecto_FARMACIA.PL
             OpropiBLL.A_materno = txtMaterno.Text;
             OpropiBLL.Nombre_s = txtNombres.Text;
             OpropiBLL.Calle = txtCalle.Text;
-            OpropiBLL.No_exterior = int.Parse(txtIdPro.Text);
+            OpropiBLL.No_exterior = int.Parse(txtNo_exte.Text);
             OpropiBLL.No_interior = txtInterios.Text;
             OpropiBLL.Colonia = txtcolonia.Text;
-            OpropiBLL.CP = int.Parse(txtIdPro.Text);
+            OpropiBLL.CP = int.Parse(txtCP.Text);
             OpropiBLL.telefono = long.Parse(txtTelefono.Text);
             OpropiBLL.correo_e = txtCorreo.Text + "@GMAIL.COM";
         }
@@ -78,22 +78,24 @@ namespace Proyecto_FARMACIA.PL
         {
             ObtenerValoresPropi();
 
-            if (conexion.AgregarPropietario(OpropiBLL))
-            {
+            /* if (*/
+            conexion.AgregarPropietario(OpropiBLL);
+            //{
                 MessageBox.Show("El propietario: " + txtNombres.Text + " de ID: " + txtIdPro.Text + " se INGRESO correctamente", "REGISTRO AGREGADO", MessageBoxButtons.OK);
                 Close();
-            }
-            else
-            {
-                MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
+            //}
         }
 
         private void cmdModificar_Click(object sender, EventArgs e)
         {
             ObtenerValoresPropi();
 
-            string COMANDO = "update PROPIETARIO set id_propietario = " + OpropiBLL.ID + ", " +
+            string COMANDO = "UPDATE PROPIETARIO SET " +
+                            "id_propietario = " + OpropiBLL.ID + ", " +
                             "a_paterno = '" + OpropiBLL.A_paterno + "', " +
                             "a_materno = '" + OpropiBLL.A_materno + "', " +
                             "nombre_s = '" + OpropiBLL.Nombre_s + "', " +
@@ -104,9 +106,10 @@ namespace Proyecto_FARMACIA.PL
                             "CP = " + OpropiBLL.CP + ", " +
                             "telefono = " + OpropiBLL.telefono + ", " +
                             "correo_e = '" + OpropiBLL.correo_e + "', " +
-                            "WHERE id_ciudad =" + ID_Actual;
+                            "id_ciudad = " + OpropiBLL.id_ciudad +
+                            "WHERE id_propietario = " + ID_Actual;
 
-           if (conexion.Modificar(COMANDO))
+            if (conexion.Modificar(COMANDO))
             {
                 MessageBox.Show("El propietario " + txtNombres.Text + " de ID " + ID_Actual + " ha sido modificada", "REGISTRO MODIFICADO");
 
@@ -138,7 +141,7 @@ namespace Proyecto_FARMACIA.PL
         {
             if(cbCiudad.SelectedIndex > 0)
             {
-                OpropiBLL.id_ciudad = conexion.captar_info("SELECT * FROM CIUDAD WHERE nombre_ciudad='" + cbCiudad.Text + "'") ;
+                OpropiBLL.id_ciudad = conexion.captar_info_2Palabras("SELECT * FROM CIUDAD WHERE nombre_ciudad='" + cbCiudad.Text + "'") ;
                 
             }
         }
@@ -167,7 +170,7 @@ namespace Proyecto_FARMACIA.PL
             txtCalle.Clear();txtcolonia.Clear();txtInterios.Clear();  
             txtNo_exte.Clear();txtCP.Clear();txtNombres.Clear();           
             txtCorreo.Clear();txtTelefono.Clear();
-            conexion.RellenarCB(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
+            conexion.RellenarCB_1(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
         }
 
     }
