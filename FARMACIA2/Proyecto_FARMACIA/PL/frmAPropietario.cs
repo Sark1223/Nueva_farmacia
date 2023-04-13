@@ -57,37 +57,62 @@ namespace Proyecto_FARMACIA.PL
             
         }
 
-        public void ObtenerValoresPropi()
+        public bool ObtenerValoresPropi()
         {
-            OpropiBLL.ID = int.Parse(txtIdPro.Text);
-            OpropiBLL.A_paterno = txtPaterno.Text;
-            OpropiBLL.A_materno = txtMaterno.Text;
-            OpropiBLL.Nombre_s = txtNombres.Text;
-            OpropiBLL.Calle = txtCalle.Text;
-            OpropiBLL.No_exterior = int.Parse(txtNo_exte.Text);
-            OpropiBLL.No_interior = txtInterios.Text;
-            OpropiBLL.Colonia = txtcolonia.Text;
-            OpropiBLL.CP = int.Parse(txtCP.Text);
-            OpropiBLL.telefono = long.Parse(txtTelefono.Text);
-            OpropiBLL.correo_e = txtCorreo.Text + "@GMAIL.COM";
+            bool completed = false;
+            if (conexion.BuscarEnTabla("SELECT * FROM PROPIETARIO", txtIdPro.Text, 0))
+            {
+                OpropiBLL.ID = int.Parse(txtIdPro.Text);
+                OpropiBLL.A_paterno = txtPaterno.Text;
+                OpropiBLL.A_materno = txtMaterno.Text;
+                OpropiBLL.Nombre_s = txtNombres.Text;
+                OpropiBLL.Calle = txtCalle.Text;
+                OpropiBLL.No_exterior = int.Parse(txtNo_exte.Text);
+                OpropiBLL.No_interior = txtInterios.Text;
+                OpropiBLL.Colonia = txtcolonia.Text;
+                OpropiBLL.CP = int.Parse(txtCP.Text);
+                if (conexion.BuscarEnTabla("SELECT * FROM PROPIETARIO", txtTelefono.Text, 9))
+                {
+                    OpropiBLL.telefono = long.Parse(txtTelefono.Text);
+                }
+                    
+                if (conexion.BuscarEnTabla("SELECT * FROM PROPIETARIO", txtCorreo.Text + "@GMAIL.COM", 10))
+                {
+                    OpropiBLL.correo_e = txtCorreo.Text + "@GMAIL.COM";
+                    completed = true;
+                }
+
+                return completed;
+            }
+            else
+            {
+                return completed;
+            }
         }
 
 
         //METODO DE PROPIETARIO
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            ObtenerValoresPropi();
-
-            /* if (*/
-            conexion.AgregarPropietario(OpropiBLL);
-            //{
+            if (ObtenerValoresPropi())
+            {
+                /* if (*/
+                conexion.AgregarPropietario(OpropiBLL);
+                //{
                 MessageBox.Show("El propietario: " + txtNombres.Text + " de ID: " + txtIdPro.Text + " se INGRESO correctamente", "REGISTRO AGREGADO", MessageBoxButtons.OK);
                 Close();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
-            //}
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Ha ocurrido un error.", "ERROR", MessageBoxButtons.OK);
+                //}
+            }
+            else
+            {
+                MessageBox.Show("No se pudo agregar el nuevo propietario.", "ERROR");
+            }
+
+
         }
 
         private void cmdModificar_Click(object sender, EventArgs e)
@@ -141,8 +166,11 @@ namespace Proyecto_FARMACIA.PL
         {
             if(cbCiudad.SelectedIndex > 0)
             {
-                OpropiBLL.id_ciudad = conexion.captar_info_2Palabras("SELECT * FROM CIUDAD WHERE nombre_ciudad='" + cbCiudad.Text + "'") ;
-                
+                    OpropiBLL.id_ciudad = conexion.captar_info_1("SELECT * FROM CIUDAD WHERE nombre_ciudad='" + cbCiudad.Text + "'");
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una ciudad", "ERROR");
             }
         }
 

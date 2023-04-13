@@ -15,7 +15,7 @@ namespace Proyecto_FARMACIA.DAL
 {
     internal class Conexion
     {
-        private string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = DB_FARMACIA_TOPICOS; Integrated Security = true";
+        private string CadenaConexion = @"server = ANVORGUEZA\SQLEXPRESS; Initial Catalog = DB_FARMACIA; Integrated Security = true";
         SqlConnection conexion;
 
         //METODOS DE CONEXION
@@ -124,6 +124,34 @@ namespace Proyecto_FARMACIA.DAL
             cb.SelectedIndex = 0;
         }
 
+        public bool BuscarEnTabla(string sentencia, string valor, int posicion)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sentencia);
+                cmd.Connection = EstablecerConexion();
+                conexion.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (dr[posicion].ToString() == valor)
+                    {
+                        MessageBox.Show("EL valor " + valor + "ya existe");
+                        return false;
+                    }
+
+                }
+                conexion.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            
+        }
+
         public int captar_info_2Palabras(string sentencia)
         {
             SqlCommand cmd = new SqlCommand(sentencia);
@@ -162,9 +190,8 @@ namespace Proyecto_FARMACIA.DAL
             //char[] characters = cuote.ToCharArray();
             string[] palabraClave = seleccion.Split();
 
-            MessageBox.Show(palabraClave[2]);
-            //MessageBox.Show(""+characters[0]);
-            return palabraClave[2];
+            MessageBox.Show(palabraClave[0]);
+            return palabraClave[0];
         }
 
 
@@ -173,6 +200,7 @@ namespace Proyecto_FARMACIA.DAL
         {
             try
             {
+
                 //    MessageBox.Show("El registro sera eliminado permanente, ¿Desea CONTINUAR?", "ATENCION", MessageBoxButtons.OKCancel);
                 //    if (MessageBox == DialogResult.Cancel)
                 //    {
@@ -182,9 +210,14 @@ namespace Proyecto_FARMACIA.DAL
                 EjecutarSentencia(sentencia);
                 return true;
             }
-            catch
+            catch (Exception ex) 
             {
+                MessageBox.Show(ex.Message);
                 return false;
+            //}
+            //catch (SqlException ex)
+            //{
+
             }
         }
 
@@ -202,19 +235,49 @@ namespace Proyecto_FARMACIA.DAL
             }
         }
 
-        public void Modificar_2(string codigoSQL)
+        public void Modificar_2(SucursalBLL sucursal, int idAnterior)
         {
-           
-                SqlCommand sentencia = new SqlCommand(codigoSQL);
-                EjecutarSentencia(sentencia);
             
+            try{
+                SqlCommand modifi = new SqlCommand(
+                         "update FARMACIA set id_farmacia =  @id, " +
+                                           "nombre_farm = @nombre," +
+                                           "calle_farm = @calle," +
+                                           "no_exterior_farm = @no_exterior, " +
+                                           "no_interior_farm = @no_interior, " +
+                                           "colonia_farm = @colonia, " +
+                                           "CP_FARM = @CP, " +
+                                           "id_propietario = @id_propietario, " +
+                                           "id_ciudad = @id_ciudad " +
+                                           "WHERE id_farmacia =" + idAnterior);
+
+                modifi.Parameters.AddWithValue("id", sucursal.id_farm);
+                modifi.Parameters.AddWithValue("nombre", sucursal.nombre_farm);
+                modifi.Parameters.AddWithValue("calle", sucursal.calle_farm);
+                modifi.Parameters.AddWithValue("no_exterior", sucursal.no_exterior_farm);
+                modifi.Parameters.AddWithValue("no_interior", sucursal.no_interior_farm);
+                modifi.Parameters.AddWithValue("colonia", sucursal.colonia_farm);
+                modifi.Parameters.AddWithValue("CP", sucursal.CP_farm);
+                modifi.Parameters.AddWithValue("id_propietario", sucursal.id_propi_farm);
+                modifi.Parameters.AddWithValue("id_ciudad", sucursal.id_Ciudad_farm);
+
+                modifi.Connection = EstablecerConexion();
+                conexion.Open();
+                modifi.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
+       
         //METODOS CIUDAD
         public bool AgregarCiudad(CiudadBLL ciudad)
         {
-            try
-            {
+            //try
+            //{
                 SqlCommand agregar = new SqlCommand(
             "insert into CIUDAD(id_ciudad,nombre_ciudad,estado_ciudad,pais_ciudad,no_habitantes_ciudad,tama_superficie_ciudad)" +
             "values(@id,@nombre,@estado,@pais,@nohabitantes,@superficie)");
@@ -232,11 +295,11 @@ namespace Proyecto_FARMACIA.DAL
                 conexion.Close();
 
                 return true;
-            }
-            catch
-            {
-                return false;
-            }
+            //}
+            //catch
+            //{
+            //    return false;
+            //}
                 
         }
 

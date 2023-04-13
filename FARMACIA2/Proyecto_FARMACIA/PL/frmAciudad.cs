@@ -52,12 +52,17 @@ namespace Proyecto_FARMACIA.PL
 
         public void ObtenerValoresCiudad()
         {
-            ObjciudadBLL.ID = int.Parse(txtId.Text);
-            ObjciudadBLL.nombre = txtNombre.Text;
-            ObjciudadBLL.estado = txtEstado.Text;
-            ObjciudadBLL.pais = txtPais.Text;
-            ObjciudadBLL.no_habitantes = int.Parse(txtPoblacion.Text);
-            ObjciudadBLL.superficie = Double.Parse(txtTamaño.Text);
+            if(conexion.BuscarEnTabla("SELECT * FROM CIUDAD", txtId.Text, 0))
+            {
+                ObjciudadBLL.ID = int.Parse(txtId.Text);
+
+                ObjciudadBLL.nombre = txtNombre.Text;
+                ObjciudadBLL.estado = txtEstado.Text;
+                ObjciudadBLL.pais = txtPais.Text;
+                ObjciudadBLL.no_habitantes = int.Parse(txtPoblacion.Text);
+                ObjciudadBLL.superficie = Double.Parse(txtTamaño.Text);
+
+            }
         }
 
 

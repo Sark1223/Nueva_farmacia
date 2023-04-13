@@ -87,7 +87,7 @@ namespace Proyecto_FARMACIA.PL
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            if (conexion.Eliminar("DELETE FROM SUCURSAL WHERE id_farmacia =" + txtIdFarmacia.Text))
+            if (conexion.Eliminar("DELETE FROM FARMACIA WHERE id_farmacia =" + txtIdFarmacia.Text))
             {
                 MessageBox.Show("La farmacia: " + txtIdFarmacia.Text + " de nombre: " + txtNombre.Text + " ha sido eliminada", "REGISTRO ELIMINADO");
 
@@ -103,18 +103,18 @@ namespace Proyecto_FARMACIA.PL
         {
             ObtenerValoresSucursal();
 
-           string COMANDO = "update FARMACIA set id_farmacia = " + objSucursal.id_farm + ", " +
-                            "nombre_farm = '" + objSucursal.nombre_farm + "', " +
-                            "calle_farm = '" + objSucursal.calle_farm + "', " +
-                            "no_exterior_farm = " + objSucursal.no_exterior_farm + ", " +
-                            "no_interior_farm = '" + objSucursal.no_interior_farm + "', " +
-                            "colonia_farm = '" + objSucursal.colonia_farm + "', " +
-                            "CP_FARM = " + objSucursal.CP_farm + ", " +
-                            "id_propietario = " + objSucursal.id_propi_farm + ", " +
-                            "id_ciudad = '" + objSucursal.id_Ciudad_farm + "' " +
-                            "WHERE id_farmacia =" + ID_Actual;
+           //string COMANDO = "update FARMACIA set id_farmacia = " + objSucursal.id_farm + ", " +
+           //                 "nombre_farm = '" + objSucursal.nombre_farm + "', " +
+           //                 "calle_farm = '" + objSucursal.calle_farm + "', " +
+           //                 "no_exterior_farm = " + objSucursal.no_exterior_farm + ", " +
+           //                 "no_interior_farm = '" + objSucursal.no_interior_farm + "', " +
+           //                 "colonia_farm = '" + objSucursal.colonia_farm + "', " +
+           //                 "CP_FARM = " + objSucursal.CP_farm + ", " +
+           //                 "id_propietario = " + objSucursal.id_propi_farm + ", " +
+           //                 "id_ciudad = " + objSucursal.id_Ciudad_farm +
+           //                 "WHERE id_farmacia =" + ID_Actual;
 
-            conexion.Modificar_2(COMANDO);
+            conexion.Modificar_2(objSucursal, ID_Actual);
             //if (conexion.Modificar(COMANDO))
             //{
             MessageBox.Show("La farmacia: " + ID_Actual + " de nombre: " + txtNombre.Text + " ha sido modificada", "REGISTRO MODIFICADO");
@@ -154,7 +154,7 @@ namespace Proyecto_FARMACIA.PL
         {
             if (cbPropietario.SelectedIndex > 0)
             {
-                objSucursal.id_propi_farm = conexion.captar_info_2Palabras("SELECT * FROM PROPIETARIO WHERE a_paterno='" + conexion.SepararValores(cbPropietario.Text) + "'");
+                objSucursal.id_propi_farm = conexion.captar_info_2Palabras("SELECT * FROM PROPIETARIO WHERE id_propietario=" + conexion.SepararValores(cbPropietario.Text) );
 
             }
         }
@@ -163,7 +163,7 @@ namespace Proyecto_FARMACIA.PL
         {
             if (cbCiudad.SelectedIndex > 0)
             {
-                objSucursal.id_Ciudad_farm = conexion.captar_info_2Palabras("SELECT * FROM CIUDAD WHERE nombre_ciudad='" + cbCiudad.Text + "'");
+                objSucursal.id_Ciudad_farm = conexion.captar_info_1("SELECT * FROM CIUDAD WHERE nombre_ciudad='" + cbCiudad.Text + "'");
 
             }
         }

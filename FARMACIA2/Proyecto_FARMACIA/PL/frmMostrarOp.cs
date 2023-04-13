@@ -205,7 +205,7 @@ namespace Proyecto_FARMACIA.PL
                 aSucursal.txtcolonia.Text = dgvTablaDB.Rows[indice].Cells[5].Value.ToString();
                 aSucursal.txtCP.Text = dgvTablaDB.Rows[indice].Cells[6].Value.ToString();
 
-                conectar.RellenarCB_1(aSucursal.cbCiudad, "SELECT * FROM CIUDAD", conectar.Retornar_info_2("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[8].Value));
+                conectar.RellenarCB_1(aSucursal.cbCiudad, "SELECT * FROM CIUDAD", conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[8].Value));
 
                 //aPropietario.cbCiudad.Text = conectar.Retornar_info_2("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
 
