@@ -77,10 +77,6 @@ namespace Proyecto_FARMACIA.PL
             {
 
             }
-            else if (lblOpcion.Text == "MEDICAMENTOS")
-            {
-
-            }
             else
             {
                 MessageBox.Show("error");
@@ -100,11 +96,11 @@ namespace Proyecto_FARMACIA.PL
             }
             else if (lblOpcion.Text == "EMPLEADOS")
             {
-
+                dgvTablaDB.DataSource = conectar.MostrarEmpleados().Tables[0];
             }
             else if (lblOpcion.Text == "SUCURSALES")
             {
-
+                dgvTablaDB.DataSource = conectar.MostrarSucursales().Tables[0];
             }
             else if (lblOpcion.Text == "VENTAS")
             {
@@ -179,14 +175,13 @@ namespace Proyecto_FARMACIA.PL
                 string ciudad = conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
                 while (bandera== false)
                 {
-                    if ((aPropietario.cbCiudad.SelectedIndex = i.ToString()) == ciudad)
+                    aPropietario.cbCiudad.SelectedIndex = i;
+                    if (aPropietario.cbCiudad.SelectedItem.ToString() == ciudad)
                     {
-
+                        bandera = true;
                     }
+                    i++;
                 }
-
-                //aPropietario.cbCiudad.SelectedIndex = conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
-                //aPropietario.cbCiudad.Text = conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
 
                 aPropietario.ShowDialog();
 
@@ -200,7 +195,6 @@ namespace Proyecto_FARMACIA.PL
             else if (lblOpcion.Text == "SUCURSALES")
             {
                 
-
                 //Modificar los valores para que La ventana cambie a Modificar
                 aSucursal.PanelModificar.Visible = true;
                 aSucursal.PanelAñadir.Visible = false;
@@ -209,11 +203,27 @@ namespace Proyecto_FARMACIA.PL
 
                 //Obtener los valores de la tabla y agregarlos a los TextBox
                 int indice = e.RowIndex;
-                
+                bool bandera = false;
+                string valorTabla;
+                int i = 0;
+
                 //DATOS PERSONALES
                 aSucursal.txtIdFarmacia.Text = dgvTablaDB.Rows[indice].Cells[0].Value.ToString();
                 aSucursal.txtNombre.Text = dgvTablaDB.Rows[indice].Cells[1].Value.ToString();
-                conectar.RellenarCB_2Palabras(aSucursal.cbPropietario, "SELECT * FROM PROPIETARIO", conectar.Retornar_info_2("SELECT * FROM PROPIETARIO WHERE id_propietario=" + dgvTablaDB.Rows[indice].Cells[7].Value));
+
+                //REGENAR DATOS PROPIETARIO
+                conectar.RellenarCB_2(aSucursal.cbPropietario, "SELECT * FROM PROPIETARIO", "-- Selecione Propietario --");
+
+                valorTabla = conectar.Retornar_info_2("SELECT * FROM PROPIETARIO WHERE id_propietario=" + dgvTablaDB.Rows[indice].Cells[7].Value);
+                while (bandera == false)
+                {
+                    aSucursal.cbPropietario.SelectedIndex = i;
+                    if (aSucursal.cbPropietario.SelectedItem.ToString() == valorTabla)
+                    {
+                        bandera = true;
+                    }
+                    i++;
+                }
 
                 //DIRECCION PARTICULAR
                 aSucursal.txtCalle.Text = dgvTablaDB.Rows[indice].Cells[2].Value.ToString();
@@ -222,19 +232,28 @@ namespace Proyecto_FARMACIA.PL
                 aSucursal.txtcolonia.Text = dgvTablaDB.Rows[indice].Cells[5].Value.ToString();
                 aSucursal.txtCP.Text = dgvTablaDB.Rows[indice].Cells[6].Value.ToString();
 
-                //conectar.RellenarCB_1(aSucursal.cbCiudad, "SELECT * FROM CIUDAD", conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[8].Value));
+                //RELLENAR DATOS CIUDAD
+                conectar.RellenarCB_1(aSucursal.cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
+                
+                valorTabla = conectar.Retornar_info_1("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[8].Value);
+                bandera = false;
+                i = 0;
 
-                //aPropietario.cbCiudad.Text = conectar.Retornar_info_2("SELECT * FROM CIUDAD WHERE id_ciudad=" + dgvTablaDB.Rows[indice].Cells[11].Value);
+                while (bandera == false)
+                {
+                    aSucursal.cbCiudad.SelectedIndex = i;
+                    if (aSucursal.cbCiudad.SelectedItem.ToString() == valorTabla)
+                    {
+                        bandera = true;
+                    }
+                    i++;
+                }
 
                 aSucursal.ShowDialog();
-
                 dgvTablaDB.DataSource = conectar.MostrarSucursales().Tables[0];
+
             }
             else if (lblOpcion.Text == "VENTAS")
-            {
-
-            }
-            else if (lblOpcion.Text == "MEDICAMENTOS")
             {
 
             }

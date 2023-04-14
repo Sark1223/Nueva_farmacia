@@ -92,6 +92,12 @@
     <Compile Include="PL\frmASucursal.Designer.cs">
       <DependentUpon>frmASucursal.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\frmMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmMedicamentos.Designer.cs">
+      <DependentUpon>frmMedicamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\frmMostrarOp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmASucursal.resx">
       <DependentUpon>frmASucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmMedicamentos.resx">
+      <DependentUpon>frmMedicamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmMostrarOp.resx">
       <DependentUpon>frmMostrarOp.cs</DependentUpon>

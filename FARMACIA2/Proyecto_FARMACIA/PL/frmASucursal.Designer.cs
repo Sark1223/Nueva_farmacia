@@ -183,6 +183,7 @@
             this.txtCP.Size = new System.Drawing.Size(50, 19);
             this.txtCP.TabIndex = 108;
             this.txtCP.Text = "22330";
+            this.txtCP.TextChanged += new System.EventHandler(this.txtCP_TextChanged);
             // 
             // lblCP
             // 
@@ -282,6 +283,7 @@
             this.txtNo_exte.Size = new System.Drawing.Size(60, 19);
             this.txtNo_exte.TabIndex = 99;
             this.txtNo_exte.Text = "5714";
+            this.txtNo_exte.TextChanged += new System.EventHandler(this.txtNo_exte_TextChanged);
             // 
             // panel6
             // 
@@ -383,6 +385,7 @@
             this.txtIdFarmacia.Size = new System.Drawing.Size(80, 19);
             this.txtIdFarmacia.TabIndex = 91;
             this.txtIdFarmacia.Text = "1212";
+            this.txtIdFarmacia.TextChanged += new System.EventHandler(this.txtIdFarmacia_TextChanged);
             // 
             // lblFarmacia
             // 

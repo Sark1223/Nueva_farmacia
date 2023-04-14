@@ -108,6 +108,7 @@
             this.txtNo_exte.Size = new System.Drawing.Size(60, 19);
             this.txtNo_exte.TabIndex = 24;
             this.txtNo_exte.Text = "5714";
+            this.txtNo_exte.TextChanged += new System.EventHandler(this.txtNo_exte_TextChanged);
             // 
             // panel6
             // 
@@ -483,6 +484,7 @@
             this.txtCP.Size = new System.Drawing.Size(50, 19);
             this.txtCP.TabIndex = 33;
             this.txtCP.Text = "22330";
+            this.txtCP.TextChanged += new System.EventHandler(this.txtCP_TextChanged);
             // 
             // lblCP
             // 

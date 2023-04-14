@@ -49,7 +49,7 @@ namespace Proyecto_FARMACIA.DAL
         }
 
 
-        //METODOS COMBO BOX
+        //METODOS COMBO BOX - SIMPLE
         public void RellenarCB_1(ComboBox cb, string sentencia, string textoCB)
         {
             SqlCommand cmd = new SqlCommand(sentencia);
@@ -97,13 +97,15 @@ namespace Proyecto_FARMACIA.DAL
             string nombre = "";
             while (dr.Read())
             {
-                cb.Items.Add(dr[1].ToString());
+                nombre =dr[1].ToString();
             }
             conexion.Close();
             return nombre;
         }//para el metodo modificar
 
-        public void RellenarCB_2Palabras(ComboBox cb, string sentencia, string textoCB)
+
+        //METODOS COMBO BOX - COMPLEJO
+        public void RellenarCB_2(ComboBox cb, string sentencia, string textoCB)
         {
             SqlCommand cmd = new SqlCommand(sentencia);
             cmd.Connection = EstablecerConexion();
@@ -124,6 +126,48 @@ namespace Proyecto_FARMACIA.DAL
             cb.SelectedIndex = 0;
         }
 
+        public int captar_info_2(string sentencia)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            conexion.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            int ID = 0;
+            while (dr.Read())
+            {
+                ID = int.Parse(dr[0].ToString());
+            }
+            conexion.Close();
+            return ID;
+        }//lo que se guarda en la tabla
+
+        public string Retornar_info_2(string sentencia)
+        {
+            SqlCommand cmd = new SqlCommand(sentencia);
+            cmd.Connection = EstablecerConexion();
+            conexion.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            string nombre = "";
+            while (dr.Read())
+            {
+                nombre = dr[0].ToString() + "  " + dr[1].ToString();
+            }
+            conexion.Close();
+            return nombre;
+        }//para el metodo modificar
+
+        public string SepararValores(string seleccion)
+        {
+            //char[] characters = cuote.ToCharArray();
+            string[] palabraClave = seleccion.Split();
+
+            return palabraClave[0];
+        }
+
+
+        //Buscar valores en tabla
         public bool BuscarEnTabla_AGREGAR(string sentencia, string valor, int posicion, string tipoValor)
         {
             try
@@ -188,48 +232,6 @@ namespace Proyecto_FARMACIA.DAL
                 return 2;
             }
 
-        }
-
-        public int captar_info_2Palabras(string sentencia)
-        {
-            SqlCommand cmd = new SqlCommand(sentencia);
-            cmd.Connection = EstablecerConexion();
-            conexion.Open();
-
-            SqlDataReader dr = cmd.ExecuteReader();
-            int ID = 0;
-            while (dr.Read())
-            {
-                ID = int.Parse(dr[0].ToString());
-            }
-            conexion.Close();
-            return ID;
-        }//lo que se guarda en la tabla
-
-        public string Retornar_info_2(string sentencia)
-        {
-            SqlCommand cmd = new SqlCommand(sentencia);
-            cmd.Connection = EstablecerConexion();
-            conexion.Open();
-
-            SqlDataReader dr = cmd.ExecuteReader();
-            string nombre = "";
-            while (dr.Read())
-            {
-                nombre = dr[0].ToString() + "  " + dr[1].ToString();
-            }
-            conexion.Close();
-            return nombre;
-        }//para el metodo modificar
-
-        public string SepararValores(string seleccion)
-        {
-            
-            //char[] characters = cuote.ToCharArray();
-            string[] palabraClave = seleccion.Split();
-
-            MessageBox.Show(palabraClave[0]);
-            return palabraClave[0];
         }
 
 
@@ -405,11 +407,11 @@ namespace Proyecto_FARMACIA.DAL
 
 
         //METODOS SUCURSAL
-        public void AgregarSucursal(SucursalBLL sucursal)
+        public bool AgregarSucursal(SucursalBLL sucursal)
         {
-            //try
-            //{
-            SqlCommand agregar = new SqlCommand(
+            try
+            {
+                SqlCommand agregar = new SqlCommand(
             "insert into FARMACIA(" +
                         "id_farmacia," +
                         "nombre_farm," +
@@ -422,27 +424,27 @@ namespace Proyecto_FARMACIA.DAL
                         "id_ciudad)" +
             "values(@id,@nombre,@calle,@no_exterior,@no_interior,@colonia,@CP,@id_propietario,@id_ciudad)");
 
-            agregar.Parameters.AddWithValue("id", sucursal.id_farm);
-            agregar.Parameters.AddWithValue("nombre", sucursal.nombre_farm);
-            agregar.Parameters.AddWithValue("calle", sucursal.calle_farm);
-            agregar.Parameters.AddWithValue("no_exterior", sucursal.no_exterior_farm);
-            agregar.Parameters.AddWithValue("no_interior", sucursal.no_interior_farm);
-            agregar.Parameters.AddWithValue("colonia", sucursal.colonia_farm);
-            agregar.Parameters.AddWithValue("CP", sucursal.CP_farm);
-            agregar.Parameters.AddWithValue("id_propietario", sucursal.id_propi_farm);
-            agregar.Parameters.AddWithValue("id_ciudad", sucursal.id_Ciudad_farm);
+                agregar.Parameters.AddWithValue("id", sucursal.id_farm);
+                agregar.Parameters.AddWithValue("nombre", sucursal.nombre_farm);
+                agregar.Parameters.AddWithValue("calle", sucursal.calle_farm);
+                agregar.Parameters.AddWithValue("no_exterior", sucursal.no_exterior_farm);
+                agregar.Parameters.AddWithValue("no_interior", sucursal.no_interior_farm);
+                agregar.Parameters.AddWithValue("colonia", sucursal.colonia_farm);
+                agregar.Parameters.AddWithValue("CP", sucursal.CP_farm);
+                agregar.Parameters.AddWithValue("id_propietario", sucursal.id_propi_farm);
+                agregar.Parameters.AddWithValue("id_ciudad", sucursal.id_Ciudad_farm);
 
-            agregar.Connection = EstablecerConexion();
-            conexion.Open();
-            agregar.ExecuteNonQuery();
-            conexion.Close();
+                agregar.Connection = EstablecerConexion();
+                conexion.Open();
+                agregar.ExecuteNonQuery();
+                conexion.Close();
 
-            //    return true;
-            //}
-            //catch
-            //{
-            //    return false;
-            //}
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
 
         }
 

@@ -52,9 +52,15 @@ namespace Proyecto_FARMACIA.PL
             {
                 conexion.RellenarCB_1(cbCiudad, "SELECT * FROM CIUDAD", "-- Selecione Ciudad --");
                 txtIdPro.Text = "0"; txtMaterno.Text = "A_MATERNO"; txtPaterno.Text = "A_PATERNO";
-                txtNombres.Text = "NOMBRE(s)"; txtCorreo.Text = "CORRE"; txtTelefono.Text = "XXXXXXXXX"; 
+                txtNombres.Text = "NOMBRE(s)"; txtCorreo.Text = "CORRE"; /*txtTelefono.Text = "XXXXXXXXX"; */
                 txtCalle.Text = "CALLE"; txtNo_exte.Text = "1"; txtInterios.Text = " "; txtCP.Text = "1";
                 txtcolonia.Text = "COLONIA";
+
+                this.AcceptButton = cmdAgregar;
+            }
+            else
+            {
+                this.AcceptButton = cmdModificar;
             }
 
             if (txtIdPro.Text != "")
@@ -74,6 +80,9 @@ namespace Proyecto_FARMACIA.PL
 
         public void ObtenerValoresPropi()
         {
+            OpropiBLL.ID = int.Parse(txtIdPro.Text);
+            OpropiBLL.telefono = long.Parse(txtTelefono.Text);
+            OpropiBLL.correo_e = txtCorreo.Text;
             OpropiBLL.A_paterno = txtPaterno.Text;
             OpropiBLL.A_materno = txtMaterno.Text;
             OpropiBLL.Nombre_s = txtNombres.Text;
@@ -198,22 +207,6 @@ namespace Proyecto_FARMACIA.PL
             Close();
         }
 
-       
-
-
-        /*CREATE TABLE PROPIETARIO (
-    id_propietario   VARCHAR(10) NOT NULL PRIMARY KEY,
-    a_paterno        VARCHAR(50) NOT NULL,
-    a_materno        VARCHAR(50) NOT NULL,
-    nombre_s      VARCHAR(100) NOT NULL,
-    calle            VARCHAR(100) NOT NULL,
-    no_exterior      VARCHAR(6) NOT NULL,
-    no_interior      VARCHAR(4),
-    colonia          VARCHAR(100) NOT NULL,
-    CP           VARCHAR(7) NOT NULL,
-    telefono         varchar (15)  unique,
-    correo_e         VARCHAR(100) unique,
-    id_ciudad VARCHAR(10) NOT NULL FOREIGN KEY (id_ciudad ) REFERENCES CIUDAD ( id_ciudad ));*/
 
         //VALIDACION DE DATOS AGREGADOS POR EL USUARIO
         public bool ValoresVacios()
@@ -291,45 +284,6 @@ namespace Proyecto_FARMACIA.PL
             }
         }
 
-        private void txtTelefono_TextChanged(object sender, EventArgs e)
-        {
-            if (primeraApertura == false)
-            {
-                try
-                {
-                    if (lblTitle.Text == "MODIFICAR PROPIETARIO")
-                    {
-                        //VERIFICAR QUE LOS DATOS UNICOS NO SE REPITAN 
-                        if (conexion.BuscarEnTabla_MODIFICAR("SELECT * FROM PROPIETARIO", txtTelefono.Text, 9, telefono, lblFon.Text) < 1 && txtTelefono.Text != "")
-                        {
-                            OpropiBLL.telefono = int.Parse(txtTelefono.Text);
-                        }
-                        else
-                        {
-                            txtTelefono.SelectAll();
-                        }
-
-                    }
-                    else
-                    {
-                        if (conexion.BuscarEnTabla_AGREGAR("SELECT * FROM PROPIETARIO", txtTelefono.Text, 9, lblFon.Text) && txtTelefono.Text != "")
-                        {
-                            OpropiBLL.telefono = long.Parse(txtTelefono.Text);
-                        }
-                        else
-                        {
-                            txtTelefono.SelectAll();
-                        }
-                    }
-                }
-                catch (FormatException)
-                {
-                    MessageBox.Show("Ingrese SOLO NUMEROS.", "ERROR DE FORMATO");
-                    txtIdPro.SelectAll();
-                }
-            }
-        }
-
         private void txtIdPro_TextChanged(object sender, EventArgs e)
         {
             if (primeraApertura == false)
@@ -399,6 +353,98 @@ namespace Proyecto_FARMACIA.PL
                 }
             }
         }
+
+        private void txtCP_TextChanged(object sender, EventArgs e)
+        {
+            if (primeraApertura == false)
+            {
+                try
+                {
+                    if(txtCP.Text != "")
+                    {
+                        OpropiBLL.CP = int.Parse(txtCP.Text);
+                    }
+                    
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Ingrese SOLO NUMEROS.", "ERROR DE FORMATO");
+                    txtCP.SelectAll();
+                }
+            }
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+            if (primeraApertura == false)
+            {
+                try
+                {
+                    if (lblTitle.Text == "MODIFICAR PROPIETARIO")
+                    {
+                        //VERIFICAR QUE LOS DATOS UNICOS NO SE REPITAN 
+                        if (conexion.BuscarEnTabla_MODIFICAR("SELECT * FROM PROPIETARIO", txtTelefono.Text, 9, telefono, lblFon.Text) < 1 && txtTelefono.Text != "")
+                        {
+                            OpropiBLL.telefono = int.Parse(txtTelefono.Text);
+                        }
+                        else
+                        {
+                            txtTelefono.SelectAll();
+                        }
+
+                    }
+                    else
+                    {
+                        if (conexion.BuscarEnTabla_AGREGAR("SELECT * FROM PROPIETARIO", txtTelefono.Text, 9, lblFon.Text) && txtTelefono.Text != "")
+                        {
+                            OpropiBLL.telefono = long.Parse(txtTelefono.Text);
+                        }
+                        else
+                        {
+                            txtTelefono.SelectAll();
+                        }
+                    }
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Ingrese SOLO NUMEROS.", "ERROR DE FORMATO");
+                    txtIdPro.SelectAll();
+                }
+            }
+        }
+
+        private void txtNo_exte_TextChanged(object sender, EventArgs e)
+        {
+            if (primeraApertura == false)
+            {
+                try
+                {
+                    if (txtNo_exte.Text != "")
+                    {
+                        OpropiBLL.No_exterior = int.Parse(txtNo_exte.Text);
+                    }
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Ingrese SOLO NUMEROS.", "ERROR DE FORMATO");
+                    txtNo_exte.SelectAll();
+                }
+            }
+        }
+
+ /*CREATE TABLE PROPIETARIO (
+    id_propietario   VARCHAR(10) NOT NULL PRIMARY KEY,
+    a_paterno        VARCHAR(50) NOT NULL,
+    a_materno        VARCHAR(50) NOT NULL,
+    nombre_s      VARCHAR(100) NOT NULL,
+    calle            VARCHAR(100) NOT NULL,
+    no_exterior      VARCHAR(6) NOT NULL,
+    no_interior      VARCHAR(4),
+    colonia          VARCHAR(100) NOT NULL,
+    CP           VARCHAR(7) NOT NULL,
+    telefono         varchar (15)  unique,
+    correo_e         VARCHAR(100) unique,
+    id_ciudad VARCHAR(10) NOT NULL FOREIGN KEY (id_ciudad ) REFERENCES CIUDAD ( id_ciudad ));*/
 
     }
 }
