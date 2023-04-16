@@ -33,6 +33,7 @@ namespace Proyecto_FARMACIA.PL
 
         //OBJETOS DE PANTALLAS
         frmMostrarOp opAdmin = new frmMostrarOp();
+        frmMedicamentos opMedicamentos = new frmMedicamentos();
 
         //OBJETO CONEXION
         Conexion conectar = new Conexion();
@@ -112,9 +113,8 @@ namespace Proyecto_FARMACIA.PL
             }
             else if (forma == cmdMedi.Name)
             {
-                opAdmin.lblOpcion.Text = "MEDICAMENTOS";
-                opAdmin.dgvTablaDB.DataSource = conectar.MostrarMedicamenntos().Tables[0];
-                opAdmin.dgvTablaDB.DataSource = conectar.MostrarPrecio().Tables[0];
+                opMedicamentos.dgvMedicamentos.DataSource = conectar.MostrarMedicamenntos().Tables[0];
+                opMedicamentos.dgvPrecioMedi.DataSource = conectar.MostrarPrecio().Tables[0];
             }
             else
             {
@@ -202,7 +202,7 @@ namespace Proyecto_FARMACIA.PL
         private void pbMedi_Click(object sender, EventArgs e)
         {
             CargarTabla(cmdMedi.Name);
-            AbrirForm(opAdmin);
+            AbrirForm(opMedicamentos);
             PanelActual = cmdMedi;
             Ponerfoco();
         }
