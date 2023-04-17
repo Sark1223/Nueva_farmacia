@@ -140,6 +140,7 @@
             this.cbMedicamento.Name = "cbMedicamento";
             this.cbMedicamento.Size = new System.Drawing.Size(145, 21);
             this.cbMedicamento.TabIndex = 3;
+            this.cbMedicamento.SelectedIndexChanged += new System.EventHandler(this.cbMedicamento_SelectedIndexChanged);
             // 
             // panel2
             // 

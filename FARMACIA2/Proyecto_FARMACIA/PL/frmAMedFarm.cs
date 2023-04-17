@@ -47,9 +47,11 @@ namespace Proyecto_FARMACIA.PL
 
         //variables auxiliares 
         bool primeraApertura=true;
+        string id_farmacia, id_medicamento;
 
         private void frmAMedFarm_Load(object sender, EventArgs e)
         {
+            primeraApertura = false;
             if (lblTitle.Text == "AÑADIR PRECIO")
             {
                 conexion.RellenarCB_2(cbFarmacia, "SELECT * FROM FARMACIA", "-- Selecione Sucursal --");
@@ -60,6 +62,15 @@ namespace Proyecto_FARMACIA.PL
             else
             {
                 this.AcceptButton = cmdModificar;
+            }
+
+            if (cbFarmacia.SelectedIndex != 0)
+            {
+                id_farmacia = conexion.SepararValores(cbFarmacia.Text);
+            }
+            if (cbMedicamento.SelectedIndex != 0)
+            {
+                id_medicamento = conexion.SepararValores(cbMedicamento.Text);
             }
         }
 
@@ -155,6 +166,43 @@ namespace Proyecto_FARMACIA.PL
 
         }
 
+        private void cbMedicamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (primeraApertura == false)
+            {
+                if (cbMedicamento.SelectedIndex > 0)
+                {
+                    string id = conexion.SepararValores(cbMedicamento.Text);
+                    objMedfarm.id_medicamento = conexion.captar_info_2("SELECT * FROM PROPIETARIO WHERE id_propietario=" + id);
+
+                    if (lblTitle.Text == "MODIFICAR PRECIO")
+                    {
+                        //VERIFICAR QUE LOS DATOS UNICOS NO SE REPITAN 
+                        if (conexion.BuscarEnTabla_MODIFICAR("SELECT * FROM FARMACIA", id, 1, id_medicamento, lblMedicamento.Text) < 1 && id != "-")
+                        {
+                            objMedfarm.id_medicamento = int.Parse(id);
+                        }
+                        else
+                        {
+                            cbFarmacia.SelectedIndex = 0;
+                        }
+
+                    }
+                    else
+                    {
+                        if (conexion.BuscarEnTabla_AGREGAR("SELECT * FROM FARMACIA", id, 1, lblMedicamento.Text) && id != "-")
+                        {
+                            objMedfarm.id_medicamento = int.Parse(id);
+                        }
+                        else
+                        {
+                            cbFarmacia.SelectedIndex = 0;
+                        }
+                    }
+                }
+            }
+        }
+
         private void cbFarmacia_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (primeraApertura == false)
@@ -162,30 +210,31 @@ namespace Proyecto_FARMACIA.PL
                 if (cbFarmacia.SelectedIndex > 0)
                 {
                     string id = conexion.SepararValores(cbFarmacia.Text);
-                    objMedfarm.id_propi_farm = conexion.captar_info_2("SELECT * FROM PROPIETARIO WHERE id_propietario=" + id);
+                    objMedfarm.id_farmacia = conexion.captar_info_2("SELECT * FROM PROPIETARIO WHERE id_propietario=" + id);
 
-                    if (lblTitle.Text == "MODIFICAR SUCURSAL")
+                    if (lblTitle.Text == "MODIFICAR PRECIO")
                     {
                         //VERIFICAR QUE LOS DATOS UNICOS NO SE REPITAN 
-                        if (conexion.BuscarEnTabla_MODIFICAR("SELECT * FROM FARMACIA", id, 7, id_propi, lblPropietario.Text) < 1 && id != "-")
+                        if (conexion.BuscarEnTabla_MODIFICAR("SELECT * FROM FARMACIA", id, 0, id_farmacia, lblFarmacia.Text) < 1 && id != "-")
                         {
-                            objSucursal.id_propi_farm = int.Parse(id);
+
+                            objMedfarm.id_farmacia = int.Parse(id);
                         }
                         else
                         {
-                            cbPropietario.SelectedIndex = 0;
+                            cbFarmacia.SelectedIndex = 0;
                         }
 
                     }
                     else
                     {
-                        if (conexion.BuscarEnTabla_AGREGAR("SELECT * FROM FARMACIA", id, 7, lblPropietario.Text) && id != "-")
+                        if (conexion.BuscarEnTabla_AGREGAR("SELECT * FROM FARMACIA", id, 0, lblFarmacia.Text) && id != "-")
                         {
-                            objSucursal.id_propi_farm = int.Parse(id);
+                            objMedfarm.id_farmacia = int.Parse(id);
                         }
                         else
                         {
-                            cbPropietario.SelectedIndex = 0;
+                            cbFarmacia.SelectedIndex = 0;
                         }
                     }
                 }

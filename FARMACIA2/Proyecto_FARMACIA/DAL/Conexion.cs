@@ -312,7 +312,42 @@ namespace Proyecto_FARMACIA.DAL
             }
         }
 
-       
+        //Buscar valores en tabla
+        public string[] BuscarEnTabla(string sentencia, string valor, int posicion, string tipoValor)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sentencia);
+                cmd.Connection = EstablecerConexion();
+                conexion.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+                string[] valores = new string[dr.FieldCount];
+
+                while (dr.Read())
+                {
+                    if (dr[posicion].ToString() == valor)
+                    {
+                        for (int i = 0; i < dr.FieldCount; i++)
+                        {
+                            valores[i] = dr[i].ToString();
+                        }
+
+                        return valores;
+                    }
+
+                }
+                conexion.Close();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+
         //METODOS CIUDAD
         public bool AgregarCiudad(CiudadBLL ciudad)
         {
@@ -500,8 +535,8 @@ namespace Proyecto_FARMACIA.DAL
 
         public bool AgregarPrecio(MedFarmBLL medfarm)
         {
-            try
-            {
+            //try
+            //{
                 SqlCommand agregar = new SqlCommand(
             "insert into MED_FARM(" +
                         "id_farmacia," +
@@ -521,11 +556,11 @@ namespace Proyecto_FARMACIA.DAL
                 conexion.Close();
 
                 return true;
-            }
-            catch
-            {
-                return false;
-            }
+            //}
+            //catch
+            //{
+            //    return false;
+            //}
 
         }
 

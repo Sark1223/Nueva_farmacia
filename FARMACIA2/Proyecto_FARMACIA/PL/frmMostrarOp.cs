@@ -475,5 +475,10 @@ namespace Proyecto_FARMACIA.PL
         {
             lblOpcion.Location = new Point((panel1.Width / 2) - (lblOpcion.Width / 2), 6);
         }
+
+        private void cmdBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

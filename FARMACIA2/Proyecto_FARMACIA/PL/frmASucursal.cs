@@ -193,6 +193,7 @@ namespace Proyecto_FARMACIA.PL
 
                     if (lblTitle.Text == "MODIFICAR SUCURSAL")
                     {
+
                         //VERIFICAR QUE LOS DATOS UNICOS NO SE REPITAN 
                         if (conexion.BuscarEnTabla_MODIFICAR("SELECT * FROM FARMACIA", id, 7, id_propi, lblPropietario.Text) < 1 && id != "-")
                         {
