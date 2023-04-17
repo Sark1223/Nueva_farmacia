@@ -40,7 +40,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblInstrucciones = new System.Windows.Forms.Label();
             this.lblEnca = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvPrecioMedi = new System.Windows.Forms.DataGridView();
             this.cmdAgregar = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -85,7 +84,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMedicamentos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMedicamentos.EnableHeadersVisualStyles = false;
-            this.dgvMedicamentos.Location = new System.Drawing.Point(21, 108);
+            this.dgvMedicamentos.Location = new System.Drawing.Point(21, 78);
             this.dgvMedicamentos.Name = "dgvMedicamentos";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(88)))), ((int)(((byte)(113)))));
@@ -98,13 +97,13 @@
             this.dgvMedicamentos.RowHeadersVisible = false;
             this.dgvMedicamentos.RowHeadersWidth = 30;
             this.dgvMedicamentos.RowTemplate.Height = 30;
-            this.dgvMedicamentos.Size = new System.Drawing.Size(375, 344);
+            this.dgvMedicamentos.Size = new System.Drawing.Size(696, 158);
             this.dgvMedicamentos.TabIndex = 29;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyecto_FARMACIA.Properties.Resources.lupa;
-            this.pictureBox1.Location = new System.Drawing.Point(71, 74);
+            this.pictureBox1.Location = new System.Drawing.Point(738, 176);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,13 +113,13 @@
             // lblInstrucciones
             // 
             this.lblInstrucciones.AutoSize = true;
-            this.lblInstrucciones.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstrucciones.Font = new System.Drawing.Font("Century Gothic", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInstrucciones.ForeColor = System.Drawing.Color.DimGray;
-            this.lblInstrucciones.Location = new System.Drawing.Point(128, 48);
+            this.lblInstrucciones.Location = new System.Drawing.Point(148, 40);
             this.lblInstrucciones.Name = "lblInstrucciones";
-            this.lblInstrucciones.Size = new System.Drawing.Size(538, 17);
+            this.lblInstrucciones.Size = new System.Drawing.Size(500, 17);
             this.lblInstrucciones.TabIndex = 39;
-            this.lblInstrucciones.Text = "Para MODIFICAR o ELIMINAR cualquier REGRISTRO haga doble click sobre el mismo";
+            this.lblInstrucciones.Text = "(Para MODIFICAR o ELIMINAR cualquier REGRISTRO haga doble click sobre el mismo)";
             this.lblInstrucciones.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEnca
@@ -128,23 +127,11 @@
             this.lblEnca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEnca.AutoSize = true;
             this.lblEnca.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnca.Location = new System.Drawing.Point(293, 11);
+            this.lblEnca.Location = new System.Drawing.Point(255, 9);
             this.lblEnca.Name = "lblEnca";
             this.lblEnca.Size = new System.Drawing.Size(254, 31);
             this.lblEnca.TabIndex = 36;
             this.lblEnca.Text = "MEDICAMENTOS";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(145, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 17);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Medicamentos en general";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvPrecioMedi
             // 
@@ -179,7 +166,7 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPrecioMedi.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPrecioMedi.EnableHeadersVisualStyles = false;
-            this.dgvPrecioMedi.Location = new System.Drawing.Point(417, 176);
+            this.dgvPrecioMedi.Location = new System.Drawing.Point(71, 308);
             this.dgvPrecioMedi.Name = "dgvPrecioMedi";
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(88)))), ((int)(((byte)(113)))));
@@ -192,13 +179,13 @@
             this.dgvPrecioMedi.RowHeadersVisible = false;
             this.dgvPrecioMedi.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             this.dgvPrecioMedi.RowTemplate.Height = 30;
-            this.dgvPrecioMedi.Size = new System.Drawing.Size(371, 277);
+            this.dgvPrecioMedi.Size = new System.Drawing.Size(706, 155);
             this.dgvPrecioMedi.TabIndex = 42;
             // 
             // cmdAgregar
             // 
             this.cmdAgregar.Image = global::Proyecto_FARMACIA.Properties.Resources.add;
-            this.cmdAgregar.Location = new System.Drawing.Point(26, 66);
+            this.cmdAgregar.Location = new System.Drawing.Point(738, 93);
             this.cmdAgregar.Name = "cmdAgregar";
             this.cmdAgregar.Size = new System.Drawing.Size(39, 41);
             this.cmdAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -208,7 +195,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proyecto_FARMACIA.Properties.Resources.add;
-            this.pictureBox2.Location = new System.Drawing.Point(444, 138);
+            this.pictureBox2.Location = new System.Drawing.Point(21, 384);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(39, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -220,7 +207,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(461, 108);
+            this.label2.Location = new System.Drawing.Point(258, 278);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(289, 17);
             this.label2.TabIndex = 44;
@@ -236,7 +223,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dgvPrecioMedi);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblInstrucciones);
             this.Controls.Add(this.cmdAgregar);
@@ -261,7 +247,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label lblInstrucciones;
         public System.Windows.Forms.Label lblEnca;
-        public System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dgvPrecioMedi;
         public System.Windows.Forms.PictureBox cmdAgregar;
         public System.Windows.Forms.PictureBox pictureBox2;
