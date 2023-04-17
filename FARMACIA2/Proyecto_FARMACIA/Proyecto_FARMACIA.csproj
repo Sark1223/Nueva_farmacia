@@ -59,6 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\CiudadBLL.cs" />
+    <Compile Include="BLL\MedFarmBLL.cs" />
+    <Compile Include="BLL\MedicamentoBLL.cs" />
     <Compile Include="BLL\PropietarioBLL.cs" />
     <Compile Include="BLL\SucursalBLL.cs" />
     <Compile Include="DAL\Conexion.cs" />
@@ -91,6 +93,18 @@
     </Compile>
     <Compile Include="PL\frmASucursal.Designer.cs">
       <DependentUpon>frmASucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAMedFarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAMedFarm.Designer.cs">
+      <DependentUpon>frmAMedFarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\frmAMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\frmAMedicamento.Designer.cs">
+      <DependentUpon>frmAMedicamento.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\frmMedicamentos.cs">
       <SubType>Form</SubType>
@@ -132,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmASucursal.resx">
       <DependentUpon>frmASucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAMedFarm.resx">
+      <DependentUpon>frmAMedFarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\frmAMedicamento.resx">
+      <DependentUpon>frmAMedicamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\frmMedicamentos.resx">
       <DependentUpon>frmMedicamentos.cs</DependentUpon>

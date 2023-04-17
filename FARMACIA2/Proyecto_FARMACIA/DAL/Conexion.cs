@@ -463,11 +463,105 @@ namespace Proyecto_FARMACIA.DAL
             return EjecutarSentencia(sentencia);
         }
 
+        public bool AgregarMedicamento (MedicamentoBLL medicamento)
+        {
+            try
+            {
+                SqlCommand agregar = new SqlCommand(
+            "insert into MEDICAMENTO(" +
+                        "id_medicamento," +
+                        "nombre," +
+                        "descripcion)" +
+            "values(@id_medicametno,@nombre,@descripcion)");
+
+                agregar.Parameters.AddWithValue("id_medicametno", medicamento.id_medicamento);
+                agregar.Parameters.AddWithValue("nombre", medicamento.nombre);
+                agregar.Parameters.AddWithValue("descripcion", medicamento.descripcion);
+               
+                agregar.Connection = EstablecerConexion();
+                conexion.Open();
+                agregar.ExecuteNonQuery();
+                conexion.Close();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
         public DataSet MostrarPrecio()
         {
             SqlCommand sentencia = new SqlCommand("SELECT * FROM MED_FARM");
             return EjecutarSentencia(sentencia);
         }
+
+        public bool AgregarPrecio(MedFarmBLL medfarm)
+        {
+            try
+            {
+                SqlCommand agregar = new SqlCommand(
+            "insert into MED_FARM(" +
+                        "id_farmacia," +
+                        "id_medicamento," +
+                        "precio," +
+                        "cantidad_existente)" +
+            "values(@id_farmacia,@id_medicamento,@Precio,@cantidad_existente)");
+
+                agregar.Parameters.AddWithValue("id_farmacia", medfarm.id_farmacia);
+                agregar.Parameters.AddWithValue("id_medicamento", medfarm.id_medicamento);
+                agregar.Parameters.AddWithValue("Precio", medfarm.precio);
+                agregar.Parameters.AddWithValue("cantidad_existente", medfarm.cantidad_exitente);
+
+                agregar.Connection = EstablecerConexion();
+                conexion.Open();
+                agregar.ExecuteNonQuery();
+                conexion.Close();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+        public void Mostrar_Precio_MedFarm(string valor, int posicion)
+        {
+            int vecesRepetido = 0;
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM MED_FARM");
+            cmd.Connection = EstablecerConexion();
+            conexion.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader();
+            frmMedicamentos medi = new frmMedicamentos();
+            medi.dgvPrecioMedi.Rows.Clear();
+            medi.dgvPrecioMedi.Columns.Add("id_farmacia", "id_farmacia");
+            medi.dgvPrecioMedi.Columns.Add("id_Medicamento", "id_Medicamento");
+            medi.dgvPrecioMedi.Columns.Add("Precio", "Precio");
+            medi.dgvPrecioMedi.Columns.Add("Cantidad_existente", "Cantidad_existente");
+
+            while (dr.Read())
+            {
+                if (dr[posicion].ToString() == valor)
+                {
+                    medi.dgvPrecioMedi.Rows.Add();
+                    medi.dgvPrecioMedi.Rows[vecesRepetido].Cells[0].Value = dr[0].ToString();
+                    medi.dgvPrecioMedi.Rows[vecesRepetido].Cells[1].Value = dr[1].ToString();
+                    medi.dgvPrecioMedi.Rows[vecesRepetido].Cells[2].Value = dr[2].ToString();
+                    medi.dgvPrecioMedi.Rows[vecesRepetido].Cells[2].Value = dr[3].ToString();
+
+                    vecesRepetido++;
+                }
+
+            }
+
+        }
+
 
         //METODOS EMPLEADOS
 
